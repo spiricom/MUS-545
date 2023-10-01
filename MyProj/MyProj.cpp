@@ -37,8 +37,10 @@ int main(void)
 	tCycle_init(&mySine, &leaf);
 	tCycle_setFreq(&mySine, 440.0f);
 	while(1) {
-	    hw.led1.Set(0.0, 0.0, 1.0);
-        hw.UpdateLeds();
+		hw.seed.SetLed(1); //turn on the red led on the Seed
+		hw.DelayMs(500); //wait 500 milliseconds (0.5 seconds)
+		hw.seed.SetLed(0); //turn off the red led on the Seed
+		hw.DelayMs(500); //wait 500 milliseconds (0.5 seconds)
 	}
 }
 
