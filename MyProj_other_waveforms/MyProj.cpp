@@ -5,11 +5,18 @@ LEAF leaf;
 char leafMemory[65535];
 DaisyPod hw;
 tCycle mySine;
+tPBSaw mySaw; // the PB stands for polyBLEP, the technique I'm using to generate the signal. Or peanut butter, whichever you prefer.
+tPBPulse myPulse;
+tPBTriangle myTriangle;
+
 //let's define a global variable to store the frequency so we can easily mess with it in our program.
 float myFreq = 220.0f;
 
-//SUPER SIMPLE SINE WAVE WITH KNOB FREQUENCY CONTROL
-//this example makes a fun siren bloop if you hold down button1 on the pod and turn knob1 to change the speed
+int whichWaveform = 0; 
+
+//OTHER WAVEFORMS
+//some other waveforms to try
+//knob 1 sets frequency. knob2 sets which waveform (of 4 waveform shapes)
 
 float randomNumber()
 {
@@ -34,14 +41,49 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
     // I just write the f by habit, you don't have to. All internal computations in leaf are in single-precision floats. 
     myFreq = (660.0f * hw.GetKnobValue(hw.KNOB_1)) + 220.0f;
 
-    // now pass myFreq as the value we pass to the setFreq function on the mySine object
-    tCycle_setFreq(&mySine, myFreq);
+
 
     //now here's the per sample stuff
     for (size_t i = 0; i < size; i++)
     {
-        //get the next sample from the sine wave object mySine and store it in a temporary variable of type float, called "mySample"
-        float mySample = tCycle_tick(&mySine);
+        //since now we're going to have an if statement control structure in here, let's define "mySample" outside of the if so it already exists and doesn't depend on the conditional situation
+        float mySample = 0.0f;
+
+        whichWaveform = hw.GetKnobValue(hw.KNOB_2) * 3.999f; // there are 4 waveforms, so starting at 0 we get 0 1 2 3 
+        
+        if (whichWaveform == 0)
+        {
+            //sine wave
+            tCycle_setFreq(&mySine, myFreq);
+            //note that since we defined mySample above, we don't put "float" here
+            mySample = tCycle_tick(&mySine);
+            //we can also set the LED stuff here if we want
+            hw.led1.Set(1.0f, 1.0f, 1.0f); //led1 white (RGB all on)
+        }
+        else if (whichWaveform == 1)
+        {
+             //saw wave
+            tPBSaw_setFreq(&mySaw, myFreq);
+            //note that since we defined mySample above, we don't put "float" here
+            mySample = tPBSaw_tick(&mySaw);
+            hw.led1.Set(1.0f, 0.0f, 0.0f); //led1 red
+        }
+        else if (whichWaveform == 2)
+        {
+             //pulse wave
+            tPBPulse_setFreq(&myPulse, myFreq);
+            //note that since we defined mySample above, we don't put "float" here
+            mySample = tPBPulse_tick(&myPulse);
+            hw.led1.Set(0.0f, 1.0f, 0.0f); //led1 green
+        }
+        else if (whichWaveform == 3)
+        {
+             //triangle wave
+            tPBTriangle_setFreq(&myTriangle, myFreq);
+            //note that since we defined mySample above, we don't put "float" here
+            mySample = tPBTriangle_tick(&myTriangle);
+            hw.led1.Set(0.0f, 0.0f, 1.0f); //led1 blue
+        }
 
         //now set the audio outputs (left is [0] and right is [1] to be whatever value has been computed and stored in the mySample variable.
         out[0][i] = mySample;
@@ -58,15 +100,16 @@ int main(void)
     hw.StartAdc();
     hw.StartAudio(AudioCallback);
     LEAF_init(&leaf, 48000, leafMemory, 65535, randomNumber);
+    //need to initialize all of the oscillators
     tCycle_init(&mySine, &leaf);
-    tCycle_setFreq(&mySine, 440.0f); //this will be written over by the audio callback loop immediately when we read in that knob value, so we could remove it without any problem.
-    
+    tPBSaw_init(&mySaw, &leaf);
+    tPBPulse_init(&myPulse, &leaf);
+    tPBTriangle_init(&myTriangle, &leaf);
+   
     //blink that light! this endless while loop will be interrupted by the audio callback when the audio chip needs new data (every 4 samples, because audio block size was set to 4 above)
     while(1) {
-        hw.seed.SetLed(1); //turn on the red led on the Seed
-        hw.DelayMs(500); //wait 500 milliseconds (0.5 seconds)
-        hw.seed.SetLed(0); //turn off the red led on the Seed
-        hw.DelayMs(500); //wait 500 milliseconds (0.5 seconds)
+        //you need to call this here to use the RGB LEDs on the pod.
+        hw.UpdateLeds();
     }
 }
 
