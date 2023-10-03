@@ -9,7 +9,7 @@ tCycle mySine;
 float myFreq = 220.0f;
 
 //SUPER SIMPLE SINE WAVE WITH KNOB FREQUENCY CONTROL
-//this example makes a fun siren bloop if you hold down button1 on the pod and turn knob1 to change the speed
+//use knob1 to control the frequency of a sine wave
 
 float randomNumber()
 {
