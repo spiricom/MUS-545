@@ -58,14 +58,15 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
             //we can use the randomNumber function that's defined above this AudioCallback function
             myFreq = (randomNumber() * 1900.0f) + 100.0f;
             tCycle_setFreq(&mySine, myFreq);
+            //we can also set the LED stuff here if we want
+            hw.led1.Set(randomNumber(), randomNumber(), randomNumber()); //set led1 to a random color
+            hw.led2.Set(randomNumber(), randomNumber(), randomNumber()); //set led2 to a random color
             //now the frequency will only change when the sample counter equals 0, which only happens when the counter resets because it reached a maximum limit we set, based on the tempo we want
         }
         
         //note that since we defined mySample above, we don't put "float" here
         mySample = tCycle_tick(&mySine);
-        //we can also set the LED stuff here if we want
-        hw.led1.Set(randomNumber(), randomNumber(), randomNumber()); //set led1 to a random color
-        hw.led2.Set(randomNumber(), randomNumber(), randomNumber()); //set led2 to a random color
+
 
 
         //increment the sampleCounter variable so we can keep track of how many samples have passed. 
