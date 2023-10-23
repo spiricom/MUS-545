@@ -5,14 +5,8 @@ LEAF leaf;
 char leafMemory[400000]; //notice I increased this, because tRetune needs more memory
 DaisyPod hw;
 
-tSimpleRetune mySimpleRetune;
-
-// A PITCH SHIFTER EXAMPLE
-// this example takes audio into the left line in channel.
-// It pitch shifts that audio by a factor from 0-2 (with 2 being up an octave and 0 being way pitched down to stopped - it's a ratio)
-// this uses the tRetune object. tRetune needs a little more memory and a larger block size so I increased the memory in two places (I noted it in comments) and increased the block size in the setAudioBlockSize function call.
-
-
+tADSR env;
+tCycle mySine;
 
 float randomNumber()
 {
@@ -29,10 +23,15 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
         //get the next sample from the left channel of the input (right channel would be in[1][i])
         float mySample = in[0][i];
 
-        tSimpleRetune_tuneVoice(&mySimpleRetune, 0, 2.0f * hw.knob1.Value());
-        mySample = tSimpleRetune_tick(&mySimpleRetune, mySample);
+        tCycle_setFreq(&mySine, 220.0f);
+        
+        if (hw.button1.RisingEdge())
+        {
+            tADSR_on(&env, 1.0f);
+        }
 
-
+        mySample = tCycle_tick(&mySine);
+        mySample = mySample * tADSR_tick(&env);
         out[0][i] = mySample;
         out[1][i] = mySample;
     }
@@ -47,7 +46,8 @@ int main(void)
     hw.StartAdc();
 
     LEAF_init(&leaf, 48000, leafMemory, 400000, randomNumber); //notice I increased this, because tRetune needs more memory
-    tSimpleRetune_init(&mySimpleRetune, 1, mtof(42.0f), mtof(84.0f), 1024, &leaf);
+    tADSR_init(&env, 10, 500, 0., 500, &leaf);
+    tCycle_init(&mySine, &leaf);
 
     hw.StartAudio(AudioCallback);
 
