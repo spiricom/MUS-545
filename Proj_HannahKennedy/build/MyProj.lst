@@ -1,0 +1,2881 @@
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.arch armv7e-m
+   3              		.fpu fpv5-d16
+   4              		.eabi_attribute 28, 1
+   5              		.eabi_attribute 20, 1
+   6              		.eabi_attribute 21, 1
+   7              		.eabi_attribute 23, 3
+   8              		.eabi_attribute 24, 1
+   9              		.eabi_attribute 25, 1
+  10              		.eabi_attribute 26, 1
+  11              		.eabi_attribute 30, 2
+  12              		.eabi_attribute 34, 1
+  13              		.eabi_attribute 18, 4
+  14              		.file	"MyProj.cpp"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text._ZN5daisy8DaisyPodD2Ev,"axG",%progbits,_ZN5daisy8DaisyPodD5Ev,comdat
+  19              		.align	1
+  20              		.p2align 2,,3
+  21              		.weak	_ZN5daisy8DaisyPodD2Ev
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	_ZN5daisy8DaisyPodD2Ev:
+  27              	.LVL0:
+  28              	.LFB2538:
+  29              		.file 1 "../../libDaisy//src/daisy_pod.h"
+   1:../../libDaisy//src/daisy_pod.h **** #pragma once
+   2:../../libDaisy//src/daisy_pod.h **** #ifndef DSY_POD_BSP_H
+   3:../../libDaisy//src/daisy_pod.h **** #define DSY_POD_BSP_H
+   4:../../libDaisy//src/daisy_pod.h **** 
+   5:../../libDaisy//src/daisy_pod.h **** #include "daisy_seed.h"
+   6:../../libDaisy//src/daisy_pod.h **** 
+   7:../../libDaisy//src/daisy_pod.h **** namespace daisy
+   8:../../libDaisy//src/daisy_pod.h **** {
+   9:../../libDaisy//src/daisy_pod.h **** /**
+  10:../../libDaisy//src/daisy_pod.h ****     @brief Class that handles initializing all of the hardware specific to the Daisy Patch Board. \
+  11:../../libDaisy//src/daisy_pod.h ****     Helper funtions are also in place to provide easy access to built-in controls and peripherals.
+  12:../../libDaisy//src/daisy_pod.h ****     @author Stephen Hensley
+  13:../../libDaisy//src/daisy_pod.h ****     @date November 2019
+  14:../../libDaisy//src/daisy_pod.h ****     @ingroup boards
+  15:../../libDaisy//src/daisy_pod.h **** */
+  16:../../libDaisy//src/daisy_pod.h **** class DaisyPod
+  17:../../libDaisy//src/daisy_pod.h **** {
+  18:../../libDaisy//src/daisy_pod.h ****   public:
+  19:../../libDaisy//src/daisy_pod.h ****     /** Switches */
+  20:../../libDaisy//src/daisy_pod.h ****     enum Sw
+  21:../../libDaisy//src/daisy_pod.h ****     {
+  22:../../libDaisy//src/daisy_pod.h ****         BUTTON_1,    /** & */
+  23:../../libDaisy//src/daisy_pod.h ****         BUTTON_2,    /** & */
+  24:../../libDaisy//src/daisy_pod.h ****         BUTTON_LAST, /** &  */
+  25:../../libDaisy//src/daisy_pod.h ****     };
+  26:../../libDaisy//src/daisy_pod.h **** 
+  27:../../libDaisy//src/daisy_pod.h ****     /** Knobs */
+  28:../../libDaisy//src/daisy_pod.h ****     enum Knob
+  29:../../libDaisy//src/daisy_pod.h ****     {
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 2
+
+
+  30:../../libDaisy//src/daisy_pod.h ****         KNOB_1,    /** &  */
+  31:../../libDaisy//src/daisy_pod.h ****         KNOB_2,    /** & */
+  32:../../libDaisy//src/daisy_pod.h ****         KNOB_LAST, /** & */
+  33:../../libDaisy//src/daisy_pod.h ****     };
+  34:../../libDaisy//src/daisy_pod.h **** 
+  35:../../libDaisy//src/daisy_pod.h ****     DaisyPod() {}
+  36:../../libDaisy//src/daisy_pod.h ****     ~DaisyPod() {}
+  30              		.loc 1 36 5 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		@ link register save eliminated.
+  35              	.LBB273:
+  36              	.LBI273:
+  37              		.file 2 "../../libDaisy//src/hid/midi.h"
+   1:../../libDaisy//src/hid/midi.h **** #pragma once
+   2:../../libDaisy//src/hid/midi.h **** #ifndef DSY_MIDI_H
+   3:../../libDaisy//src/hid/midi.h **** #define DSY_MIDI_H
+   4:../../libDaisy//src/hid/midi.h **** 
+   5:../../libDaisy//src/hid/midi.h **** // TODO: make this adjustable
+   6:../../libDaisy//src/hid/midi.h **** #define SYSEX_BUFFER_LEN 128
+   7:../../libDaisy//src/hid/midi.h **** 
+   8:../../libDaisy//src/hid/midi.h **** #include <stdint.h>
+   9:../../libDaisy//src/hid/midi.h **** #include <stdlib.h>
+  10:../../libDaisy//src/hid/midi.h **** #include "per/uart.h"
+  11:../../libDaisy//src/hid/midi.h **** #include "util/ringbuffer.h"
+  12:../../libDaisy//src/hid/midi.h **** #include "hid/MidiEvent.h"
+  13:../../libDaisy//src/hid/midi.h **** #include "hid/usb_midi.h"
+  14:../../libDaisy//src/hid/midi.h **** #include "sys/system.h"
+  15:../../libDaisy//src/hid/midi.h **** 
+  16:../../libDaisy//src/hid/midi.h **** namespace daisy
+  17:../../libDaisy//src/hid/midi.h **** {
+  18:../../libDaisy//src/hid/midi.h **** /** @brief   Transport layer for sending and receiving MIDI data over UART 
+  19:../../libDaisy//src/hid/midi.h ****  *  @details This is the mode of communication used for TRS and DIN MIDI
+  20:../../libDaisy//src/hid/midi.h ****  *  @ingroup midi
+  21:../../libDaisy//src/hid/midi.h **** */
+  22:../../libDaisy//src/hid/midi.h **** class MidiUartTransport
+  23:../../libDaisy//src/hid/midi.h **** {
+  24:../../libDaisy//src/hid/midi.h ****   public:
+  25:../../libDaisy//src/hid/midi.h ****     MidiUartTransport() {}
+  26:../../libDaisy//src/hid/midi.h ****     ~MidiUartTransport() {}
+  27:../../libDaisy//src/hid/midi.h **** 
+  28:../../libDaisy//src/hid/midi.h ****     struct Config
+  29:../../libDaisy//src/hid/midi.h ****     {
+  30:../../libDaisy//src/hid/midi.h ****         UartHandler::Config::Peripheral periph;
+  31:../../libDaisy//src/hid/midi.h ****         dsy_gpio_pin                    rx;
+  32:../../libDaisy//src/hid/midi.h ****         dsy_gpio_pin                    tx;
+  33:../../libDaisy//src/hid/midi.h **** 
+  34:../../libDaisy//src/hid/midi.h ****         Config()
+  35:../../libDaisy//src/hid/midi.h ****         {
+  36:../../libDaisy//src/hid/midi.h ****             periph = UartHandler::Config::Peripheral::USART_1;
+  37:../../libDaisy//src/hid/midi.h ****             rx     = {DSY_GPIOB, 7};
+  38:../../libDaisy//src/hid/midi.h ****             tx     = {DSY_GPIOB, 6};
+  39:../../libDaisy//src/hid/midi.h ****         }
+  40:../../libDaisy//src/hid/midi.h ****     };
+  41:../../libDaisy//src/hid/midi.h **** 
+  42:../../libDaisy//src/hid/midi.h ****     inline void Init(Config config)
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 3
+
+
+  43:../../libDaisy//src/hid/midi.h ****     {
+  44:../../libDaisy//src/hid/midi.h ****         UartHandler::Config uart_config;
+  45:../../libDaisy//src/hid/midi.h **** 
+  46:../../libDaisy//src/hid/midi.h ****         //defaults
+  47:../../libDaisy//src/hid/midi.h ****         uart_config.baudrate   = 31250;
+  48:../../libDaisy//src/hid/midi.h ****         uart_config.stopbits   = UartHandler::Config::StopBits::BITS_1;
+  49:../../libDaisy//src/hid/midi.h ****         uart_config.parity     = UartHandler::Config::Parity::NONE;
+  50:../../libDaisy//src/hid/midi.h ****         uart_config.mode       = UartHandler::Config::Mode::TX_RX;
+  51:../../libDaisy//src/hid/midi.h ****         uart_config.wordlength = UartHandler::Config::WordLength::BITS_8;
+  52:../../libDaisy//src/hid/midi.h **** 
+  53:../../libDaisy//src/hid/midi.h ****         //user settings
+  54:../../libDaisy//src/hid/midi.h ****         uart_config.periph        = config.periph;
+  55:../../libDaisy//src/hid/midi.h ****         uart_config.pin_config.rx = config.rx;
+  56:../../libDaisy//src/hid/midi.h ****         uart_config.pin_config.tx = config.tx;
+  57:../../libDaisy//src/hid/midi.h **** 
+  58:../../libDaisy//src/hid/midi.h ****         uart_.Init(uart_config);
+  59:../../libDaisy//src/hid/midi.h ****     }
+  60:../../libDaisy//src/hid/midi.h **** 
+  61:../../libDaisy//src/hid/midi.h ****     inline void    StartRx() { uart_.StartRx(); }
+  62:../../libDaisy//src/hid/midi.h ****     inline size_t  Readable() { return uart_.Readable(); }
+  63:../../libDaisy//src/hid/midi.h ****     inline uint8_t Rx() { return uart_.PopRx(); }
+  64:../../libDaisy//src/hid/midi.h ****     inline bool    RxActive() { return uart_.RxActive(); }
+  65:../../libDaisy//src/hid/midi.h ****     inline void    FlushRx() { uart_.FlushRx(); }
+  66:../../libDaisy//src/hid/midi.h ****     inline void    Tx(uint8_t* buff, size_t size) { uart_.PollTx(buff, size); }
+  67:../../libDaisy//src/hid/midi.h **** 
+  68:../../libDaisy//src/hid/midi.h ****   private:
+  69:../../libDaisy//src/hid/midi.h ****     UartHandler uart_;
+  70:../../libDaisy//src/hid/midi.h **** };
+  71:../../libDaisy//src/hid/midi.h **** 
+  72:../../libDaisy//src/hid/midi.h **** /** 
+  73:../../libDaisy//src/hid/midi.h ****     @brief Simple MIDI Handler \n 
+  74:../../libDaisy//src/hid/midi.h ****     Parses bytes from an input into valid MidiEvents. \n 
+  75:../../libDaisy//src/hid/midi.h ****     The MidiEvents fill a FIFO queue that the user can pop messages from.
+  76:../../libDaisy//src/hid/midi.h ****     @author shensley
+  77:../../libDaisy//src/hid/midi.h ****     @date March 2020
+  78:../../libDaisy//src/hid/midi.h ****     @ingroup midi
+  79:../../libDaisy//src/hid/midi.h **** */
+  80:../../libDaisy//src/hid/midi.h **** template <typename Transport>
+  81:../../libDaisy//src/hid/midi.h **** class MidiHandler
+  82:../../libDaisy//src/hid/midi.h **** {
+  83:../../libDaisy//src/hid/midi.h ****   public:
+  84:../../libDaisy//src/hid/midi.h ****     MidiHandler() {}
+  85:../../libDaisy//src/hid/midi.h ****     ~MidiHandler() {}
+  38              		.loc 2 85 5 view .LVU1
+  39              	.LBB274:
+  40              	.LBI274:
+  26:../../libDaisy//src/hid/midi.h **** 
+  41              		.loc 2 26 5 view .LVU2
+  26:../../libDaisy//src/hid/midi.h **** 
+  42              		.loc 2 26 5 is_stmt 0 view .LVU3
+  43              	.LBE274:
+  44              	.LBE273:
+  45              	.LBB275:
+  46              	.LBI275:
+  47              		.file 3 "../../libDaisy//src/hid/rgb_led.h"
+   1:../../libDaisy//src/hid/rgb_led.h **** #pragma once
+   2:../../libDaisy//src/hid/rgb_led.h **** #ifndef DSY_RGB_LED_H
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 4
+
+
+   3:../../libDaisy//src/hid/rgb_led.h **** #define DSY_RGB_LED_H
+   4:../../libDaisy//src/hid/rgb_led.h **** #include "hid/led.h"
+   5:../../libDaisy//src/hid/rgb_led.h **** #include "util/color.h"
+   6:../../libDaisy//src/hid/rgb_led.h **** 
+   7:../../libDaisy//src/hid/rgb_led.h **** namespace daisy
+   8:../../libDaisy//src/hid/rgb_led.h **** {
+   9:../../libDaisy//src/hid/rgb_led.h **** /** @addtogroup feedback
+  10:../../libDaisy//src/hid/rgb_led.h ****     @{
+  11:../../libDaisy//src/hid/rgb_led.h **** */
+  12:../../libDaisy//src/hid/rgb_led.h **** 
+  13:../../libDaisy//src/hid/rgb_led.h **** /** 3x LEDs configured as an RGB for ease of use. */
+  14:../../libDaisy//src/hid/rgb_led.h **** class RgbLed
+  15:../../libDaisy//src/hid/rgb_led.h **** {
+  16:../../libDaisy//src/hid/rgb_led.h ****   public:
+  17:../../libDaisy//src/hid/rgb_led.h ****     RgbLed() {}
+  18:../../libDaisy//src/hid/rgb_led.h ****     ~RgbLed() {}
+  48              		.loc 3 18 5 is_stmt 1 view .LVU4
+  49              	.LBB276:
+  50              	.LBI276:
+  51              		.file 4 "../../libDaisy//src/hid/led.h"
+   1:../../libDaisy//src/hid/led.h **** 
+   2:../../libDaisy//src/hid/led.h **** #pragma once
+   3:../../libDaisy//src/hid/led.h **** #ifndef DSY_LED_H
+   4:../../libDaisy//src/hid/led.h **** #define DSY_LED_H
+   5:../../libDaisy//src/hid/led.h **** #include "daisy_core.h"
+   6:../../libDaisy//src/hid/led.h **** #include "per/gpio.h"
+   7:../../libDaisy//src/hid/led.h **** 
+   8:../../libDaisy//src/hid/led.h **** /* TODO - Get this set up to work with the dev_leddriver stuff as well
+   9:../../libDaisy//src/hid/led.h **** - Setup Hardware PWM for pins that have it
+  10:../../libDaisy//src/hid/led.h **** */
+  11:../../libDaisy//src/hid/led.h **** 
+  12:../../libDaisy//src/hid/led.h **** namespace daisy
+  13:../../libDaisy//src/hid/led.h **** {
+  14:../../libDaisy//src/hid/led.h **** /**
+  15:../../libDaisy//src/hid/led.h ****     @brief LED Class providing simple Software PWM ability, etc \n 
+  16:../../libDaisy//src/hid/led.h ****     Eventually this will work with hardware PWM, and external LED Driver devices as well.
+  17:../../libDaisy//src/hid/led.h ****     @author shensley
+  18:../../libDaisy//src/hid/led.h ****     @date March 2020
+  19:../../libDaisy//src/hid/led.h ****     @ingroup feedback
+  20:../../libDaisy//src/hid/led.h **** */
+  21:../../libDaisy//src/hid/led.h **** class Led
+  22:../../libDaisy//src/hid/led.h **** {
+  23:../../libDaisy//src/hid/led.h ****   public:
+  24:../../libDaisy//src/hid/led.h ****     Led() {}
+  25:../../libDaisy//src/hid/led.h ****     ~Led() {}
+  52              		.loc 4 25 5 view .LVU5
+  53              		.loc 4 25 5 is_stmt 0 view .LVU6
+  54              	.LBE276:
+  55              	.LBB277:
+  56              	.LBI277:
+  57              		.loc 4 25 5 is_stmt 1 view .LVU7
+  58              		.loc 4 25 5 is_stmt 0 view .LVU8
+  59              	.LBE277:
+  60              	.LBB278:
+  61              	.LBI278:
+  62              		.loc 4 25 5 is_stmt 1 view .LVU9
+  63              		.loc 4 25 5 is_stmt 0 view .LVU10
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 5
+
+
+  64              	.LBE278:
+  65              	.LBE275:
+  66              	.LBB279:
+  67              	.LBI279:
+  68              		.loc 3 18 5 is_stmt 1 view .LVU11
+  69              	.LBB280:
+  70              	.LBI280:
+  71              		.loc 4 25 5 view .LVU12
+  72              		.loc 4 25 5 is_stmt 0 view .LVU13
+  73              	.LBE280:
+  74              	.LBB281:
+  75              	.LBI281:
+  76              		.loc 4 25 5 is_stmt 1 view .LVU14
+  77              		.loc 4 25 5 is_stmt 0 view .LVU15
+  78              	.LBE281:
+  79              	.LBB282:
+  80              	.LBI282:
+  81              		.loc 4 25 5 is_stmt 1 view .LVU16
+  82              		.loc 4 25 5 is_stmt 0 view .LVU17
+  83              	.LBE282:
+  84              	.LBE279:
+  85              	.LBB283:
+  86              	.LBI283:
+  87              		.file 5 "../../libDaisy//src/hid/switch.h"
+   1:../../libDaisy//src/hid/switch.h **** #pragma once
+   2:../../libDaisy//src/hid/switch.h **** #ifndef DSY_SWITCH_H
+   3:../../libDaisy//src/hid/switch.h **** #define DSY_SWITCH_H
+   4:../../libDaisy//src/hid/switch.h **** #include "daisy_core.h"
+   5:../../libDaisy//src/hid/switch.h **** #include "per/gpio.h"
+   6:../../libDaisy//src/hid/switch.h **** #include "sys/system.h"
+   7:../../libDaisy//src/hid/switch.h **** 
+   8:../../libDaisy//src/hid/switch.h **** namespace daisy
+   9:../../libDaisy//src/hid/switch.h **** {
+  10:../../libDaisy//src/hid/switch.h **** /** 
+  11:../../libDaisy//src/hid/switch.h ****     Generic Class for handling momentary/latching switches \n 
+  12:../../libDaisy//src/hid/switch.h ****     Inspired/influenced by Mutable Instruments (pichenettes) Switch classes
+  13:../../libDaisy//src/hid/switch.h ****     @author Stephen Hensley
+  14:../../libDaisy//src/hid/switch.h ****     @date December 2019
+  15:../../libDaisy//src/hid/switch.h ****     @ingroup controls
+  16:../../libDaisy//src/hid/switch.h **** */
+  17:../../libDaisy//src/hid/switch.h **** class Switch
+  18:../../libDaisy//src/hid/switch.h **** {
+  19:../../libDaisy//src/hid/switch.h ****   public:
+  20:../../libDaisy//src/hid/switch.h ****     /** Specifies the expected behavior of the switch */
+  21:../../libDaisy//src/hid/switch.h ****     enum Type
+  22:../../libDaisy//src/hid/switch.h ****     {
+  23:../../libDaisy//src/hid/switch.h ****         TYPE_TOGGLE,    /**< & */
+  24:../../libDaisy//src/hid/switch.h ****         TYPE_MOMENTARY, /**< & */
+  25:../../libDaisy//src/hid/switch.h ****     };
+  26:../../libDaisy//src/hid/switch.h ****     /** Specifies whether the pressed is HIGH or LOW. */
+  27:../../libDaisy//src/hid/switch.h ****     enum Polarity
+  28:../../libDaisy//src/hid/switch.h ****     {
+  29:../../libDaisy//src/hid/switch.h ****         POLARITY_NORMAL,   /**< & */
+  30:../../libDaisy//src/hid/switch.h ****         POLARITY_INVERTED, /**< & */
+  31:../../libDaisy//src/hid/switch.h ****     };
+  32:../../libDaisy//src/hid/switch.h **** 
+  33:../../libDaisy//src/hid/switch.h ****     /** Specifies whether to use built-in Pull Up/Down resistors to hold button at a given state wh
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 6
+
+
+  34:../../libDaisy//src/hid/switch.h ****     enum Pull
+  35:../../libDaisy//src/hid/switch.h ****     {
+  36:../../libDaisy//src/hid/switch.h ****         PULL_UP,   /**< & */
+  37:../../libDaisy//src/hid/switch.h ****         PULL_DOWN, /**< & */
+  38:../../libDaisy//src/hid/switch.h ****         PULL_NONE, /**< & */
+  39:../../libDaisy//src/hid/switch.h ****     };
+  40:../../libDaisy//src/hid/switch.h **** 
+  41:../../libDaisy//src/hid/switch.h ****     Switch() {}
+  42:../../libDaisy//src/hid/switch.h ****     ~Switch() {}
+  88              		.loc 5 42 5 is_stmt 1 view .LVU18
+  89              		.loc 5 42 5 is_stmt 0 view .LVU19
+  90              	.LBE283:
+  91              	.LBB284:
+  92              	.LBI284:
+  93              		.loc 5 42 5 is_stmt 1 view .LVU20
+  94              		.loc 5 42 5 is_stmt 0 view .LVU21
+  95              	.LBE284:
+  96              	.LBB285:
+  97              	.LBI285:
+  98              		.file 6 "../../libDaisy//src/hid/ctrl.h"
+   1:../../libDaisy//src/hid/ctrl.h **** #pragma once
+   2:../../libDaisy//src/hid/ctrl.h **** #ifndef DSY_KNOB_H
+   3:../../libDaisy//src/hid/ctrl.h **** #define DSY_KNOB_H /**< & */
+   4:../../libDaisy//src/hid/ctrl.h **** #include <stdint.h>
+   5:../../libDaisy//src/hid/ctrl.h **** 
+   6:../../libDaisy//src/hid/ctrl.h **** #ifdef __cplusplus
+   7:../../libDaisy//src/hid/ctrl.h **** namespace daisy
+   8:../../libDaisy//src/hid/ctrl.h **** {
+   9:../../libDaisy//src/hid/ctrl.h **** /**
+  10:../../libDaisy//src/hid/ctrl.h ****     @brief Hardware Interface for control inputs \n 
+  11:../../libDaisy//src/hid/ctrl.h ****     Primarily designed for ADC input controls such as \n 
+  12:../../libDaisy//src/hid/ctrl.h ****     potentiometers, and control voltage. \n 
+  13:../../libDaisy//src/hid/ctrl.h ****     @author Stephen Hensley
+  14:../../libDaisy//src/hid/ctrl.h ****     @date November 2019
+  15:../../libDaisy//src/hid/ctrl.h ****     @ingroup controls
+  16:../../libDaisy//src/hid/ctrl.h **** */
+  17:../../libDaisy//src/hid/ctrl.h **** class AnalogControl
+  18:../../libDaisy//src/hid/ctrl.h **** {
+  19:../../libDaisy//src/hid/ctrl.h ****   public:
+  20:../../libDaisy//src/hid/ctrl.h ****     /** Constructor */
+  21:../../libDaisy//src/hid/ctrl.h ****     AnalogControl() {}
+  22:../../libDaisy//src/hid/ctrl.h ****     /** destructor */
+  23:../../libDaisy//src/hid/ctrl.h ****     ~AnalogControl() {}
+  99              		.loc 6 23 5 is_stmt 1 view .LVU22
+ 100              		.loc 6 23 5 is_stmt 0 view .LVU23
+ 101              	.LBE285:
+ 102              	.LBB286:
+ 103              	.LBI286:
+ 104              		.loc 6 23 5 is_stmt 1 view .LVU24
+ 105              		.loc 6 23 5 is_stmt 0 view .LVU25
+ 106              	.LBE286:
+ 107              	.LBB287:
+ 108              	.LBI287:
+ 109              		.file 7 "../../libDaisy//src/hid/encoder.h"
+   1:../../libDaisy//src/hid/encoder.h **** #pragma once
+   2:../../libDaisy//src/hid/encoder.h **** #ifndef DSY_ENCODER_H
+   3:../../libDaisy//src/hid/encoder.h **** #define DSY_ENCODER_H
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 7
+
+
+   4:../../libDaisy//src/hid/encoder.h **** #include "daisy_core.h"
+   5:../../libDaisy//src/hid/encoder.h **** #include "per/gpio.h"
+   6:../../libDaisy//src/hid/encoder.h **** #include "hid/switch.h"
+   7:../../libDaisy//src/hid/encoder.h **** 
+   8:../../libDaisy//src/hid/encoder.h **** namespace daisy
+   9:../../libDaisy//src/hid/encoder.h **** {
+  10:../../libDaisy//src/hid/encoder.h **** /** 
+  11:../../libDaisy//src/hid/encoder.h ****     @brief Generic Class for handling Quadrature Encoders \n 
+  12:../../libDaisy//src/hid/encoder.h ****     Inspired/influenced by Mutable Instruments (pichenettes) Encoder classes
+  13:../../libDaisy//src/hid/encoder.h ****     @author Stephen Hensley
+  14:../../libDaisy//src/hid/encoder.h ****     @date December 2019
+  15:../../libDaisy//src/hid/encoder.h ****     @ingroup controls
+  16:../../libDaisy//src/hid/encoder.h **** */
+  17:../../libDaisy//src/hid/encoder.h **** class Encoder
+  18:../../libDaisy//src/hid/encoder.h **** {
+  19:../../libDaisy//src/hid/encoder.h ****   public:
+  20:../../libDaisy//src/hid/encoder.h ****     Encoder() {}
+  21:../../libDaisy//src/hid/encoder.h ****     ~Encoder() {}
+ 110              		.loc 7 21 5 is_stmt 1 view .LVU26
+ 111              	.LBB288:
+ 112              	.LBI288:
+ 113              		.loc 5 42 5 view .LVU27
+ 114              		.loc 5 42 5 is_stmt 0 view .LVU28
+ 115              	.LBE288:
+ 116              	.LBE287:
+ 117              	.LBB289:
+ 118              	.LBI289:
+ 119              		.file 8 "../../libDaisy//src/daisy_seed.h"
+   1:../../libDaisy//src/daisy_seed.h **** #pragma once
+   2:../../libDaisy//src/daisy_seed.h **** #ifndef DSY_SEED_H
+   3:../../libDaisy//src/daisy_seed.h **** #define DSY_SEED_H
+   4:../../libDaisy//src/daisy_seed.h **** 
+   5:../../libDaisy//src/daisy_seed.h **** #include "daisy.h"
+   6:../../libDaisy//src/daisy_seed.h **** 
+   7:../../libDaisy//src/daisy_seed.h **** //Uncomment this out if you're still using the rev2 hardware
+   8:../../libDaisy//src/daisy_seed.h **** //#define SEED_REV2
+   9:../../libDaisy//src/daisy_seed.h **** 
+  10:../../libDaisy//src/daisy_seed.h **** namespace daisy
+  11:../../libDaisy//src/daisy_seed.h **** {
+  12:../../libDaisy//src/daisy_seed.h **** /**
+  13:../../libDaisy//src/daisy_seed.h ****    @brief This is the higher-level interface for the Daisy board. \n 
+  14:../../libDaisy//src/daisy_seed.h ****     All basic peripheral configuration/initialization is setup here. \n
+  15:../../libDaisy//src/daisy_seed.h **** 
+  16:../../libDaisy//src/daisy_seed.h ****    @ingroup boards
+  17:../../libDaisy//src/daisy_seed.h **** */
+  18:../../libDaisy//src/daisy_seed.h **** class DaisySeed
+  19:../../libDaisy//src/daisy_seed.h **** {
+  20:../../libDaisy//src/daisy_seed.h ****   public:
+  21:../../libDaisy//src/daisy_seed.h ****     DaisySeed() {}
+  22:../../libDaisy//src/daisy_seed.h ****     ~DaisySeed() {}
+ 120              		.loc 8 22 5 is_stmt 1 view .LVU29
+ 121              	.LBB290:
+ 122              	.LBI290:
+ 123              		.file 9 "../../libDaisy//src/sys/system.h"
+   1:../../libDaisy//src/sys/system.h **** #ifndef DSY_SYSTEM_H
+   2:../../libDaisy//src/sys/system.h **** #define DSY_SYSTEM_H
+   3:../../libDaisy//src/sys/system.h **** 
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 8
+
+
+   4:../../libDaisy//src/sys/system.h **** #ifndef UNIT_TEST // for unit tests, a dummy implementation is provided below
+   5:../../libDaisy//src/sys/system.h **** 
+   6:../../libDaisy//src/sys/system.h **** #include <cstdint>
+   7:../../libDaisy//src/sys/system.h **** #include "per/tim.h"
+   8:../../libDaisy//src/sys/system.h **** 
+   9:../../libDaisy//src/sys/system.h **** namespace daisy
+  10:../../libDaisy//src/sys/system.h **** {
+  11:../../libDaisy//src/sys/system.h **** /** A handle for interacting with the Core System. 
+  12:../../libDaisy//src/sys/system.h ****  ** This includes the Clock tree, MPU, global DMA initialization,
+  13:../../libDaisy//src/sys/system.h ****  ** cache handling, and any other necessary global initiailzation
+  14:../../libDaisy//src/sys/system.h ****  **
+  15:../../libDaisy//src/sys/system.h ****  ** @author shensley
+  16:../../libDaisy//src/sys/system.h ****  ** @ingroup system
+  17:../../libDaisy//src/sys/system.h ****  */
+  18:../../libDaisy//src/sys/system.h **** class System
+  19:../../libDaisy//src/sys/system.h **** {
+  20:../../libDaisy//src/sys/system.h ****   public:
+  21:../../libDaisy//src/sys/system.h ****     /** Contains settings for initializing the System */
+  22:../../libDaisy//src/sys/system.h ****     struct Config
+  23:../../libDaisy//src/sys/system.h ****     {
+  24:../../libDaisy//src/sys/system.h ****         /** Specifies the system clock frequency that feeds APB/AHB clocks, etc. */
+  25:../../libDaisy//src/sys/system.h ****         enum class SysClkFreq
+  26:../../libDaisy//src/sys/system.h ****         {
+  27:../../libDaisy//src/sys/system.h ****             FREQ_400MHZ,
+  28:../../libDaisy//src/sys/system.h ****             FREQ_480MHZ,
+  29:../../libDaisy//src/sys/system.h ****         };
+  30:../../libDaisy//src/sys/system.h **** 
+  31:../../libDaisy//src/sys/system.h ****         /** Method to call on the struct to set to defaults
+  32:../../libDaisy//src/sys/system.h ****          ** CPU Freq set to 400MHz
+  33:../../libDaisy//src/sys/system.h ****          ** Cache Enabled 
+  34:../../libDaisy//src/sys/system.h ****          ** */
+  35:../../libDaisy//src/sys/system.h ****         void Defaults()
+  36:../../libDaisy//src/sys/system.h ****         {
+  37:../../libDaisy//src/sys/system.h ****             cpu_freq    = SysClkFreq::FREQ_400MHZ;
+  38:../../libDaisy//src/sys/system.h ****             use_dcache  = true;
+  39:../../libDaisy//src/sys/system.h ****             use_icache  = true;
+  40:../../libDaisy//src/sys/system.h ****             skip_clocks = false;
+  41:../../libDaisy//src/sys/system.h ****         }
+  42:../../libDaisy//src/sys/system.h **** 
+  43:../../libDaisy//src/sys/system.h ****         /** Method to call on the struct to set to boost mode:
+  44:../../libDaisy//src/sys/system.h ****          ** CPU Freq set to 480MHz
+  45:../../libDaisy//src/sys/system.h ****          ** Cache Enabled 
+  46:../../libDaisy//src/sys/system.h ****          ** */
+  47:../../libDaisy//src/sys/system.h ****         void Boost()
+  48:../../libDaisy//src/sys/system.h ****         {
+  49:../../libDaisy//src/sys/system.h ****             cpu_freq    = SysClkFreq::FREQ_480MHZ;
+  50:../../libDaisy//src/sys/system.h ****             use_dcache  = true;
+  51:../../libDaisy//src/sys/system.h ****             use_icache  = true;
+  52:../../libDaisy//src/sys/system.h ****             skip_clocks = false;
+  53:../../libDaisy//src/sys/system.h ****         }
+  54:../../libDaisy//src/sys/system.h **** 
+  55:../../libDaisy//src/sys/system.h ****         SysClkFreq cpu_freq;
+  56:../../libDaisy//src/sys/system.h ****         bool       use_dcache;
+  57:../../libDaisy//src/sys/system.h ****         bool       use_icache;
+  58:../../libDaisy//src/sys/system.h ****         bool       skip_clocks;
+  59:../../libDaisy//src/sys/system.h ****     };
+  60:../../libDaisy//src/sys/system.h **** 
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 9
+
+
+  61:../../libDaisy//src/sys/system.h ****     /** Describes the different regions of memory available to the Daisy
+  62:../../libDaisy//src/sys/system.h ****      * 
+  63:../../libDaisy//src/sys/system.h ****      */
+  64:../../libDaisy//src/sys/system.h ****     enum MemoryRegion
+  65:../../libDaisy//src/sys/system.h ****     {
+  66:../../libDaisy//src/sys/system.h ****         INTERNAL_FLASH = 0,
+  67:../../libDaisy//src/sys/system.h ****         ITCMRAM,
+  68:../../libDaisy//src/sys/system.h ****         DTCMRAM,
+  69:../../libDaisy//src/sys/system.h ****         SRAM_D1,
+  70:../../libDaisy//src/sys/system.h ****         SRAM_D2,
+  71:../../libDaisy//src/sys/system.h ****         SRAM_D3,
+  72:../../libDaisy//src/sys/system.h ****         SDRAM,
+  73:../../libDaisy//src/sys/system.h ****         QSPI,
+  74:../../libDaisy//src/sys/system.h ****         INVALID_ADDRESS,
+  75:../../libDaisy//src/sys/system.h ****     };
+  76:../../libDaisy//src/sys/system.h **** 
+  77:../../libDaisy//src/sys/system.h ****     System() {}
+  78:../../libDaisy//src/sys/system.h ****     ~System() {}
+ 124              		.loc 9 78 5 view .LVU30
+ 125              		.loc 9 78 5 is_stmt 0 view .LVU31
+ 126              	.LBE290:
+ 127              	.LBB291:
+ 128              	.LBI291:
+ 129              		.file 10 "../../libDaisy//src/hid/usb.h"
+   1:../../libDaisy//src/hid/usb.h **** #pragma once
+   2:../../libDaisy//src/hid/usb.h **** #ifndef DSY_HID_USB_H
+   3:../../libDaisy//src/hid/usb.h **** #define DSY_HID_USB_H
+   4:../../libDaisy//src/hid/usb.h **** #include <stdint.h>
+   5:../../libDaisy//src/hid/usb.h **** #include <stdlib.h>
+   6:../../libDaisy//src/hid/usb.h **** 
+   7:../../libDaisy//src/hid/usb.h **** namespace daisy
+   8:../../libDaisy//src/hid/usb.h **** /** @addtogroup human_interface
+   9:../../libDaisy//src/hid/usb.h ****     @{
+  10:../../libDaisy//src/hid/usb.h **** */
+  11:../../libDaisy//src/hid/usb.h **** 
+  12:../../libDaisy//src/hid/usb.h **** {
+  13:../../libDaisy//src/hid/usb.h **** /** 
+  14:../../libDaisy//src/hid/usb.h ****     @brief Interface for initializing and using the USB Peripherals on the daisy
+  15:../../libDaisy//src/hid/usb.h ****     @author Stephen Hensley
+  16:../../libDaisy//src/hid/usb.h ****     @date December 2019
+  17:../../libDaisy//src/hid/usb.h **** */
+  18:../../libDaisy//src/hid/usb.h **** class UsbHandle
+  19:../../libDaisy//src/hid/usb.h **** {
+  20:../../libDaisy//src/hid/usb.h ****   public:
+  21:../../libDaisy//src/hid/usb.h ****     /** Return values for USBHandle Functions */
+  22:../../libDaisy//src/hid/usb.h ****     enum class Result
+  23:../../libDaisy//src/hid/usb.h ****     {
+  24:../../libDaisy//src/hid/usb.h ****         OK,
+  25:../../libDaisy//src/hid/usb.h ****         ERR,
+  26:../../libDaisy//src/hid/usb.h ****     };
+  27:../../libDaisy//src/hid/usb.h **** 
+  28:../../libDaisy//src/hid/usb.h ****     /** Specified which of the two USB Peripherals to initialize. */
+  29:../../libDaisy//src/hid/usb.h ****     enum UsbPeriph
+  30:../../libDaisy//src/hid/usb.h ****     {
+  31:../../libDaisy//src/hid/usb.h ****         FS_INTERNAL, /**< Internal pin */
+  32:../../libDaisy//src/hid/usb.h ****         FS_EXTERNAL, /**< FS External D+ pin is Pin 38 (GPIO32). FS External D- pin is Pin 37 (GPIO
+  33:../../libDaisy//src/hid/usb.h ****         FS_BOTH,     /**< Both */
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 10
+
+
+  34:../../libDaisy//src/hid/usb.h ****     };
+  35:../../libDaisy//src/hid/usb.h **** 
+  36:../../libDaisy//src/hid/usb.h **** 
+  37:../../libDaisy//src/hid/usb.h ****     /** Function called upon reception of a buffer */
+  38:../../libDaisy//src/hid/usb.h ****     typedef void (*ReceiveCallback)(uint8_t* buff, uint32_t* len);
+  39:../../libDaisy//src/hid/usb.h **** 
+  40:../../libDaisy//src/hid/usb.h ****     UsbHandle() {}
+  41:../../libDaisy//src/hid/usb.h **** 
+  42:../../libDaisy//src/hid/usb.h ****     ~UsbHandle() {}
+ 130              		.loc 10 42 5 is_stmt 1 view .LVU32
+ 131              		.loc 10 42 5 is_stmt 0 view .LVU33
+ 132              	.LBE291:
+ 133              	.LBB292:
+ 134              	.LBI292:
+ 135              		.file 11 "../../libDaisy//src/per/adc.h"
+   1:../../libDaisy//src/per/adc.h **** #pragma once
+   2:../../libDaisy//src/per/adc.h **** #ifndef DSY_ADC_H
+   3:../../libDaisy//src/per/adc.h **** #define DSY_ADC_H /**< Macro */
+   4:../../libDaisy//src/per/adc.h **** #include <stdint.h>
+   5:../../libDaisy//src/per/adc.h **** #include <stdlib.h>
+   6:../../libDaisy//src/per/adc.h **** #include "daisy_core.h"
+   7:../../libDaisy//src/per/adc.h **** #include "per/gpio.h"
+   8:../../libDaisy//src/per/adc.h **** 
+   9:../../libDaisy//src/per/adc.h **** #define DSY_ADC_MAX_CHANNELS 16 /**< Maximum number of ADC channels */
+  10:../../libDaisy//src/per/adc.h **** 
+  11:../../libDaisy//src/per/adc.h **** namespace daisy
+  12:../../libDaisy//src/per/adc.h **** {
+  13:../../libDaisy//src/per/adc.h **** /** @addtogroup per_analog
+  14:../../libDaisy//src/per/adc.h ****     @{
+  15:../../libDaisy//src/per/adc.h **** */
+  16:../../libDaisy//src/per/adc.h **** 
+  17:../../libDaisy//src/per/adc.h **** /* While there may not be many configuration options here,
+  18:../../libDaisy//src/per/adc.h **** using a struct like this allows us to add more configuration
+  19:../../libDaisy//src/per/adc.h **** later without breaking existing functionality.
+  20:../../libDaisy//src/per/adc.h **** */
+  21:../../libDaisy//src/per/adc.h **** 
+  22:../../libDaisy//src/per/adc.h **** /** @brief   Configuration Structure for an ADC Channel 
+  23:../../libDaisy//src/per/adc.h ****  *  @details This can be used to configure a a single input, 
+  24:../../libDaisy//src/per/adc.h ****  *           or a multiplexed input, allowing up to 8 inputs on 
+  25:../../libDaisy//src/per/adc.h ****  *           one channel.
+  26:../../libDaisy//src/per/adc.h ****  *  @note    Sharing data lines to multiple muxes _is_ possible, but
+  27:../../libDaisy//src/per/adc.h ****  *           each channel sharing data lines must be set to the maximum
+  28:../../libDaisy//src/per/adc.h ****  *           number of channels, even if some multiplexers have fewer
+  29:../../libDaisy//src/per/adc.h ****  *           inputs connected.
+  30:../../libDaisy//src/per/adc.h **** */
+  31:../../libDaisy//src/per/adc.h **** struct AdcChannelConfig
+  32:../../libDaisy//src/per/adc.h **** {
+  33:../../libDaisy//src/per/adc.h ****     /** Which pin to use for multiplexing */
+  34:../../libDaisy//src/per/adc.h ****     enum MuxPin
+  35:../../libDaisy//src/per/adc.h ****     {
+  36:../../libDaisy//src/per/adc.h ****         MUX_SEL_0,    /**< & */
+  37:../../libDaisy//src/per/adc.h ****         MUX_SEL_1,    /**< & */
+  38:../../libDaisy//src/per/adc.h ****         MUX_SEL_2,    /**< & */
+  39:../../libDaisy//src/per/adc.h ****         MUX_SEL_LAST, /**< & */
+  40:../../libDaisy//src/per/adc.h ****     };
+  41:../../libDaisy//src/per/adc.h **** 
+  42:../../libDaisy//src/per/adc.h ****     /** Initializes a single ADC pin as an ADC. 
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 11
+
+
+  43:../../libDaisy//src/per/adc.h ****     \param pin Pin to init.
+  44:../../libDaisy//src/per/adc.h ****      */
+  45:../../libDaisy//src/per/adc.h ****     void InitSingle(dsy_gpio_pin pin);
+  46:../../libDaisy//src/per/adc.h **** 
+  47:../../libDaisy//src/per/adc.h ****     /** 
+  48:../../libDaisy//src/per/adc.h ****     Initializes a single ADC pin as a Multiplexed ADC.
+  49:../../libDaisy//src/per/adc.h ****     Requires a CD405X Multiplexer connected to the pin.
+  50:../../libDaisy//src/per/adc.h ****     You only need to supply the mux pins that are required,
+  51:../../libDaisy//src/per/adc.h ****     e.g. a 4052 mux would only require mux_0 and mux_1.
+  52:../../libDaisy//src/per/adc.h ****     Internal Callbacks handle the pin addressing.
+  53:../../libDaisy//src/per/adc.h ****     \param mux_channels must be 1-8
+  54:../../libDaisy//src/per/adc.h ****     \param mux_0 First mux pin
+  55:../../libDaisy//src/per/adc.h ****     \param mux_1 Second mux pin
+  56:../../libDaisy//src/per/adc.h ****     \param mux_2 Third mux pin
+  57:../../libDaisy//src/per/adc.h ****     \param adc_pin &
+  58:../../libDaisy//src/per/adc.h ****     */
+  59:../../libDaisy//src/per/adc.h ****     void InitMux(dsy_gpio_pin adc_pin,
+  60:../../libDaisy//src/per/adc.h ****                  size_t       mux_channels,
+  61:../../libDaisy//src/per/adc.h ****                  dsy_gpio_pin mux_0,
+  62:../../libDaisy//src/per/adc.h ****                  dsy_gpio_pin mux_1 = {DSY_GPIOX, 0},
+  63:../../libDaisy//src/per/adc.h ****                  dsy_gpio_pin mux_2 = {DSY_GPIOX, 0});
+  64:../../libDaisy//src/per/adc.h **** 
+  65:../../libDaisy//src/per/adc.h ****     dsy_gpio pin_;                   /**< & */
+  66:../../libDaisy//src/per/adc.h ****     dsy_gpio mux_pin_[MUX_SEL_LAST]; /**< & */
+  67:../../libDaisy//src/per/adc.h ****     uint8_t  mux_channels_;          /**< & */
+  68:../../libDaisy//src/per/adc.h **** };
+  69:../../libDaisy//src/per/adc.h **** 
+  70:../../libDaisy//src/per/adc.h **** /**
+  71:../../libDaisy//src/per/adc.h ****    @brief Handler for analog to digital conversion
+  72:../../libDaisy//src/per/adc.h **** */
+  73:../../libDaisy//src/per/adc.h **** class AdcHandle
+  74:../../libDaisy//src/per/adc.h **** {
+  75:../../libDaisy//src/per/adc.h ****   public:
+  76:../../libDaisy//src/per/adc.h ****     /** Supported oversampling amounts */
+  77:../../libDaisy//src/per/adc.h ****     enum OverSampling
+  78:../../libDaisy//src/per/adc.h ****     {
+  79:../../libDaisy//src/per/adc.h ****         OVS_NONE, /**< & */
+  80:../../libDaisy//src/per/adc.h ****         OVS_4,    /**< & */
+  81:../../libDaisy//src/per/adc.h ****         OVS_8,    /**< & */
+  82:../../libDaisy//src/per/adc.h ****         OVS_16,   /**< & */
+  83:../../libDaisy//src/per/adc.h ****         OVS_32,   /**< & */
+  84:../../libDaisy//src/per/adc.h ****         OVS_64,   /**< & */
+  85:../../libDaisy//src/per/adc.h ****         OVS_128,  /**< & */
+  86:../../libDaisy//src/per/adc.h ****         OVS_256,  /**< & */
+  87:../../libDaisy//src/per/adc.h ****         OVS_512,  /**< & */
+  88:../../libDaisy//src/per/adc.h ****         OVS_1024, /**< & */
+  89:../../libDaisy//src/per/adc.h ****         OVS_LAST, /**< & */
+  90:../../libDaisy//src/per/adc.h ****     };
+  91:../../libDaisy//src/per/adc.h **** 
+  92:../../libDaisy//src/per/adc.h ****     AdcHandle() {}
+  93:../../libDaisy//src/per/adc.h ****     ~AdcHandle() {}
+ 136              		.loc 11 93 5 is_stmt 1 view .LVU34
+ 137              		.loc 11 93 5 is_stmt 0 view .LVU35
+ 138              	.LBE292:
+ 139              	.LBB293:
+ 140              	.LBI293:
+ 141              		.file 12 "../../libDaisy//src/hid/audio.h"
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 12
+
+
+   1:../../libDaisy//src/hid/audio.h **** #ifndef DSY_AUDIO_H
+   2:../../libDaisy//src/hid/audio.h **** #define DSY_AUDIO_H /**< & */
+   3:../../libDaisy//src/hid/audio.h **** 
+   4:../../libDaisy//src/hid/audio.h **** #include "per/sai.h"
+   5:../../libDaisy//src/hid/audio.h **** 
+   6:../../libDaisy//src/hid/audio.h **** namespace daisy
+   7:../../libDaisy//src/hid/audio.h **** {
+   8:../../libDaisy//src/hid/audio.h **** /** @brief Audio Engine Handle
+   9:../../libDaisy//src/hid/audio.h ****  *  @ingroup audio 
+  10:../../libDaisy//src/hid/audio.h ****  *  @details This class allows for higher level access to an audio engine.
+  11:../../libDaisy//src/hid/audio.h ****  *           If you're using a SOM like the DaisySeed or DaisyPatchSM (or any 
+  12:../../libDaisy//src/hid/audio.h ****  *            board that includes one of those objects) then the intialization
+  13:../../libDaisy//src/hid/audio.h ****  *            is already taken  care of.
+  14:../../libDaisy//src/hid/audio.h ****  *           If you're setting up your own custom hardware, or need to make changes
+  15:../../libDaisy//src/hid/audio.h ****  *           you will have to take the following steps:
+  16:../../libDaisy//src/hid/audio.h ****  *             1. Create and Initialize an SaiHandle or two depending on your requirements
+  17:../../libDaisy//src/hid/audio.h ****  *             2. Initialize the Audio Handle with the desired settings and the Initialized SaiHand
+  18:../../libDaisy//src/hid/audio.h ****  *             3. If the connected codec requires special configuration or initialization, do so
+  19:../../libDaisy//src/hid/audio.h ****  *             4. Write a callback method using either the AudioCallback or the InterleavingAudioCa
+  20:../../libDaisy//src/hid/audio.h ****  *             5. Start the Audio using one of the StartAudio function
+  21:../../libDaisy//src/hid/audio.h ****  */
+  22:../../libDaisy//src/hid/audio.h **** class AudioHandle
+  23:../../libDaisy//src/hid/audio.h **** {
+  24:../../libDaisy//src/hid/audio.h ****   public:
+  25:../../libDaisy//src/hid/audio.h ****     /** Manually configurable details about the Audio Engine */
+  26:../../libDaisy//src/hid/audio.h ****     /** TODO: Figure out how to get samplerate in here. */
+  27:../../libDaisy//src/hid/audio.h ****     struct Config
+  28:../../libDaisy//src/hid/audio.h ****     {
+  29:../../libDaisy//src/hid/audio.h ****         /** number of samples to process per callback */
+  30:../../libDaisy//src/hid/audio.h ****         size_t blocksize;
+  31:../../libDaisy//src/hid/audio.h **** 
+  32:../../libDaisy//src/hid/audio.h ****         /**< Sample rate of audio */
+  33:../../libDaisy//src/hid/audio.h ****         SaiHandle::Config::SampleRate samplerate;
+  34:../../libDaisy//src/hid/audio.h **** 
+  35:../../libDaisy//src/hid/audio.h ****         /** factor for adjustment before and after callback for hardware that may have extra headro
+  36:../../libDaisy//src/hid/audio.h ****         float postgain;
+  37:../../libDaisy//src/hid/audio.h **** 
+  38:../../libDaisy//src/hid/audio.h ****         /** factor for additional one-sided compensation to audio path for hardware that may
+  39:../../libDaisy//src/hid/audio.h ****          *  have unequal input/output ranges
+  40:../../libDaisy//src/hid/audio.h ****          */
+  41:../../libDaisy//src/hid/audio.h ****         float output_compensation;
+  42:../../libDaisy//src/hid/audio.h **** 
+  43:../../libDaisy//src/hid/audio.h ****         /** Sets default values for config struct */
+  44:../../libDaisy//src/hid/audio.h ****         Config()
+  45:../../libDaisy//src/hid/audio.h ****         : blocksize(48),
+  46:../../libDaisy//src/hid/audio.h ****           samplerate(SaiHandle::Config::SampleRate::SAI_48KHZ),
+  47:../../libDaisy//src/hid/audio.h ****           postgain(1.f),
+  48:../../libDaisy//src/hid/audio.h ****           output_compensation(1.f)
+  49:../../libDaisy//src/hid/audio.h ****         {
+  50:../../libDaisy//src/hid/audio.h ****         }
+  51:../../libDaisy//src/hid/audio.h ****     };
+  52:../../libDaisy//src/hid/audio.h **** 
+  53:../../libDaisy//src/hid/audio.h ****     enum class Result
+  54:../../libDaisy//src/hid/audio.h ****     {
+  55:../../libDaisy//src/hid/audio.h ****         OK,
+  56:../../libDaisy//src/hid/audio.h ****         ERR,
+  57:../../libDaisy//src/hid/audio.h ****     };
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 13
+
+
+  58:../../libDaisy//src/hid/audio.h **** 
+  59:../../libDaisy//src/hid/audio.h ****     /** Non-Interleaving input buffer
+  60:../../libDaisy//src/hid/audio.h ****      * Buffer arranged by float[chn][sample] 
+  61:../../libDaisy//src/hid/audio.h ****      * const so that the user can't modify the input
+  62:../../libDaisy//src/hid/audio.h ****      */
+  63:../../libDaisy//src/hid/audio.h ****     typedef const float* const* InputBuffer;
+  64:../../libDaisy//src/hid/audio.h **** 
+  65:../../libDaisy//src/hid/audio.h ****     /** Non-Interleaving output buffer
+  66:../../libDaisy//src/hid/audio.h ****      * Arranged by float[chn][sample] 
+  67:../../libDaisy//src/hid/audio.h ****      */
+  68:../../libDaisy//src/hid/audio.h ****     typedef float** OutputBuffer;
+  69:../../libDaisy//src/hid/audio.h **** 
+  70:../../libDaisy//src/hid/audio.h ****     /** Type for a Non-Interleaving audio callback 
+  71:../../libDaisy//src/hid/audio.h ****      * Non-Interleaving audio callbacks in daisy will be of this type
+  72:../../libDaisy//src/hid/audio.h ****      */
+  73:../../libDaisy//src/hid/audio.h ****     typedef void (*AudioCallback)(InputBuffer  in,
+  74:../../libDaisy//src/hid/audio.h ****                                   OutputBuffer out,
+  75:../../libDaisy//src/hid/audio.h ****                                   size_t       size);
+  76:../../libDaisy//src/hid/audio.h **** 
+  77:../../libDaisy//src/hid/audio.h ****     /** Interleaving Input buffer
+  78:../../libDaisy//src/hid/audio.h ****      ** audio is prepared as { L0, R0, L1, R1, . . . LN, RN }]
+  79:../../libDaisy//src/hid/audio.h ****      ** this is const, as the user shouldn't modify it
+  80:../../libDaisy//src/hid/audio.h ****     */
+  81:../../libDaisy//src/hid/audio.h ****     typedef const float* InterleavingInputBuffer;
+  82:../../libDaisy//src/hid/audio.h **** 
+  83:../../libDaisy//src/hid/audio.h ****     /** Interleaving Output buffer 
+  84:../../libDaisy//src/hid/audio.h ****      ** audio is prepared as { L0, R0, L1, R1, . . . LN, RN }
+  85:../../libDaisy//src/hid/audio.h ****     */
+  86:../../libDaisy//src/hid/audio.h ****     typedef float* InterleavingOutputBuffer;
+  87:../../libDaisy//src/hid/audio.h **** 
+  88:../../libDaisy//src/hid/audio.h ****     /** Interleaving Audio Callback 
+  89:../../libDaisy//src/hid/audio.h ****      * Interleaving audio callbacks in daisy must be of this type
+  90:../../libDaisy//src/hid/audio.h ****      */
+  91:../../libDaisy//src/hid/audio.h ****     typedef void (*InterleavingAudioCallback)(InterleavingInputBuffer  in,
+  92:../../libDaisy//src/hid/audio.h ****                                               InterleavingOutputBuffer out,
+  93:../../libDaisy//src/hid/audio.h ****                                               size_t                   size);
+  94:../../libDaisy//src/hid/audio.h **** 
+  95:../../libDaisy//src/hid/audio.h ****     AudioHandle() : pimpl_(nullptr) {}
+  96:../../libDaisy//src/hid/audio.h ****     ~AudioHandle() {}
+ 142              		.loc 12 96 5 is_stmt 1 view .LVU36
+ 143              		.loc 12 96 5 is_stmt 0 view .LVU37
+ 144              	.LBE293:
+ 145              	.LBE289:
+ 146              		.loc 1 36 18 view .LVU38
+ 147 0000 7047     		bx	lr
+ 148              		.cfi_endproc
+ 149              	.LFE2538:
+ 151              		.weak	_ZN5daisy8DaisyPodD1Ev
+ 152              		.thumb_set _ZN5daisy8DaisyPodD1Ev,_ZN5daisy8DaisyPodD2Ev
+ 153 0002 00BF     		.section	.text._Z12randomNumberv,"ax",%progbits
+ 154              		.align	1
+ 155              		.p2align 2,,3
+ 156              		.global	_Z12randomNumberv
+ 157              		.syntax unified
+ 158              		.thumb
+ 159              		.thumb_func
+ 161              	_Z12randomNumberv:
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 14
+
+
+ 162              	.LFB2541:
+ 163              		.file 13 "MyProj.cpp"
+   1:MyProj.cpp    **** #include "daisy_pod.h"
+   2:MyProj.cpp    **** #include "leaf.h"
+   3:MyProj.cpp    **** using namespace daisy;
+   4:MyProj.cpp    **** LEAF leaf;
+   5:MyProj.cpp    **** char leafMemory[65535];
+   6:MyProj.cpp    **** DaisyPod hw;
+   7:MyProj.cpp    **** tCycle mySine;
+   8:MyProj.cpp    **** tCycle mySine2;
+   9:MyProj.cpp    **** tCycle mySine3;
+  10:MyProj.cpp    **** //let's define a global variable to store the frequency so we can easily mess with it in our progra
+  11:MyProj.cpp    **** float myFreq = 220.0f;
+  12:MyProj.cpp    **** float myFreq2 = 440.0f;
+  13:MyProj.cpp    **** //sequence variables
+  14:MyProj.cpp    **** float myTempo = 200.0f;
+  15:MyProj.cpp    **** int sampleCounter = 0;
+  16:MyProj.cpp    **** int sampleCounterMaxValue = 48000;
+  17:MyProj.cpp    **** 
+  18:MyProj.cpp    **** int mySequence[16] = {60,54,72,85,93,43,80,66,60,57,72,85,93,46,80,66};
+  19:MyProj.cpp    **** int whichNoteInSequence = 0;
+  20:MyProj.cpp    **** 
+  21:MyProj.cpp    **** int majorScale[8] = {0,2,4,5,7,9,11,12};
+  22:MyProj.cpp    **** 
+  23:MyProj.cpp    **** float randomNumber()
+  24:MyProj.cpp    **** {
+ 164              		.loc 13 24 1 is_stmt 1 view -0
+ 165              		.cfi_startproc
+ 166              		@ args = 0, pretend = 0, frame = 0
+ 167              		@ frame_needed = 0, uses_anonymous_args = 0
+ 168              		@ link register save eliminated.
+  25:MyProj.cpp    ****     //call the daisy function to get a random number between 0 and 1 (what leaf wants)
+  26:MyProj.cpp    ****     return Random::GetFloat(0.0f, 1.0f);
+ 169              		.loc 13 26 5 view .LVU40
+ 170              		.loc 13 26 28 is_stmt 0 view .LVU41
+ 171 0000 F7EE000A 		vmov.f32	s1, #1.0e+0
+ 172 0004 9FED010A 		vldr.32	s0, .L4
+ 173 0008 FFF7FEBF 		b	_ZN5daisy6Random8GetFloatEff
+ 174              	.LVL1:
+ 175              	.L5:
+ 176              		.align	2
+ 177              	.L4:
+ 178 000c 00000000 		.word	0
+ 179              		.cfi_endproc
+ 180              	.LFE2541:
+ 182              		.section	.text._Z13AudioCallbackPKPKfPPfj,"ax",%progbits
+ 183              		.align	1
+ 184              		.p2align 2,,3
+ 185              		.global	_Z13AudioCallbackPKPKfPPfj
+ 186              		.syntax unified
+ 187              		.thumb
+ 188              		.thumb_func
+ 190              	_Z13AudioCallbackPKPKfPPfj:
+ 191              	.LVL2:
+ 192              	.LFB2542:
+  27:MyProj.cpp    **** }
+  28:MyProj.cpp    **** 
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 15
+
+
+  29:MyProj.cpp    **** 
+  30:MyProj.cpp    **** void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
+  31:MyProj.cpp    **** {
+ 193              		.loc 13 31 1 is_stmt 1 view -0
+ 194              		.cfi_startproc
+ 195              		@ args = 0, pretend = 0, frame = 8
+ 196              		@ frame_needed = 0, uses_anonymous_args = 0
+  32:MyProj.cpp    ****     hw.ProcessAllControls();
+ 197              		.loc 13 32 5 view .LVU43
+ 198              	.LBB294:
+ 199              	.LBI294:
+  37:../../libDaisy//src/daisy_pod.h **** 
+  38:../../libDaisy//src/daisy_pod.h ****     /** Init related stuff. */
+  39:../../libDaisy//src/daisy_pod.h ****     void Init(bool boost = false);
+  40:../../libDaisy//src/daisy_pod.h **** 
+  41:../../libDaisy//src/daisy_pod.h ****     /** Wait for a bit
+  42:../../libDaisy//src/daisy_pod.h ****     \param del Time to wait in ms.
+  43:../../libDaisy//src/daisy_pod.h ****     */
+  44:../../libDaisy//src/daisy_pod.h ****     void DelayMs(size_t del);
+  45:../../libDaisy//src/daisy_pod.h **** 
+  46:../../libDaisy//src/daisy_pod.h ****     /** Starts the callback
+  47:../../libDaisy//src/daisy_pod.h ****     \param cb Interleaved callback function
+  48:../../libDaisy//src/daisy_pod.h ****     */
+  49:../../libDaisy//src/daisy_pod.h ****     void StartAudio(AudioHandle::InterleavingAudioCallback cb);
+  50:../../libDaisy//src/daisy_pod.h **** 
+  51:../../libDaisy//src/daisy_pod.h ****     /** Starts the callback
+  52:../../libDaisy//src/daisy_pod.h ****     \param cb multichannel callback function
+  53:../../libDaisy//src/daisy_pod.h ****     */
+  54:../../libDaisy//src/daisy_pod.h ****     void StartAudio(AudioHandle::AudioCallback cb);
+  55:../../libDaisy//src/daisy_pod.h **** 
+  56:../../libDaisy//src/daisy_pod.h ****     /**
+  57:../../libDaisy//src/daisy_pod.h ****        Switch callback functions
+  58:../../libDaisy//src/daisy_pod.h ****        \param cb New interleaved callback function.
+  59:../../libDaisy//src/daisy_pod.h ****     */
+  60:../../libDaisy//src/daisy_pod.h ****     void ChangeAudioCallback(AudioHandle::InterleavingAudioCallback cb);
+  61:../../libDaisy//src/daisy_pod.h **** 
+  62:../../libDaisy//src/daisy_pod.h ****     /**
+  63:../../libDaisy//src/daisy_pod.h ****        Switch callback functions
+  64:../../libDaisy//src/daisy_pod.h ****        \param cb New multichannel callback function.
+  65:../../libDaisy//src/daisy_pod.h ****     */
+  66:../../libDaisy//src/daisy_pod.h ****     void ChangeAudioCallback(AudioHandle::AudioCallback cb);
+  67:../../libDaisy//src/daisy_pod.h **** 
+  68:../../libDaisy//src/daisy_pod.h ****     /** Stops the audio if it is running. */
+  69:../../libDaisy//src/daisy_pod.h ****     void StopAudio();
+  70:../../libDaisy//src/daisy_pod.h **** 
+  71:../../libDaisy//src/daisy_pod.h ****     /** Updates the Audio Sample Rate, and reinitializes.
+  72:../../libDaisy//src/daisy_pod.h ****      ** Audio must be stopped for this to work.
+  73:../../libDaisy//src/daisy_pod.h ****      */
+  74:../../libDaisy//src/daisy_pod.h ****     void SetAudioSampleRate(SaiHandle::Config::SampleRate samplerate);
+  75:../../libDaisy//src/daisy_pod.h **** 
+  76:../../libDaisy//src/daisy_pod.h ****     /** Returns the audio sample rate in Hz as a floating point number.
+  77:../../libDaisy//src/daisy_pod.h ****      */
+  78:../../libDaisy//src/daisy_pod.h ****     float AudioSampleRate();
+  79:../../libDaisy//src/daisy_pod.h **** 
+  80:../../libDaisy//src/daisy_pod.h ****     /** Sets the number of samples processed per channel by the audio callback.
+  81:../../libDaisy//src/daisy_pod.h ****      */
+  82:../../libDaisy//src/daisy_pod.h ****     void SetAudioBlockSize(size_t blocksize);
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 16
+
+
+  83:../../libDaisy//src/daisy_pod.h **** 
+  84:../../libDaisy//src/daisy_pod.h ****     /** Returns the number of samples per channel in a block of audio. */
+  85:../../libDaisy//src/daisy_pod.h ****     size_t AudioBlockSize();
+  86:../../libDaisy//src/daisy_pod.h **** 
+  87:../../libDaisy//src/daisy_pod.h ****     /** Returns the rate in Hz that the Audio callback is called */
+  88:../../libDaisy//src/daisy_pod.h ****     float AudioCallbackRate();
+  89:../../libDaisy//src/daisy_pod.h **** 
+  90:../../libDaisy//src/daisy_pod.h ****     /**
+  91:../../libDaisy//src/daisy_pod.h ****        Start analog to digital conversion.
+  92:../../libDaisy//src/daisy_pod.h ****      */
+  93:../../libDaisy//src/daisy_pod.h ****     void StartAdc();
+  94:../../libDaisy//src/daisy_pod.h **** 
+  95:../../libDaisy//src/daisy_pod.h ****     /** Stops Transfering data from the ADC */
+  96:../../libDaisy//src/daisy_pod.h ****     void StopAdc();
+  97:../../libDaisy//src/daisy_pod.h **** 
+  98:../../libDaisy//src/daisy_pod.h ****     /** Call at same rate as analog reads for smooth reading.*/
+  99:../../libDaisy//src/daisy_pod.h ****     void ProcessAnalogControls();
+ 100:../../libDaisy//src/daisy_pod.h **** 
+ 101:../../libDaisy//src/daisy_pod.h ****     /** Process Analog and Digital Controls */
+ 102:../../libDaisy//src/daisy_pod.h ****     inline void ProcessAllControls()
+ 200              		.loc 1 102 17 view .LVU44
+ 201              	.LBB295:
+ 103:../../libDaisy//src/daisy_pod.h ****     {
+ 104:../../libDaisy//src/daisy_pod.h ****         ProcessAnalogControls();
+ 202              		.loc 1 104 9 view .LVU45
+ 203              	.LBE295:
+ 204              	.LBE294:
+  31:MyProj.cpp    ****     hw.ProcessAllControls();
+ 205              		.loc 13 31 1 is_stmt 0 view .LVU46
+ 206 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 207              		.cfi_def_cfa_offset 24
+ 208              		.cfi_offset 4, -24
+ 209              		.cfi_offset 5, -20
+ 210              		.cfi_offset 6, -16
+ 211              		.cfi_offset 7, -12
+ 212              		.cfi_offset 8, -8
+ 213              		.cfi_offset 14, -4
+ 214              	.LBB299:
+ 215              	.LBB296:
+ 216              		.loc 1 104 30 view .LVU47
+ 217 0004 744C     		ldr	r4, .L23
+ 218              	.LBE296:
+ 219              	.LBE299:
+  31:MyProj.cpp    ****     hw.ProcessAllControls();
+ 220              		.loc 13 31 1 view .LVU48
+ 221 0006 0D46     		mov	r5, r1
+ 222 0008 1646     		mov	r6, r2
+ 223              	.LBB300:
+ 224              	.LBB297:
+ 225              		.loc 1 104 30 view .LVU49
+ 226 000a 2046     		mov	r0, r4
+ 227              	.LVL3:
+ 228              		.loc 1 104 30 view .LVU50
+ 229              	.LBE297:
+ 230              	.LBE300:
+  31:MyProj.cpp    ****     hw.ProcessAllControls();
+ 231              		.loc 13 31 1 view .LVU51
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 17
+
+
+ 232 000c 2DED028B 		vpush.64	{d8}
+ 233              		.cfi_def_cfa_offset 32
+ 234              		.cfi_offset 80, -32
+ 235              		.cfi_offset 81, -28
+ 236 0010 82B0     		sub	sp, sp, #8
+ 237              		.cfi_def_cfa_offset 40
+ 238              	.LBB301:
+ 239              	.LBB298:
+ 240              		.loc 1 104 30 view .LVU52
+ 241 0012 FFF7FEFF 		bl	_ZN5daisy8DaisyPod21ProcessAnalogControlsEv
+ 242              	.LVL4:
+ 105:../../libDaisy//src/daisy_pod.h ****         ProcessDigitalControls();
+ 243              		.loc 1 105 9 is_stmt 1 view .LVU53
+ 244              		.loc 1 105 31 is_stmt 0 view .LVU54
+ 245 0016 2046     		mov	r0, r4
+ 246 0018 FFF7FEFF 		bl	_ZN5daisy8DaisyPod22ProcessDigitalControlsEv
+ 247              	.LVL5:
+ 248              		.loc 1 105 31 view .LVU55
+ 249              	.LBE298:
+ 250              	.LBE301:
+  33:MyProj.cpp    ****     
+  34:MyProj.cpp    ****     //use the "myFreq" variable we declared up top here to temporarily store a value that is
+  35:MyProj.cpp    ****     //set to be something between 220 and 880 (two octaves), depending on the knob position.
+  36:MyProj.cpp    ****     // we do this by taking the knob value, which comes in as something between 0.0 and 1.0 
+  37:MyProj.cpp    ****     //(which I got by calling the function GetKnobValue() in the hw object, passing in the hw objec
+  38:MyProj.cpp    ****     //and multiplying it by the range we want (880-220, or 660), 
+  39:MyProj.cpp    ****     //and then offsetting it by adding 220 so it starts where we want it to start. (otherwise it wo
+  40:MyProj.cpp    ****     //the little f I put after numbers makes them a float literal, meaning it tells the compiler to
+  41:MyProj.cpp    ****     // that's not necessary, it'll work if I just write 660.0 instead of 660.0f, but because of the
+  42:MyProj.cpp    ****     // adding the f at the end of floating point numbers means they will be computed faster (at the
+  43:MyProj.cpp    ****     
+  44:MyProj.cpp    ****     // I just write the f by habit, you don't have to. All internal computations in leaf are in sin
+  45:MyProj.cpp    ****     if (hw.button1.Pressed())
+ 251              		.loc 13 45 5 is_stmt 1 view .LVU56
+ 252              	.LBB302:
+ 253              	.LBB303:
+ 254              	.LBI303:
+  43:../../libDaisy//src/hid/switch.h **** 
+  44:../../libDaisy//src/hid/switch.h ****     /** 
+  45:../../libDaisy//src/hid/switch.h ****     Initializes the switch object with a given port/pin combo.
+  46:../../libDaisy//src/hid/switch.h ****     \param pin port/pin object to tell the switch which hardware pin to use.
+  47:../../libDaisy//src/hid/switch.h ****     \param update_rate Does nothing. Backwards compatibility until next breaking update.
+  48:../../libDaisy//src/hid/switch.h ****     \param t switch type -- Default: TYPE_MOMENTARY
+  49:../../libDaisy//src/hid/switch.h ****     \param pol switch polarity -- Default: POLARITY_INVERTED
+  50:../../libDaisy//src/hid/switch.h ****     \param pu switch pull up/down -- Default: PULL_UP
+  51:../../libDaisy//src/hid/switch.h ****     */
+  52:../../libDaisy//src/hid/switch.h ****     void
+  53:../../libDaisy//src/hid/switch.h ****     Init(dsy_gpio_pin pin, float update_rate, Type t, Polarity pol, Pull pu);
+  54:../../libDaisy//src/hid/switch.h **** 
+  55:../../libDaisy//src/hid/switch.h ****     /**
+  56:../../libDaisy//src/hid/switch.h ****        Simplified Init.
+  57:../../libDaisy//src/hid/switch.h ****        \param pin port/pin object to tell the switch which hardware pin to use.
+  58:../../libDaisy//src/hid/switch.h ****        \param update_rate Left for backwards compatibility until next breaking change.
+  59:../../libDaisy//src/hid/switch.h ****     */
+  60:../../libDaisy//src/hid/switch.h ****     void Init(dsy_gpio_pin pin, float update_rate = 0.f);
+  61:../../libDaisy//src/hid/switch.h **** 
+  62:../../libDaisy//src/hid/switch.h ****     /** 
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 18
+
+
+  63:../../libDaisy//src/hid/switch.h ****     Called at update_rate to debounce and handle timing for the switch.
+  64:../../libDaisy//src/hid/switch.h ****     In order for events not to be missed, its important that the Edge/Pressed checks
+  65:../../libDaisy//src/hid/switch.h ****     be made at the same rate as the debounce function is being called.
+  66:../../libDaisy//src/hid/switch.h ****     */
+  67:../../libDaisy//src/hid/switch.h ****     void Debounce();
+  68:../../libDaisy//src/hid/switch.h **** 
+  69:../../libDaisy//src/hid/switch.h ****     /** \return true if a button was just pressed. */
+  70:../../libDaisy//src/hid/switch.h ****     inline bool RisingEdge() const { return updated_ ? state_ == 0x7f : false; }
+  71:../../libDaisy//src/hid/switch.h **** 
+  72:../../libDaisy//src/hid/switch.h ****     /** \return true if the button was just released */
+  73:../../libDaisy//src/hid/switch.h ****     inline bool FallingEdge() const
+  74:../../libDaisy//src/hid/switch.h ****     {
+  75:../../libDaisy//src/hid/switch.h ****         return updated_ ? state_ == 0x80 : false;
+  76:../../libDaisy//src/hid/switch.h ****     }
+  77:../../libDaisy//src/hid/switch.h **** 
+  78:../../libDaisy//src/hid/switch.h ****     /** \return true if the button is held down (or if the toggle is on) */
+  79:../../libDaisy//src/hid/switch.h ****     inline bool Pressed() const { return state_ == 0xff; }
+ 255              		.loc 5 79 17 view .LVU57
+ 256              	.LBB304:
+ 257              		.loc 5 79 35 view .LVU58
+ 258              		.loc 5 79 35 is_stmt 0 view .LVU59
+ 259              	.LBE304:
+ 260              	.LBE303:
+ 261              		.loc 13 45 5 view .LVU60
+ 262 001c 94F8B630 		ldrb	r3, [r4, #182]	@ zero_extendqisi2
+ 263 0020 FF2B     		cmp	r3, #255
+ 264 0022 5AD1     		bne	.L7
+ 265              	.LVL6:
+ 266              	.LBB305:
+  46:MyProj.cpp    ****     {
+  47:MyProj.cpp    ****         for (size_t i = 0; i < size; i++)
+ 267              		.loc 13 47 30 is_stmt 1 view .LVU61
+ 268 0024 002E     		cmp	r6, #0
+ 269 0026 53D0     		beq	.L6
+ 270              		.loc 13 47 21 is_stmt 0 view .LVU62
+ 271 0028 0024     		movs	r4, #0
+ 272 002a DFF8F881 		ldr	r8, .L23+76
+ 273 002e 6B4F     		ldr	r7, .L23+4
+ 274              	.LVL7:
+ 275              	.L13:
+ 276              	.LBB306:
+  48:MyProj.cpp    ****         {
+  49:MyProj.cpp    ****             float mySample = 0.0f;
+ 277              		.loc 13 49 13 is_stmt 1 view .LVU63
+  50:MyProj.cpp    **** 
+  51:MyProj.cpp    ****             if (sampleCounter == 0)
+ 278              		.loc 13 51 13 view .LVU64
+ 279              	.LBB307:
+ 280              	.LBB308:
+  52:MyProj.cpp    ****             {
+  53:MyProj.cpp    ****                 float tempMidiNote = mySequence[whichNoteInSequence];
+ 281              		.loc 13 53 17 view .LVU65
+ 282              	.LBE308:
+  51:MyProj.cpp    ****             {
+ 283              		.loc 13 51 13 is_stmt 0 view .LVU66
+ 284 0030 D8F80030 		ldr	r3, [r8]
+ 285              	.LBB309:
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 19
+
+
+ 286              		.loc 13 53 68 view .LVU67
+ 287 0034 6A49     		ldr	r1, .L23+8
+ 288 0036 6B48     		ldr	r0, .L23+12
+ 289              	.LBE309:
+  51:MyProj.cpp    ****             {
+ 290              		.loc 13 51 13 view .LVU68
+ 291 0038 7BBB     		cbnz	r3, .L9
+ 292              	.LBB310:
+ 293              		.loc 13 53 68 view .LVU69
+ 294 003a 0A68     		ldr	r2, [r1]
+ 295              		.loc 13 53 23 view .LVU70
+ 296 003c 00EB8200 		add	r0, r0, r2, lsl #2
+  54:MyProj.cpp    ****                 whichNoteInSequence = whichNoteInSequence + 1;
+ 297              		.loc 13 54 59 view .LVU71
+ 298 0040 0132     		adds	r2, r2, #1
+  53:MyProj.cpp    ****                 whichNoteInSequence = whichNoteInSequence + 1;
+ 299              		.loc 13 53 23 view .LVU72
+ 300 0042 90ED008A 		vldr.32	s16, [r0]	@ int
+ 301              		.loc 13 54 37 view .LVU73
+ 302 0046 0F2A     		cmp	r2, #15
+ 303 0048 D8BF     		it	le
+ 304 004a 1346     		movle	r3, r2
+  53:MyProj.cpp    ****                 whichNoteInSequence = whichNoteInSequence + 1;
+ 305              		.loc 13 53 23 view .LVU74
+ 306 004c B8EEC88A 		vcvt.f32.s32	s16, s16
+ 307              	.LVL8:
+ 308              		.loc 13 54 17 is_stmt 1 view .LVU75
+  55:MyProj.cpp    **** 
+  56:MyProj.cpp    ****                 if (whichNoteInSequence >= 16)
+ 309              		.loc 13 56 17 view .LVU76
+  54:MyProj.cpp    **** 
+ 310              		.loc 13 54 37 is_stmt 0 view .LVU77
+ 311 0050 0B60     		str	r3, [r1]
+  57:MyProj.cpp    ****                 {
+  58:MyProj.cpp    ****                     whichNoteInSequence = 0;
+  59:MyProj.cpp    ****                 }
+  60:MyProj.cpp    ****                 myFreq = mtof(tempMidiNote);
+ 312              		.loc 13 60 17 is_stmt 1 view .LVU78
+ 313              		.loc 13 60 30 is_stmt 0 view .LVU79
+ 314 0052 B0EE480A 		vmov.f32	s0, s16
+ 315 0056 FFF7FEFF 		bl	mtof
+ 316              	.LVL9:
+ 317              		.loc 13 60 24 view .LVU80
+ 318 005a 634B     		ldr	r3, .L23+16
+  61:MyProj.cpp    ****                 tCycle_setFreq(&mySine, myFreq);
+ 319              		.loc 13 61 31 view .LVU81
+ 320 005c 6348     		ldr	r0, .L23+20
+  60:MyProj.cpp    ****                 tCycle_setFreq(&mySine, myFreq);
+ 321              		.loc 13 60 24 view .LVU82
+ 322 005e 83ED000A 		vstr.32	s0, [r3]
+ 323              		.loc 13 61 17 is_stmt 1 view .LVU83
+ 324              		.loc 13 61 31 is_stmt 0 view .LVU84
+ 325 0062 FFF7FEFF 		bl	tCycle_setFreq
+ 326              	.LVL10:
+  62:MyProj.cpp    ****                 float ledValue = (tempMidiNote - 48.0f) / 24.0f;
+ 327              		.loc 13 62 17 is_stmt 1 view .LVU85
+ 328              		.loc 13 62 48 is_stmt 0 view .LVU86
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 20
+
+
+ 329 0066 9FED627A 		vldr.32	s14, .L23+24
+ 330              		.loc 13 62 23 view .LVU87
+ 331 006a F3EE087A 		vmov.f32	s15, #2.4e+1
+  63:MyProj.cpp    ****                 hw.led1.Set(ledValue, 0.0f, 0.0f);
+ 332              		.loc 13 63 28 view .LVU88
+ 333 006e 9FED611A 		vldr.32	s2, .L23+28
+  62:MyProj.cpp    ****                 float ledValue = (tempMidiNote - 48.0f) / 24.0f;
+ 334              		.loc 13 62 48 view .LVU89
+ 335 0072 38EE478A 		vsub.f32	s16, s16, s14
+ 336              	.LVL11:
+ 337              		.loc 13 63 28 view .LVU90
+ 338 0076 6048     		ldr	r0, .L23+32
+ 339 0078 F0EE410A 		vmov.f32	s1, s2
+  62:MyProj.cpp    ****                 float ledValue = (tempMidiNote - 48.0f) / 24.0f;
+ 340              		.loc 13 62 23 view .LVU91
+ 341 007c 88EE270A 		vdiv.f32	s0, s16, s15
+ 342              	.LVL12:
+ 343              		.loc 13 63 17 is_stmt 1 view .LVU92
+ 344              		.loc 13 63 28 is_stmt 0 view .LVU93
+ 345 0080 8DED010A 		vstr.32	s0, [sp, #4]	@ int
+ 346 0084 FFF7FEFF 		bl	_ZN5daisy6RgbLed3SetEfff
+ 347              	.LVL13:
+  64:MyProj.cpp    ****                 hw.led2.Set(ledValue, 0.0f, 0.0f);
+ 348              		.loc 13 64 17 is_stmt 1 view .LVU94
+ 349              		.loc 13 64 28 is_stmt 0 view .LVU95
+ 350 0088 9FED5A1A 		vldr.32	s2, .L23+28
+ 351 008c 9DED010A 		vldr.32	s0, [sp, #4]	@ int
+ 352 0090 F0EE410A 		vmov.f32	s1, s2
+ 353 0094 5948     		ldr	r0, .L23+36
+ 354 0096 FFF7FEFF 		bl	_ZN5daisy6RgbLed3SetEfff
+ 355              	.LVL14:
+ 356              	.L9:
+ 357              		.loc 13 64 28 view .LVU96
+ 358              	.LBE310:
+ 359              	.LBE307:
+  65:MyProj.cpp    ****             }
+  66:MyProj.cpp    ****              mySample = tCycle_tick(&mySine);
+ 360              		.loc 13 66 14 is_stmt 1 view .LVU97
+ 361              		.loc 13 66 36 is_stmt 0 view .LVU98
+ 362 009a 5448     		ldr	r0, .L23+20
+ 363 009c FFF7FEFF 		bl	tCycle_tick
+ 364              	.LVL15:
+  67:MyProj.cpp    ****              sampleCounter = sampleCounter + 1;
+  68:MyProj.cpp    ****              if (sampleCounter >= sampleCounterMaxValue)
+  69:MyProj.cpp    ****              {
+  70:MyProj.cpp    ****                 sampleCounter = 0;
+ 365              		.loc 13 70 17 is_stmt 1 view .LVU99
+  71:MyProj.cpp    ****              }
+  72:MyProj.cpp    ****              out[0] [i] = mySample;
+ 366              		.loc 13 72 14 view .LVU100
+  67:MyProj.cpp    ****              sampleCounter = sampleCounter + 1;
+ 367              		.loc 13 67 44 is_stmt 0 view .LVU101
+ 368 00a0 D8F80030 		ldr	r3, [r8]
+  68:MyProj.cpp    ****              {
+ 369              		.loc 13 68 14 view .LVU102
+ 370 00a4 3A68     		ldr	r2, [r7]
+ 371              	.LVL16:
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 21
+
+
+  67:MyProj.cpp    ****              sampleCounter = sampleCounter + 1;
+ 372              		.loc 13 67 14 is_stmt 1 view .LVU103
+  70:MyProj.cpp    ****              }
+ 373              		.loc 13 70 31 is_stmt 0 view .LVU104
+ 374 00a6 0021     		movs	r1, #0
+  67:MyProj.cpp    ****              if (sampleCounter >= sampleCounterMaxValue)
+ 375              		.loc 13 67 44 view .LVU105
+ 376 00a8 0133     		adds	r3, r3, #1
+  67:MyProj.cpp    ****              if (sampleCounter >= sampleCounterMaxValue)
+ 377              		.loc 13 67 28 view .LVU106
+ 378 00aa C8F80030 		str	r3, [r8]
+  68:MyProj.cpp    ****              {
+ 379              		.loc 13 68 14 is_stmt 1 view .LVU107
+ 380 00ae 9342     		cmp	r3, r2
+  73:MyProj.cpp    ****              out[1] [i] = mySample;
+ 381              		.loc 13 73 25 is_stmt 0 view .LVU108
+ 382 00b0 D5E90023 		ldrd	r2, r3, [r5]
+  70:MyProj.cpp    ****              }
+ 383              		.loc 13 70 31 view .LVU109
+ 384 00b4 A8BF     		it	ge
+ 385 00b6 C8F80010 		strge	r1, [r8]
+  72:MyProj.cpp    ****              out[1] [i] = mySample;
+ 386              		.loc 13 72 25 view .LVU110
+ 387 00ba 02EB8402 		add	r2, r2, r4, lsl #2
+ 388              		.loc 13 73 25 view .LVU111
+ 389 00be 03EB8403 		add	r3, r3, r4, lsl #2
+ 390              	.LBE306:
+  47:MyProj.cpp    ****         {
+ 391              		.loc 13 47 9 view .LVU112
+ 392 00c2 0134     		adds	r4, r4, #1
+ 393              	.LVL17:
+ 394              	.LBB311:
+  72:MyProj.cpp    ****              out[1] [i] = mySample;
+ 395              		.loc 13 72 25 view .LVU113
+ 396 00c4 82ED000A 		vstr.32	s0, [r2]
+ 397              		.loc 13 73 14 is_stmt 1 view .LVU114
+ 398              	.LBE311:
+  47:MyProj.cpp    ****         {
+ 399              		.loc 13 47 30 is_stmt 0 view .LVU115
+ 400 00c8 A642     		cmp	r6, r4
+ 401              	.LBB312:
+ 402              		.loc 13 73 25 view .LVU116
+ 403 00ca 83ED000A 		vstr.32	s0, [r3]
+ 404              	.LBE312:
+  47:MyProj.cpp    ****         {
+ 405              		.loc 13 47 9 is_stmt 1 view .LVU117
+ 406              	.LVL18:
+  47:MyProj.cpp    ****         {
+ 407              		.loc 13 47 30 view .LVU118
+ 408 00ce AFD1     		bne	.L13
+ 409              	.LVL19:
+ 410              	.L6:
+  47:MyProj.cpp    ****         {
+ 411              		.loc 13 47 30 is_stmt 0 view .LVU119
+ 412              	.LBE305:
+ 413              	.LBE302:
+  74:MyProj.cpp    **** 
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 22
+
+
+  75:MyProj.cpp    ****         } 
+  76:MyProj.cpp    **** 
+  77:MyProj.cpp    ****     }
+  78:MyProj.cpp    ****     
+  79:MyProj.cpp    ****     else
+  80:MyProj.cpp    ****     {
+  81:MyProj.cpp    ****     myFreq = (660.0f * hw.GetKnobValue(hw.KNOB_1)) + 220.0f;
+  82:MyProj.cpp    ****     myFreq2 = (440.0f * hw.GetKnobValue(hw.KNOB_2)) + 100.0f;
+  83:MyProj.cpp    **** 
+  84:MyProj.cpp    ****     //let's make a variable we'll use as the midi note value.
+  85:MyProj.cpp    ****     int theNote;
+  86:MyProj.cpp    ****     int theNote2;
+  87:MyProj.cpp    **** 
+  88:MyProj.cpp    ****     //now let's try to get the knob data to be a number between zero and 7. We've got 8 notes (coun
+  89:MyProj.cpp    ****     // so let's turn our 0-1 values from the knob into 0-7. If we multiply by 7, that would sort of
+  90:MyProj.cpp    ****     // appear at the extreme end of the knob's range. Instead, let's multiply 0-1 by 7.99. Then we 
+  91:MyProj.cpp    ****     // distribution of the numbers. Let's make another temporary variable to store that, just to ke
+  92:MyProj.cpp    ****     int scaleDegree = hw.GetKnobValue(hw.KNOB_1) * 7.999f;
+  93:MyProj.cpp    ****     //how can we trust it'll get truncated to just the integer values? by storing it in an integer 
+  94:MyProj.cpp    ****     //note that it doesn't round. It just loses everything after the decimal point. So 7.9999 is 7.
+  95:MyProj.cpp    **** 
+  96:MyProj.cpp    ****     //now let's use that "scaleDegree" as an index into the array we defined up top. 
+  97:MyProj.cpp    ****     //how do we do that?
+  98:MyProj.cpp    ****     // you can retrieve a value from an element of an array by typing arrayName[whichIndex]. 
+  99:MyProj.cpp    ****     //So majorScale[0] will give us 0, and majorScale[1] will give us 2, and majorScale[2] will giv
+ 100:MyProj.cpp    ****     int scaleNote = majorScale[scaleDegree];
+ 101:MyProj.cpp    ****     //now theNote has a value that is either 0, 2, 4, 5, 7, 9, 11 or 12, depending on the position 
+ 102:MyProj.cpp    **** 
+ 103:MyProj.cpp    ****     // let's add some offset to this to set what pitch our major scale starts on. midinote 60 is mi
+ 104:MyProj.cpp    ****     int startingNote = hw.GetKnobValue(hw.KNOB_2) * 12.99f;
+ 105:MyProj.cpp    ****     //this one will give us a chromatic scale within an octave. 
+ 106:MyProj.cpp    ****     //let's add 60 to that so it starts on middle c and goes up to high c.
+ 107:MyProj.cpp    ****     //note that we don't put the "int" in front of startingNote this time because it's already been
+ 108:MyProj.cpp    ****     startingNote = startingNote + 60;
+ 109:MyProj.cpp    **** 
+ 110:MyProj.cpp    ****     //now let's put the starting note and the scale note together to get our final midinote
+ 111:MyProj.cpp    ****     theNote = 60 + scaleNote;
+ 112:MyProj.cpp    ****     theNote2 = startingNote;
+ 113:MyProj.cpp    ****     //OK, but it's still not a frequency. Let's make it one with the mtof function that's built int
+ 114:MyProj.cpp    ****     myFreq = mtof(theNote);
+ 115:MyProj.cpp    ****     myFreq2 = mtof(theNote2);
+ 116:MyProj.cpp    **** 
+ 117:MyProj.cpp    ****     // now pass myFreq as the value we pass to the setFreq function on the mySine object
+ 118:MyProj.cpp    ****     tCycle_setFreq(&mySine, myFreq);
+ 119:MyProj.cpp    ****     tCycle_setFreq(&mySine2, myFreq2);
+ 120:MyProj.cpp    **** 
+ 121:MyProj.cpp    ****     //now here's the per sample stuff
+ 122:MyProj.cpp    ****     for (size_t i = 0; i < size; i++)
+ 123:MyProj.cpp    ****     {
+ 124:MyProj.cpp    ****         //get the next sample from the sine wave object mySine and store it in a temporary variable
+ 125:MyProj.cpp    ****         float mySample1 = tCycle_tick(&mySine);
+ 126:MyProj.cpp    ****         float mySample2 = tCycle_tick(&mySine2);
+ 127:MyProj.cpp    **** 
+ 128:MyProj.cpp    ****         //now set the audio outputs (left is [0] and right is [1] to be whatever value has been com
+ 129:MyProj.cpp    ****         out[0][i] = (mySample1*.5) + (mySample2*.5);
+ 130:MyProj.cpp    ****         out[1][i] = (mySample1*.5) + (mySample2*.5);
+ 131:MyProj.cpp    ****     }
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 23
+
+
+ 132:MyProj.cpp    **** }
+ 133:MyProj.cpp    **** }
+ 414              		.loc 13 133 1 view .LVU120
+ 415 00d0 02B0     		add	sp, sp, #8
+ 416              		.cfi_remember_state
+ 417              		.cfi_def_cfa_offset 32
+ 418              		@ sp needed
+ 419 00d2 BDEC028B 		vldm	sp!, {d8}
+ 420              		.cfi_restore 80
+ 421              		.cfi_restore 81
+ 422              		.cfi_def_cfa_offset 24
+ 423 00d6 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 424              	.LVL20:
+ 425              	.L7:
+ 426              		.cfi_restore_state
+ 427              	.LBB318:
+ 428              	.LBB313:
+  81:MyProj.cpp    ****     myFreq2 = (440.0f * hw.GetKnobValue(hw.KNOB_2)) + 100.0f;
+ 429              		.loc 13 81 5 is_stmt 1 view .LVU121
+  81:MyProj.cpp    ****     myFreq2 = (440.0f * hw.GetKnobValue(hw.KNOB_2)) + 100.0f;
+ 430              		.loc 13 81 39 is_stmt 0 view .LVU122
+ 431 00da 2046     		mov	r0, r4
+ 432 00dc 0021     		movs	r1, #0
+ 433 00de FFF7FEFF 		bl	_ZN5daisy8DaisyPod12GetKnobValueENS0_4KnobE
+ 434              	.LVL21:
+  81:MyProj.cpp    ****     myFreq2 = (440.0f * hw.GetKnobValue(hw.KNOB_2)) + 100.0f;
+ 435              		.loc 13 81 52 view .LVU123
+ 436 00e2 9FED477A 		vldr.32	s14, .L23+40
+ 437 00e6 DFED477A 		vldr.32	s15, .L23+44
+  82:MyProj.cpp    **** 
+ 438              		.loc 13 82 40 view .LVU124
+ 439 00ea 2046     		mov	r0, r4
+  81:MyProj.cpp    ****     myFreq2 = (440.0f * hw.GetKnobValue(hw.KNOB_2)) + 100.0f;
+ 440              		.loc 13 81 12 view .LVU125
+ 441 00ec DFF8F880 		ldr	r8, .L23+16
+  82:MyProj.cpp    **** 
+ 442              		.loc 13 82 40 view .LVU126
+ 443 00f0 0121     		movs	r1, #1
+  81:MyProj.cpp    ****     myFreq2 = (440.0f * hw.GetKnobValue(hw.KNOB_2)) + 100.0f;
+ 444              		.loc 13 81 52 view .LVU127
+ 445 00f2 E0EE077A 		vfma.f32	s15, s0, s14
+  82:MyProj.cpp    **** 
+ 446              		.loc 13 82 13 view .LVU128
+ 447 00f6 444F     		ldr	r7, .L23+48
+  81:MyProj.cpp    ****     myFreq2 = (440.0f * hw.GetKnobValue(hw.KNOB_2)) + 100.0f;
+ 448              		.loc 13 81 12 view .LVU129
+ 449 00f8 C8ED007A 		vstr.32	s15, [r8]
+  82:MyProj.cpp    **** 
+ 450              		.loc 13 82 5 is_stmt 1 view .LVU130
+  82:MyProj.cpp    **** 
+ 451              		.loc 13 82 40 is_stmt 0 view .LVU131
+ 452 00fc FFF7FEFF 		bl	_ZN5daisy8DaisyPod12GetKnobValueENS0_4KnobE
+ 453              	.LVL22:
+  82:MyProj.cpp    **** 
+ 454              		.loc 13 82 53 view .LVU132
+ 455 0100 9FED427A 		vldr.32	s14, .L23+52
+  92:MyProj.cpp    ****     //how can we trust it'll get truncated to just the integer values? by storing it in an integer 
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 24
+
+
+ 456              		.loc 13 92 38 view .LVU133
+ 457 0104 2046     		mov	r0, r4
+  82:MyProj.cpp    **** 
+ 458              		.loc 13 82 53 view .LVU134
+ 459 0106 DFED427A 		vldr.32	s15, .L23+56
+  92:MyProj.cpp    ****     //how can we trust it'll get truncated to just the integer values? by storing it in an integer 
+ 460              		.loc 13 92 38 view .LVU135
+ 461 010a 0021     		movs	r1, #0
+  82:MyProj.cpp    **** 
+ 462              		.loc 13 82 53 view .LVU136
+ 463 010c E0EE077A 		vfma.f32	s15, s0, s14
+  82:MyProj.cpp    **** 
+ 464              		.loc 13 82 13 view .LVU137
+ 465 0110 C7ED007A 		vstr.32	s15, [r7]
+  85:MyProj.cpp    ****     int theNote2;
+ 466              		.loc 13 85 5 is_stmt 1 view .LVU138
+  86:MyProj.cpp    **** 
+ 467              		.loc 13 86 5 view .LVU139
+  92:MyProj.cpp    ****     //how can we trust it'll get truncated to just the integer values? by storing it in an integer 
+ 468              		.loc 13 92 5 view .LVU140
+  92:MyProj.cpp    ****     //how can we trust it'll get truncated to just the integer values? by storing it in an integer 
+ 469              		.loc 13 92 38 is_stmt 0 view .LVU141
+ 470 0114 FFF7FEFF 		bl	_ZN5daisy8DaisyPod12GetKnobValueENS0_4KnobE
+ 471              	.LVL23:
+ 100:MyProj.cpp    ****     //now theNote has a value that is either 0, 2, 4, 5, 7, 9, 11 or 12, depending on the position 
+ 472              		.loc 13 100 5 is_stmt 1 view .LVU142
+  92:MyProj.cpp    ****     //how can we trust it'll get truncated to just the integer values? by storing it in an integer 
+ 473              		.loc 13 92 50 is_stmt 0 view .LVU143
+ 474 0118 DFED3E7A 		vldr.32	s15, .L23+60
+ 104:MyProj.cpp    ****     //this one will give us a chromatic scale within an octave. 
+ 475              		.loc 13 104 39 view .LVU144
+ 476 011c 2046     		mov	r0, r4
+ 100:MyProj.cpp    ****     //now theNote has a value that is either 0, 2, 4, 5, 7, 9, 11 or 12, depending on the position 
+ 477              		.loc 13 100 9 view .LVU145
+ 478 011e 3E4B     		ldr	r3, .L23+64
+ 104:MyProj.cpp    ****     //this one will give us a chromatic scale within an octave. 
+ 479              		.loc 13 104 39 view .LVU146
+ 480 0120 0121     		movs	r1, #1
+  92:MyProj.cpp    ****     //how can we trust it'll get truncated to just the integer values? by storing it in an integer 
+ 481              		.loc 13 92 50 view .LVU147
+ 482 0122 20EE270A 		vmul.f32	s0, s0, s15
+ 483              	.LVL24:
+  92:MyProj.cpp    ****     //how can we trust it'll get truncated to just the integer values? by storing it in an integer 
+ 484              		.loc 13 92 52 view .LVU148
+ 485 0126 BDEEC00A 		vcvt.s32.f32	s0, s0
+ 100:MyProj.cpp    ****     //now theNote has a value that is either 0, 2, 4, 5, 7, 9, 11 or 12, depending on the position 
+ 486              		.loc 13 100 9 view .LVU149
+ 487 012a 10EE102A 		vmov	r2, s0	@ int
+ 488 012e 53F82240 		ldr	r4, [r3, r2, lsl #2]
+ 489              	.LVL25:
+ 104:MyProj.cpp    ****     //this one will give us a chromatic scale within an octave. 
+ 490              		.loc 13 104 5 is_stmt 1 view .LVU150
+ 104:MyProj.cpp    ****     //this one will give us a chromatic scale within an octave. 
+ 491              		.loc 13 104 39 is_stmt 0 view .LVU151
+ 492 0132 FFF7FEFF 		bl	_ZN5daisy8DaisyPod12GetKnobValueENS0_4KnobE
+ 493              	.LVL26:
+ 104:MyProj.cpp    ****     //this one will give us a chromatic scale within an octave. 
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 25
+
+
+ 494              		.loc 13 104 51 view .LVU152
+ 495 0136 DFED397A 		vldr.32	s15, .L23+68
+ 111:MyProj.cpp    ****     theNote2 = startingNote;
+ 496              		.loc 13 111 13 view .LVU153
+ 497 013a 04F13C03 		add	r3, r4, #60
+ 104:MyProj.cpp    ****     //this one will give us a chromatic scale within an octave. 
+ 498              		.loc 13 104 51 view .LVU154
+ 499 013e 60EE277A 		vmul.f32	s15, s0, s15
+ 111:MyProj.cpp    ****     theNote2 = startingNote;
+ 500              		.loc 13 111 13 view .LVU155
+ 501 0142 00EE103A 		vmov	s0, r3	@ int
+ 104:MyProj.cpp    ****     //this one will give us a chromatic scale within an octave. 
+ 502              		.loc 13 104 53 view .LVU156
+ 503 0146 FDEEE77A 		vcvt.s32.f32	s15, s15
+ 114:MyProj.cpp    ****     myFreq2 = mtof(theNote2);
+ 504              		.loc 13 114 18 view .LVU157
+ 505 014a B8EEC00A 		vcvt.f32.s32	s0, s0
+ 104:MyProj.cpp    ****     //this one will give us a chromatic scale within an octave. 
+ 506              		.loc 13 104 53 view .LVU158
+ 507 014e 17EE904A 		vmov	r4, s15	@ int
+ 508              	.LVL27:
+ 108:MyProj.cpp    **** 
+ 509              		.loc 13 108 5 is_stmt 1 view .LVU159
+ 111:MyProj.cpp    ****     theNote2 = startingNote;
+ 510              		.loc 13 111 5 view .LVU160
+ 112:MyProj.cpp    ****     //OK, but it's still not a frequency. Let's make it one with the mtof function that's built int
+ 511              		.loc 13 112 5 view .LVU161
+ 114:MyProj.cpp    ****     myFreq2 = mtof(theNote2);
+ 512              		.loc 13 114 5 view .LVU162
+ 114:MyProj.cpp    ****     myFreq2 = mtof(theNote2);
+ 513              		.loc 13 114 18 is_stmt 0 view .LVU163
+ 514 0152 FFF7FEFF 		bl	mtof
+ 515              	.LVL28:
+ 114:MyProj.cpp    ****     myFreq2 = mtof(theNote2);
+ 516              		.loc 13 114 12 view .LVU164
+ 517 0156 88ED000A 		vstr.32	s0, [r8]
+ 115:MyProj.cpp    **** 
+ 518              		.loc 13 115 5 is_stmt 1 view .LVU165
+ 108:MyProj.cpp    **** 
+ 519              		.loc 13 108 18 is_stmt 0 view .LVU166
+ 520 015a 04F13C03 		add	r3, r4, #60
+ 521              	.LVL29:
+ 108:MyProj.cpp    **** 
+ 522              		.loc 13 108 18 view .LVU167
+ 523 015e 00EE103A 		vmov	s0, r3	@ int
+ 115:MyProj.cpp    **** 
+ 524              		.loc 13 115 19 view .LVU168
+ 525 0162 B8EEC00A 		vcvt.f32.s32	s0, s0
+ 526 0166 FFF7FEFF 		bl	mtof
+ 527              	.LVL30:
+ 115:MyProj.cpp    **** 
+ 528              		.loc 13 115 19 view .LVU169
+ 529 016a F0EE407A 		vmov.f32	s15, s0
+ 118:MyProj.cpp    ****     tCycle_setFreq(&mySine2, myFreq2);
+ 530              		.loc 13 118 19 view .LVU170
+ 531 016e 1F48     		ldr	r0, .L23+20
+ 532 0170 98ED000A 		vldr.32	s0, [r8]
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 26
+
+
+ 115:MyProj.cpp    **** 
+ 533              		.loc 13 115 13 view .LVU171
+ 534 0174 C7ED007A 		vstr.32	s15, [r7]
+ 118:MyProj.cpp    ****     tCycle_setFreq(&mySine2, myFreq2);
+ 535              		.loc 13 118 5 is_stmt 1 view .LVU172
+ 118:MyProj.cpp    ****     tCycle_setFreq(&mySine2, myFreq2);
+ 536              		.loc 13 118 19 is_stmt 0 view .LVU173
+ 537 0178 FFF7FEFF 		bl	tCycle_setFreq
+ 538              	.LVL31:
+ 119:MyProj.cpp    **** 
+ 539              		.loc 13 119 5 is_stmt 1 view .LVU174
+ 119:MyProj.cpp    **** 
+ 540              		.loc 13 119 19 is_stmt 0 view .LVU175
+ 541 017c 97ED000A 		vldr.32	s0, [r7]
+ 542 0180 2748     		ldr	r0, .L23+72
+ 543 0182 FFF7FEFF 		bl	tCycle_setFreq
+ 544              	.LVL32:
+ 122:MyProj.cpp    ****     {
+ 545              		.loc 13 122 5 is_stmt 1 view .LVU176
+ 546              	.LBB314:
+ 122:MyProj.cpp    ****     {
+ 547              		.loc 13 122 26 view .LVU177
+ 548 0186 002E     		cmp	r6, #0
+ 549 0188 A2D0     		beq	.L6
+ 122:MyProj.cpp    ****     {
+ 550              		.loc 13 122 17 is_stmt 0 view .LVU178
+ 551 018a 0024     		movs	r4, #0
+ 552              	.LVL33:
+ 553              	.L14:
+ 554              	.LBB315:
+ 125:MyProj.cpp    ****         float mySample2 = tCycle_tick(&mySine2);
+ 555              		.loc 13 125 9 is_stmt 1 discriminator 2 view .LVU179
+ 125:MyProj.cpp    ****         float mySample2 = tCycle_tick(&mySine2);
+ 556              		.loc 13 125 38 is_stmt 0 discriminator 2 view .LVU180
+ 557 018c 1748     		ldr	r0, .L23+20
+ 558 018e FFF7FEFF 		bl	tCycle_tick
+ 559              	.LVL34:
+ 126:MyProj.cpp    **** 
+ 560              		.loc 13 126 38 discriminator 2 view .LVU181
+ 561 0192 2348     		ldr	r0, .L23+72
+ 125:MyProj.cpp    ****         float mySample2 = tCycle_tick(&mySine2);
+ 562              		.loc 13 125 38 discriminator 2 view .LVU182
+ 563 0194 B0EE408A 		vmov.f32	s16, s0
+ 564              	.LVL35:
+ 126:MyProj.cpp    **** 
+ 565              		.loc 13 126 9 is_stmt 1 discriminator 2 view .LVU183
+ 126:MyProj.cpp    **** 
+ 566              		.loc 13 126 38 is_stmt 0 discriminator 2 view .LVU184
+ 567 0198 FFF7FEFF 		bl	tCycle_tick
+ 568              	.LVL36:
+ 129:MyProj.cpp    ****         out[1][i] = (mySample1*.5) + (mySample2*.5);
+ 569              		.loc 13 129 9 is_stmt 1 discriminator 2 view .LVU185
+ 129:MyProj.cpp    ****         out[1][i] = (mySample1*.5) + (mySample2*.5);
+ 570              		.loc 13 129 48 is_stmt 0 discriminator 2 view .LVU186
+ 571 019c B6EE006B 		vmov.f64	d6, #5.0e-1
+ 129:MyProj.cpp    ****         out[1][i] = (mySample1*.5) + (mySample2*.5);
+ 572              		.loc 13 129 19 discriminator 2 view .LVU187
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 27
+
+
+ 573 01a0 2A68     		ldr	r2, [r5]
+ 129:MyProj.cpp    ****         out[1][i] = (mySample1*.5) + (mySample2*.5);
+ 574              		.loc 13 129 39 discriminator 2 view .LVU188
+ 575 01a2 B7EEC00A 		vcvt.f64.f32	d0, s0
+ 576              	.LVL37:
+ 130:MyProj.cpp    ****     }
+ 577              		.loc 13 130 19 discriminator 2 view .LVU189
+ 578 01a6 6B68     		ldr	r3, [r5, #4]
+ 129:MyProj.cpp    ****         out[1][i] = (mySample1*.5) + (mySample2*.5);
+ 579              		.loc 13 129 22 discriminator 2 view .LVU190
+ 580 01a8 B7EEC88A 		vcvt.f64.f32	d8, s16
+ 581              	.LVL38:
+ 129:MyProj.cpp    ****         out[1][i] = (mySample1*.5) + (mySample2*.5);
+ 582              		.loc 13 129 19 discriminator 2 view .LVU191
+ 583 01ac 02EB8402 		add	r2, r2, r4, lsl #2
+ 130:MyProj.cpp    ****     }
+ 584              		.loc 13 130 19 discriminator 2 view .LVU192
+ 585 01b0 03EB8403 		add	r3, r3, r4, lsl #2
+ 586              	.LBE315:
+ 122:MyProj.cpp    ****     {
+ 587              		.loc 13 122 5 discriminator 2 view .LVU193
+ 588 01b4 0134     		adds	r4, r4, #1
+ 589              	.LVL39:
+ 590              	.LBB316:
+ 129:MyProj.cpp    ****         out[1][i] = (mySample1*.5) + (mySample2*.5);
+ 591              		.loc 13 129 48 discriminator 2 view .LVU194
+ 592 01b6 20EE060B 		vmul.f64	d0, d0, d6
+ 593              	.LBE316:
+ 122:MyProj.cpp    ****     {
+ 594              		.loc 13 122 26 discriminator 2 view .LVU195
+ 595 01ba A642     		cmp	r6, r4
+ 596              	.LBB317:
+ 129:MyProj.cpp    ****         out[1][i] = (mySample1*.5) + (mySample2*.5);
+ 597              		.loc 13 129 36 discriminator 2 view .LVU196
+ 598 01bc A8EE060B 		vfma.f64	d0, d8, d6
+ 599 01c0 B7EEC00B 		vcvt.f32.f64	s0, d0
+ 129:MyProj.cpp    ****         out[1][i] = (mySample1*.5) + (mySample2*.5);
+ 600              		.loc 13 129 19 discriminator 2 view .LVU197
+ 601 01c4 82ED000A 		vstr.32	s0, [r2]
+ 130:MyProj.cpp    ****     }
+ 602              		.loc 13 130 9 is_stmt 1 discriminator 2 view .LVU198
+ 130:MyProj.cpp    ****     }
+ 603              		.loc 13 130 19 is_stmt 0 discriminator 2 view .LVU199
+ 604 01c8 83ED000A 		vstr.32	s0, [r3]
+ 605              	.LBE317:
+ 122:MyProj.cpp    ****     {
+ 606              		.loc 13 122 5 is_stmt 1 discriminator 2 view .LVU200
+ 607              	.LVL40:
+ 122:MyProj.cpp    ****     {
+ 608              		.loc 13 122 26 discriminator 2 view .LVU201
+ 609 01cc DED1     		bne	.L14
+ 610              	.LBE314:
+ 611              	.LBE313:
+ 612              	.LBE318:
+ 613              		.loc 13 133 1 is_stmt 0 view .LVU202
+ 614 01ce 02B0     		add	sp, sp, #8
+ 615              		.cfi_def_cfa_offset 32
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 28
+
+
+ 616              		@ sp needed
+ 617 01d0 BDEC028B 		vldm	sp!, {d8}
+ 618              		.cfi_restore 80
+ 619              		.cfi_restore 81
+ 620              		.cfi_def_cfa_offset 24
+ 621 01d4 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 622              	.LVL41:
+ 623              	.L24:
+ 624              		.loc 13 133 1 view .LVU203
+ 625              		.align	2
+ 626              	.L23:
+ 627 01d8 00000000 		.word	hw
+ 628 01dc 00000000 		.word	.LANCHOR5
+ 629 01e0 00000000 		.word	.LANCHOR1
+ 630 01e4 00000000 		.word	.LANCHOR2
+ 631 01e8 00000000 		.word	.LANCHOR3
+ 632 01ec 00000000 		.word	.LANCHOR4
+ 633 01f0 00004042 		.word	1111490560
+ 634 01f4 00000000 		.word	0
+ 635 01f8 D4000000 		.word	hw+212
+ 636 01fc 28010000 		.word	hw+296
+ 637 0200 00002544 		.word	1143275520
+ 638 0204 00005C43 		.word	1130102784
+ 639 0208 00000000 		.word	.LANCHOR6
+ 640 020c 0000DC43 		.word	1138491392
+ 641 0210 0000C842 		.word	1120403456
+ 642 0214 CFF7FF40 		.word	1090516943
+ 643 0218 00000000 		.word	.LANCHOR7
+ 644 021c 0AD74F41 		.word	1095751434
+ 645 0220 00000000 		.word	.LANCHOR8
+ 646 0224 00000000 		.word	.LANCHOR0
+ 647              		.cfi_endproc
+ 648              	.LFE2542:
+ 650              		.section	.text.startup.main,"ax",%progbits
+ 651              		.align	1
+ 652              		.p2align 2,,3
+ 653              		.global	main
+ 654              		.syntax unified
+ 655              		.thumb
+ 656              		.thumb_func
+ 658              	main:
+ 659              	.LFB2543:
+ 134:MyProj.cpp    **** 
+ 135:MyProj.cpp    **** int main(void)
+ 136:MyProj.cpp    **** {
+ 660              		.loc 13 136 1 is_stmt 1 view -0
+ 661              		.cfi_startproc
+ 662              		@ Volatile: function does not return.
+ 663              		@ args = 0, pretend = 0, frame = 0
+ 664              		@ frame_needed = 0, uses_anonymous_args = 0
+ 137:MyProj.cpp    ****     hw.Init();
+ 665              		.loc 13 137 5 view .LVU205
+ 136:MyProj.cpp    ****     hw.Init();
+ 666              		.loc 13 136 1 is_stmt 0 view .LVU206
+ 667 0000 08B5     		push	{r3, lr}
+ 668              		.cfi_def_cfa_offset 8
+ 669              		.cfi_offset 3, -8
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 29
+
+
+ 670              		.cfi_offset 14, -4
+ 671              		.loc 13 137 12 view .LVU207
+ 672 0002 0021     		movs	r1, #0
+ 673 0004 2048     		ldr	r0, .L28
+ 674 0006 FFF7FEFF 		bl	_ZN5daisy8DaisyPod4InitEb
+ 675              	.LVL42:
+ 138:MyProj.cpp    ****     hw.SetAudioBlockSize(4); // number of samples handled per callback
+ 676              		.loc 13 138 5 is_stmt 1 view .LVU208
+ 677              		.loc 13 138 25 is_stmt 0 view .LVU209
+ 678 000a 0421     		movs	r1, #4
+ 679 000c 1E48     		ldr	r0, .L28
+ 680 000e FFF7FEFF 		bl	_ZN5daisy8DaisyPod17SetAudioBlockSizeEj
+ 681              	.LVL43:
+ 139:MyProj.cpp    ****     hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
+ 682              		.loc 13 139 5 is_stmt 1 view .LVU210
+ 683              		.loc 13 139 26 is_stmt 0 view .LVU211
+ 684 0012 0321     		movs	r1, #3
+ 685 0014 1C48     		ldr	r0, .L28
+ 686 0016 FFF7FEFF 		bl	_ZN5daisy8DaisyPod18SetAudioSampleRateENS_9SaiHandle6Config10SampleRateE
+ 687              	.LVL44:
+ 140:MyProj.cpp    ****     Random::Init();
+ 688              		.loc 13 140 5 is_stmt 1 view .LVU212
+ 689              		.loc 13 140 17 is_stmt 0 view .LVU213
+ 690 001a FFF7FEFF 		bl	_ZN5daisy6Random4InitEv
+ 691              	.LVL45:
+ 141:MyProj.cpp    ****     hw.StartAdc();
+ 692              		.loc 13 141 5 is_stmt 1 view .LVU214
+ 693              		.loc 13 141 16 is_stmt 0 view .LVU215
+ 694 001e 1A48     		ldr	r0, .L28
+ 695 0020 FFF7FEFF 		bl	_ZN5daisy8DaisyPod8StartAdcEv
+ 696              	.LVL46:
+ 142:MyProj.cpp    ****     hw.StartAudio(AudioCallback);
+ 697              		.loc 13 142 5 is_stmt 1 view .LVU216
+ 698              		.loc 13 142 18 is_stmt 0 view .LVU217
+ 699 0024 1949     		ldr	r1, .L28+4
+ 700 0026 1848     		ldr	r0, .L28
+ 701 0028 FFF7FEFF 		bl	_ZN5daisy8DaisyPod10StartAudioEPFvPKPKfPPfjE
+ 702              	.LVL47:
+ 143:MyProj.cpp    ****     LEAF_init(&leaf, 48000, leafMemory, 65535, randomNumber);
+ 703              		.loc 13 143 5 is_stmt 1 view .LVU218
+ 704              		.loc 13 143 14 is_stmt 0 view .LVU219
+ 705 002c 184B     		ldr	r3, .L28+8
+ 706 002e 4FF6FF72 		movw	r2, #65535
+ 707 0032 9FED180A 		vldr.32	s0, .L28+12
+ 708 0036 1849     		ldr	r1, .L28+16
+ 709 0038 1848     		ldr	r0, .L28+20
+ 710 003a FFF7FEFF 		bl	LEAF_init
+ 711              	.LVL48:
+ 144:MyProj.cpp    ****     tCycle_init(&mySine, &leaf);
+ 712              		.loc 13 144 5 is_stmt 1 view .LVU220
+ 713              		.loc 13 144 16 is_stmt 0 view .LVU221
+ 714 003e 1749     		ldr	r1, .L28+20
+ 715 0040 1748     		ldr	r0, .L28+24
+ 716 0042 FFF7FEFF 		bl	tCycle_init
+ 717              	.LVL49:
+ 145:MyProj.cpp    ****     tCycle_init(&mySine2, &leaf);
+ 718              		.loc 13 145 5 is_stmt 1 view .LVU222
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 30
+
+
+ 719              		.loc 13 145 16 is_stmt 0 view .LVU223
+ 720 0046 1549     		ldr	r1, .L28+20
+ 721 0048 1648     		ldr	r0, .L28+28
+ 722 004a FFF7FEFF 		bl	tCycle_init
+ 723              	.LVL50:
+ 146:MyProj.cpp    ****     tCycle_setFreq(&mySine, 440.0f); //this will be written over by the audio callback loop immedia
+ 724              		.loc 13 146 5 is_stmt 1 view .LVU224
+ 725              		.loc 13 146 19 is_stmt 0 view .LVU225
+ 726 004e 9FED160A 		vldr.32	s0, .L28+32
+ 727 0052 1348     		ldr	r0, .L28+24
+ 728 0054 FFF7FEFF 		bl	tCycle_setFreq
+ 729              	.LVL51:
+ 147:MyProj.cpp    ****     tCycle_setFreq(&mySine2, 220.0f);
+ 730              		.loc 13 147 5 is_stmt 1 view .LVU226
+ 731              		.loc 13 147 19 is_stmt 0 view .LVU227
+ 732 0058 9FED140A 		vldr.32	s0, .L28+36
+ 733 005c 1148     		ldr	r0, .L28+28
+ 734 005e FFF7FEFF 		bl	tCycle_setFreq
+ 735              	.LVL52:
+ 736              	.L26:
+ 148:MyProj.cpp    **** 
+ 149:MyProj.cpp    ****     //blink that light! this endless while loop will be interrupted by the audio callback when the 
+ 150:MyProj.cpp    ****     while(1) {
+ 737              		.loc 13 150 5 is_stmt 1 discriminator 1 view .LVU228
+ 151:MyProj.cpp    ****         hw.seed.SetLed(1); //turn on the red led on the Seed
+ 738              		.loc 13 151 9 discriminator 1 view .LVU229
+ 739              		.loc 13 151 23 is_stmt 0 discriminator 1 view .LVU230
+ 740 0062 0121     		movs	r1, #1
+ 741 0064 0848     		ldr	r0, .L28
+ 742 0066 FFF7FEFF 		bl	_ZN5daisy9DaisySeed6SetLedEb
+ 743              	.LVL53:
+ 152:MyProj.cpp    ****         hw.DelayMs(500); //wait 500 milliseconds (0.5 seconds)
+ 744              		.loc 13 152 9 is_stmt 1 discriminator 1 view .LVU231
+ 745              		.loc 13 152 19 is_stmt 0 discriminator 1 view .LVU232
+ 746 006a 4FF4FA71 		mov	r1, #500
+ 747 006e 0648     		ldr	r0, .L28
+ 748 0070 FFF7FEFF 		bl	_ZN5daisy8DaisyPod7DelayMsEj
+ 749              	.LVL54:
+ 153:MyProj.cpp    ****         hw.seed.SetLed(0); //turn off the red led on the Seed
+ 750              		.loc 13 153 9 is_stmt 1 discriminator 1 view .LVU233
+ 751              		.loc 13 153 23 is_stmt 0 discriminator 1 view .LVU234
+ 752 0074 0021     		movs	r1, #0
+ 753 0076 0448     		ldr	r0, .L28
+ 754 0078 FFF7FEFF 		bl	_ZN5daisy9DaisySeed6SetLedEb
+ 755              	.LVL55:
+ 154:MyProj.cpp    ****         hw.DelayMs(500); //wait 500 milliseconds (0.5 seconds)
+ 756              		.loc 13 154 9 is_stmt 1 discriminator 1 view .LVU235
+ 757              		.loc 13 154 19 is_stmt 0 discriminator 1 view .LVU236
+ 758 007c 4FF4FA71 		mov	r1, #500
+ 759 0080 0148     		ldr	r0, .L28
+ 760 0082 FFF7FEFF 		bl	_ZN5daisy8DaisyPod7DelayMsEj
+ 761              	.LVL56:
+ 150:MyProj.cpp    ****         hw.seed.SetLed(1); //turn on the red led on the Seed
+ 762              		.loc 13 150 5 is_stmt 1 discriminator 1 view .LVU237
+ 763 0086 ECE7     		b	.L26
+ 764              	.L29:
+ 765              		.align	2
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 31
+
+
+ 766              	.L28:
+ 767 0088 00000000 		.word	hw
+ 768 008c 00000000 		.word	_Z13AudioCallbackPKPKfPPfj
+ 769 0090 00000000 		.word	_Z12randomNumberv
+ 770 0094 00803B47 		.word	1195081728
+ 771 0098 00000000 		.word	leafMemory
+ 772 009c 00000000 		.word	.LANCHOR9
+ 773 00a0 00000000 		.word	.LANCHOR4
+ 774 00a4 00000000 		.word	.LANCHOR8
+ 775 00a8 0000DC43 		.word	1138491392
+ 776 00ac 00005C43 		.word	1130102784
+ 777              		.cfi_endproc
+ 778              	.LFE2543:
+ 780              		.section	.text.startup._GLOBAL__sub_I_leaf,"ax",%progbits
+ 781              		.align	1
+ 782              		.p2align 2,,3
+ 783              		.syntax unified
+ 784              		.thumb
+ 785              		.thumb_func
+ 787              	_GLOBAL__sub_I_leaf:
+ 788              	.LFB2571:
+ 155:MyProj.cpp    ****     }
+ 156:MyProj.cpp    **** }
+ 789              		.loc 13 156 1 view -0
+ 790              		.cfi_startproc
+ 791              		@ args = 0, pretend = 0, frame = 0
+ 792              		@ frame_needed = 0, uses_anonymous_args = 0
+ 793              	.LBB384:
+ 794              	.LBI384:
+ 795              		.loc 13 156 1 view .LVU239
+ 796              	.LVL57:
+ 797              	.LBB385:
+ 798              	.LBB386:
+ 799              	.LBI386:
+  35:../../libDaisy//src/daisy_pod.h ****     ~DaisyPod() {}
+ 800              		.loc 1 35 5 view .LVU240
+ 801              	.LBB387:
+ 802              	.LBB388:
+ 803              	.LBI388:
+  21:../../libDaisy//src/daisy_seed.h ****     ~DaisySeed() {}
+ 804              		.loc 8 21 5 view .LVU241
+ 805              	.LBB389:
+ 806              	.LBB390:
+ 807              	.LBI390:
+ 808              		.file 14 "../../libDaisy//src/per/qspi.h"
+   1:../../libDaisy//src/per/qspi.h **** #ifndef DSY_QSPI
+   2:../../libDaisy//src/per/qspi.h **** #define DSY_QSPI /**< Macro */
+   3:../../libDaisy//src/per/qspi.h **** 
+   4:../../libDaisy//src/per/qspi.h **** #ifndef UNIT_TEST // for unit tests, a dummy implementation
+   5:../../libDaisy//src/per/qspi.h **** 
+   6:../../libDaisy//src/per/qspi.h **** #include <cstdint>
+   7:../../libDaisy//src/per/qspi.h **** #include "daisy_core.h" // Added for dsy_gpio_pin typedef
+   8:../../libDaisy//src/per/qspi.h **** 
+   9:../../libDaisy//src/per/qspi.h **** #define DSY_QSPI_TEXT       \
+  10:../../libDaisy//src/per/qspi.h ****     __attribute__((section( \
+  11:../../libDaisy//src/per/qspi.h ****         ".qspiflash_text"))) /**< used for reading memory in memory_mapped mode. */
+  12:../../libDaisy//src/per/qspi.h **** #define DSY_QSPI_DATA       \
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 32
+
+
+  13:../../libDaisy//src/per/qspi.h ****     __attribute__((section( \
+  14:../../libDaisy//src/per/qspi.h ****         ".qspiflash_data"))) /**< used for reading memory in memory_mapped mode. */
+  15:../../libDaisy//src/per/qspi.h **** #define DSY_QSPI_BSS        \
+  16:../../libDaisy//src/per/qspi.h ****     __attribute__((section( \
+  17:../../libDaisy//src/per/qspi.h ****         ".qspiflash_bss"))) /**< used for reading memory in memory_mapped mode. */
+  18:../../libDaisy//src/per/qspi.h **** 
+  19:../../libDaisy//src/per/qspi.h **** namespace daisy
+  20:../../libDaisy//src/per/qspi.h **** {
+  21:../../libDaisy//src/per/qspi.h **** /** @addtogroup serial
+  22:../../libDaisy//src/per/qspi.h **** @{
+  23:../../libDaisy//src/per/qspi.h **** */
+  24:../../libDaisy//src/per/qspi.h **** 
+  25:../../libDaisy//src/per/qspi.h **** /** 
+  26:../../libDaisy//src/per/qspi.h ****  Driver for QSPI peripheral to interface with external flash memory. \n 
+  27:../../libDaisy//src/per/qspi.h ****     Currently supported QSPI Devices: \n 
+  28:../../libDaisy//src/per/qspi.h ****     * IS25LP080D
+  29:../../libDaisy//src/per/qspi.h **** */
+  30:../../libDaisy//src/per/qspi.h **** class QSPIHandle
+  31:../../libDaisy//src/per/qspi.h **** {
+  32:../../libDaisy//src/per/qspi.h ****   public:
+  33:../../libDaisy//src/per/qspi.h ****     enum Result
+  34:../../libDaisy//src/per/qspi.h ****     {
+  35:../../libDaisy//src/per/qspi.h ****         OK = 0,
+  36:../../libDaisy//src/per/qspi.h ****         ERR
+  37:../../libDaisy//src/per/qspi.h ****     };
+  38:../../libDaisy//src/per/qspi.h **** 
+  39:../../libDaisy//src/per/qspi.h ****     /** Indicates the current status of the module. 
+  40:../../libDaisy//src/per/qspi.h ****          *  Warnings are indicated by a leading W.
+  41:../../libDaisy//src/per/qspi.h ****          *  Errors are indicated by a leading E and cause an immediate exit.
+  42:../../libDaisy//src/per/qspi.h ****          * 
+  43:../../libDaisy//src/per/qspi.h ****          *  \param GOOD - No errors have been reported.
+  44:../../libDaisy//src/per/qspi.h ****          *  \param E_HAL_ERROR - HAL code did not return HAL_OK.
+  45:../../libDaisy//src/per/qspi.h ****          *  \param E_SWITCHING_MODES - An error was encountered while switching QSPI peripheral mod
+  46:../../libDaisy//src/per/qspi.h ****          *  \param E_INVALID_MODE - QSPI should not be written to while the program is executing fr
+  47:../../libDaisy//src/per/qspi.h ****          */
+  48:../../libDaisy//src/per/qspi.h ****     enum Status
+  49:../../libDaisy//src/per/qspi.h ****     {
+  50:../../libDaisy//src/per/qspi.h ****         GOOD = 0,
+  51:../../libDaisy//src/per/qspi.h ****         E_HAL_ERROR,
+  52:../../libDaisy//src/per/qspi.h ****         E_SWITCHING_MODES,
+  53:../../libDaisy//src/per/qspi.h ****         E_INVALID_MODE,
+  54:../../libDaisy//src/per/qspi.h ****     };
+  55:../../libDaisy//src/per/qspi.h **** 
+  56:../../libDaisy//src/per/qspi.h ****     /** Configuration structure for interfacing with QSPI Driver */
+  57:../../libDaisy//src/per/qspi.h ****     struct Config
+  58:../../libDaisy//src/per/qspi.h ****     {
+  59:../../libDaisy//src/per/qspi.h ****         /** Flash Devices supported. (Both of these are more-or-less the same, just different sizes
+  60:../../libDaisy//src/per/qspi.h ****         enum Device
+  61:../../libDaisy//src/per/qspi.h ****         {
+  62:../../libDaisy//src/per/qspi.h ****             IS25LP080D,  /**< & */
+  63:../../libDaisy//src/per/qspi.h ****             IS25LP064A,  /**< & */
+  64:../../libDaisy//src/per/qspi.h ****             DEVICE_LAST, /**< & */
+  65:../../libDaisy//src/per/qspi.h ****         };
+  66:../../libDaisy//src/per/qspi.h **** 
+  67:../../libDaisy//src/per/qspi.h ****         /** 
+  68:../../libDaisy//src/per/qspi.h ****         Modes of operation.
+  69:../../libDaisy//src/per/qspi.h ****         Memory Mapped mode: QSPI configured so that the QSPI can be
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 33
+
+
+  70:../../libDaisy//src/per/qspi.h ****         read from starting address 0x90000000. Writing is not
+  71:../../libDaisy//src/per/qspi.h ****         possible in this mode. \n 
+  72:../../libDaisy//src/per/qspi.h ****         Indirect Polling mode: Device driver enabled. 
+  73:../../libDaisy//src/per/qspi.h ****         */
+  74:../../libDaisy//src/per/qspi.h ****         enum Mode
+  75:../../libDaisy//src/per/qspi.h ****         {
+  76:../../libDaisy//src/per/qspi.h ****             MEMORY_MAPPED,    /**< & */
+  77:../../libDaisy//src/per/qspi.h ****             INDIRECT_POLLING, /**< & */
+  78:../../libDaisy//src/per/qspi.h ****             MODE_LAST,
+  79:../../libDaisy//src/per/qspi.h ****         };
+  80:../../libDaisy//src/per/qspi.h **** 
+  81:../../libDaisy//src/per/qspi.h ****         //SCK,  CE# (active low)
+  82:../../libDaisy//src/per/qspi.h ****         struct
+  83:../../libDaisy//src/per/qspi.h ****         {
+  84:../../libDaisy//src/per/qspi.h ****             dsy_gpio_pin io0; /**< & */
+  85:../../libDaisy//src/per/qspi.h ****             dsy_gpio_pin io1; /**< & */
+  86:../../libDaisy//src/per/qspi.h ****             dsy_gpio_pin io2; /**< & */
+  87:../../libDaisy//src/per/qspi.h ****             dsy_gpio_pin io3; /**< & */
+  88:../../libDaisy//src/per/qspi.h ****             dsy_gpio_pin clk; /**< & */
+  89:../../libDaisy//src/per/qspi.h ****             dsy_gpio_pin ncs; /**< & */
+  90:../../libDaisy//src/per/qspi.h ****         } pin_config;
+  91:../../libDaisy//src/per/qspi.h **** 
+  92:../../libDaisy//src/per/qspi.h ****         Device device;
+  93:../../libDaisy//src/per/qspi.h ****         Mode   mode;
+  94:../../libDaisy//src/per/qspi.h ****     };
+  95:../../libDaisy//src/per/qspi.h **** 
+  96:../../libDaisy//src/per/qspi.h ****     /** 
+  97:../../libDaisy//src/per/qspi.h ****         Initializes QSPI peripheral, and Resets, and prepares memory for access.
+  98:../../libDaisy//src/per/qspi.h ****         \param config should be populated with the mode, device and pin_config before calling this 
+  99:../../libDaisy//src/per/qspi.h ****         \return Result::OK or Result::ERR
+ 100:../../libDaisy//src/per/qspi.h ****         */
+ 101:../../libDaisy//src/per/qspi.h ****     Result Init(const Config& config);
+ 102:../../libDaisy//src/per/qspi.h **** 
+ 103:../../libDaisy//src/per/qspi.h ****     /** Returns the current config. */
+ 104:../../libDaisy//src/per/qspi.h ****     const Config& GetConfig() const;
+ 105:../../libDaisy//src/per/qspi.h **** 
+ 106:../../libDaisy//src/per/qspi.h ****     // Couldn't this just be called before anything else in init? That
+ 107:../../libDaisy//src/per/qspi.h ****     // would make manually calling it unnecessary.
+ 108:../../libDaisy//src/per/qspi.h ****     /** 
+ 109:../../libDaisy//src/per/qspi.h ****         Deinitializes the peripheral
+ 110:../../libDaisy//src/per/qspi.h ****         This should be called before reinitializing QSPI in a different mode.
+ 111:../../libDaisy//src/per/qspi.h ****         \return Result::OK or Result::ERR
+ 112:../../libDaisy//src/per/qspi.h ****         */
+ 113:../../libDaisy//src/per/qspi.h ****     Result DeInit();
+ 114:../../libDaisy//src/per/qspi.h **** 
+ 115:../../libDaisy//src/per/qspi.h ****     /** 
+ 116:../../libDaisy//src/per/qspi.h ****         Writes a single page to to the specified address on the QSPI chip.
+ 117:../../libDaisy//src/per/qspi.h ****         For IS25LP*, page size is 256 bytes.
+ 118:../../libDaisy//src/per/qspi.h ****         \param address Address to write to
+ 119:../../libDaisy//src/per/qspi.h ****         \param size Buffer size
+ 120:../../libDaisy//src/per/qspi.h ****         \param buffer Buffer to write
+ 121:../../libDaisy//src/per/qspi.h ****         \return Result::OK or Result::ERR
+ 122:../../libDaisy//src/per/qspi.h ****         */
+ 123:../../libDaisy//src/per/qspi.h ****     Result WritePage(uint32_t address, uint32_t size, uint8_t* buffer);
+ 124:../../libDaisy//src/per/qspi.h **** 
+ 125:../../libDaisy//src/per/qspi.h ****     /** 
+ 126:../../libDaisy//src/per/qspi.h ****         Writes data in buffer to to the QSPI. Starting at address to address+size 
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 34
+
+
+ 127:../../libDaisy//src/per/qspi.h ****         \param address Address to write to
+ 128:../../libDaisy//src/per/qspi.h ****         \param size Buffer size
+ 129:../../libDaisy//src/per/qspi.h ****         \param buffer Buffer to write
+ 130:../../libDaisy//src/per/qspi.h ****         \return Result::OK or Result::ERR
+ 131:../../libDaisy//src/per/qspi.h ****         */
+ 132:../../libDaisy//src/per/qspi.h ****     Result Write(uint32_t address, uint32_t size, uint8_t* buffer);
+ 133:../../libDaisy//src/per/qspi.h **** 
+ 134:../../libDaisy//src/per/qspi.h ****     /** 
+ 135:../../libDaisy//src/per/qspi.h ****         Erases the area specified on the chip.
+ 136:../../libDaisy//src/per/qspi.h ****         Erasures will happen by 4K, 32K or 64K increments.
+ 137:../../libDaisy//src/per/qspi.h ****         Smallest erase possible is 4kB at a time. (on IS25LP*)
+ 138:../../libDaisy//src/per/qspi.h ****         \param start_addr Address to begin erasing from
+ 139:../../libDaisy//src/per/qspi.h ****         \param end_addr  Address to stop erasing at
+ 140:../../libDaisy//src/per/qspi.h ****         \return Result::OK or Result::ERR
+ 141:../../libDaisy//src/per/qspi.h ****         */
+ 142:../../libDaisy//src/per/qspi.h ****     Result Erase(uint32_t start_addr, uint32_t end_addr);
+ 143:../../libDaisy//src/per/qspi.h **** 
+ 144:../../libDaisy//src/per/qspi.h ****     /**  
+ 145:../../libDaisy//src/per/qspi.h ****          Erases a single sector of the chip.  
+ 146:../../libDaisy//src/per/qspi.h ****         TODO: Document the size of this function. 
+ 147:../../libDaisy//src/per/qspi.h ****         \param address Address of sector to erase
+ 148:../../libDaisy//src/per/qspi.h ****         \return Result::OK or Result::ERR
+ 149:../../libDaisy//src/per/qspi.h ****         */
+ 150:../../libDaisy//src/per/qspi.h ****     Result EraseSector(uint32_t address);
+ 151:../../libDaisy//src/per/qspi.h **** 
+ 152:../../libDaisy//src/per/qspi.h ****     /** Returns the current class status. Useful for debugging.
+ 153:../../libDaisy//src/per/qspi.h ****      *  \returns Status
+ 154:../../libDaisy//src/per/qspi.h ****      */
+ 155:../../libDaisy//src/per/qspi.h ****     Status GetStatus();
+ 156:../../libDaisy//src/per/qspi.h **** 
+ 157:../../libDaisy//src/per/qspi.h ****     /** Returns a pointer to the actual memory used 
+ 158:../../libDaisy//src/per/qspi.h ****      *  The memory at this address is read-only
+ 159:../../libDaisy//src/per/qspi.h ****      *  to write to it use the Write function.
+ 160:../../libDaisy//src/per/qspi.h ****      * 
+ 161:../../libDaisy//src/per/qspi.h ****      *  \param offset returns the pointer starting this 
+ 162:../../libDaisy//src/per/qspi.h ****      *                many bytes into the memory
+ 163:../../libDaisy//src/per/qspi.h ****     */
+ 164:../../libDaisy//src/per/qspi.h ****     void* GetData(uint32_t offset = 0);
+ 165:../../libDaisy//src/per/qspi.h **** 
+ 166:../../libDaisy//src/per/qspi.h ****     QSPIHandle() : pimpl_(nullptr) {}
+ 809              		.loc 14 166 5 view .LVU242
+ 810              	.LBB391:
+ 811              	.LBB392:
+ 812              		.loc 14 166 34 is_stmt 0 view .LVU243
+ 813 0000 1348     		ldr	r0, .L32
+ 814 0002 0022     		movs	r2, #0
+ 815              	.LBE392:
+ 816              	.LBE391:
+ 817              	.LBE390:
+ 818              	.LBE389:
+ 819              	.LBE388:
+ 820              	.LBB408:
+ 821              	.LBB409:
+ 822              	.LBB410:
+ 823              	.LBB411:
+ 824              	.LBB412:
+ 825              	.LBB413:
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 35
+
+
+ 826              	.LBB414:
+  37:../../libDaisy//src/hid/midi.h ****             tx     = {DSY_GPIOB, 6};
+ 827              		.loc 2 37 20 view .LVU244
+ 828 0004 1349     		ldr	r1, .L32+4
+  36:../../libDaisy//src/hid/midi.h ****             rx     = {DSY_GPIOB, 7};
+ 829              		.loc 2 36 20 view .LVU245
+ 830 0006 00F51043 		add	r3, r0, #36864
+  38:../../libDaisy//src/hid/midi.h ****         }
+ 831              		.loc 2 38 20 view .LVU246
+ 832 000a B1F804C0 		ldrh	ip, [r1, #4]
+ 833              	.LBE414:
+ 834              	.LBE413:
+ 835              	.LBE412:
+ 836              	.LBE411:
+ 837              	.LBE410:
+ 838              	.LBE409:
+ 839              	.LBE408:
+ 840              	.LBE387:
+ 841              	.LBE386:
+ 842              	.LBE385:
+ 843              	.LBE384:
+ 844              		.loc 13 156 1 view .LVU247
+ 845 000e 00B5     		push	{lr}
+ 846              		.cfi_def_cfa_offset 4
+ 847              		.cfi_offset 14, -4
+ 848              	.LBB469:
+ 849              	.LBB467:
+ 850              	.LBB466:
+ 851              	.LBB465:
+ 852              	.LBB443:
+ 853              	.LBB440:
+ 854              	.LBB437:
+ 855              	.LBB424:
+ 856              	.LBB421:
+ 857              	.LBB418:
+ 858              	.LBB415:
+  37:../../libDaisy//src/hid/midi.h ****             tx     = {DSY_GPIOB, 6};
+ 859              		.loc 2 37 20 view .LVU248
+ 860 0010 B1F800E0 		ldrh	lr, [r1]
+ 861              	.LBE415:
+ 862              	.LBE418:
+ 863              	.LBE421:
+ 864              	.LBE424:
+ 865              	.LBE437:
+ 866              	.LBE440:
+ 867              	.LBE443:
+ 868              	.LBB444:
+ 869              	.LBB406:
+ 870              	.LBB395:
+ 871              	.LBB394:
+ 872              	.LBB393:
+ 873              		.loc 14 166 34 view .LVU249
+ 874 0014 0260     		str	r2, [r0]
+ 875              	.LVL58:
+ 876              		.loc 14 166 34 view .LVU250
+ 877              	.LBE393:
+ 878              	.LBE394:
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 36
+
+
+ 879              	.LBE395:
+ 880              	.LBB396:
+ 881              	.LBI396:
+  95:../../libDaisy//src/hid/audio.h ****     ~AudioHandle() {}
+ 882              		.loc 12 95 5 is_stmt 1 view .LVU251
+ 883              	.LBE396:
+ 884              	.LBE406:
+ 885              	.LBE444:
+ 886              	.LBB445:
+ 887              	.LBB441:
+ 888              	.LBB438:
+  84:../../libDaisy//src/hid/midi.h ****     ~MidiHandler() {}
+ 889              		.loc 2 84 19 is_stmt 0 view .LVU252
+ 890 0016 1049     		ldr	r1, .L32+8
+ 891              	.LBE438:
+ 892              	.LBE441:
+ 893              	.LBE445:
+ 894              	.LBB446:
+ 895              	.LBB407:
+ 896              	.LBB399:
+ 897              	.LBB397:
+ 898              	.LBB398:
+  95:../../libDaisy//src/hid/audio.h ****     ~AudioHandle() {}
+ 899              		.loc 12 95 35 view .LVU253
+ 900 0018 4261     		str	r2, [r0, #20]
+ 901              	.LVL59:
+  95:../../libDaisy//src/hid/audio.h ****     ~AudioHandle() {}
+ 902              		.loc 12 95 35 view .LVU254
+ 903              	.LBE398:
+ 904              	.LBE397:
+ 905              	.LBE399:
+ 906              	.LBB400:
+ 907              	.LBI400:
+  92:../../libDaisy//src/per/adc.h ****     ~AdcHandle() {}
+ 908              		.loc 11 92 5 is_stmt 1 view .LVU255
+  92:../../libDaisy//src/per/adc.h ****     ~AdcHandle() {}
+ 909              		.loc 11 92 5 is_stmt 0 view .LVU256
+ 910              	.LBE400:
+ 911              	.LBB401:
+ 912              	.LBI401:
+ 913              		.file 15 "../../libDaisy//src/per/dac.h"
+   1:../../libDaisy//src/per/dac.h **** #pragma once
+   2:../../libDaisy//src/per/dac.h **** #ifndef DSY_DAC_H
+   3:../../libDaisy//src/per/dac.h **** #define DSY_DAC_H
+   4:../../libDaisy//src/per/dac.h **** 
+   5:../../libDaisy//src/per/dac.h **** #include "daisy_core.h"
+   6:../../libDaisy//src/per/dac.h **** 
+   7:../../libDaisy//src/per/dac.h **** namespace daisy
+   8:../../libDaisy//src/per/dac.h **** {
+   9:../../libDaisy//src/per/dac.h **** /** @brief DAC handle for Built-in DAC Peripheral 
+  10:../../libDaisy//src/per/dac.h ****  *  @ingroup per_analog
+  11:../../libDaisy//src/per/dac.h ****  ** 
+  12:../../libDaisy//src/per/dac.h ****  ** For now only Normal Mode is supported,
+  13:../../libDaisy//src/per/dac.h ****  ** Sample and hold mode provides reduced power consumption, but requires a bit more setup.
+  14:../../libDaisy//src/per/dac.h ****  **
+  15:../../libDaisy//src/per/dac.h ****  ** For now connecting the DAC through other internal peripherals is also not supported.
+  16:../../libDaisy//src/per/dac.h ****  **
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 37
+
+
+  17:../../libDaisy//src/per/dac.h ****  ** Since the DAC channels have dedicated pins we don't need to pass in a pin config like with
+  18:../../libDaisy//src/per/dac.h ****  ** other modules. However, it is still important to not try to use the DAC pins for anything else.
+  19:../../libDaisy//src/per/dac.h ****  ** DAC Channel 1 is on PA4, and DAC Channel 2 is on PA5
+  20:../../libDaisy//src/per/dac.h ****  ***/
+  21:../../libDaisy//src/per/dac.h **** class DacHandle
+  22:../../libDaisy//src/per/dac.h **** {
+  23:../../libDaisy//src/per/dac.h ****   public:
+  24:../../libDaisy//src/per/dac.h ****     /** Return Values for the DacHandle class */
+  25:../../libDaisy//src/per/dac.h ****     enum class Result
+  26:../../libDaisy//src/per/dac.h ****     {
+  27:../../libDaisy//src/per/dac.h ****         OK,
+  28:../../libDaisy//src/per/dac.h ****         ERR,
+  29:../../libDaisy//src/per/dac.h ****     };
+  30:../../libDaisy//src/per/dac.h **** 
+  31:../../libDaisy//src/per/dac.h ****     /** Selects which channel(s) will be configured for use. */
+  32:../../libDaisy//src/per/dac.h ****     enum class Channel
+  33:../../libDaisy//src/per/dac.h ****     {
+  34:../../libDaisy//src/per/dac.h ****         ONE,
+  35:../../libDaisy//src/per/dac.h ****         TWO,
+  36:../../libDaisy//src/per/dac.h ****         BOTH,
+  37:../../libDaisy//src/per/dac.h ****     };
+  38:../../libDaisy//src/per/dac.h **** 
+  39:../../libDaisy//src/per/dac.h ****     /** Sets the Mode for the DAC channels.
+  40:../../libDaisy//src/per/dac.h ****      **
+  41:../../libDaisy//src/per/dac.h ****      ** Polling mode uses the blocking mode to transmit a single value at a time.
+  42:../../libDaisy//src/per/dac.h ****      **
+  43:../../libDaisy//src/per/dac.h ****      ** DMA mode uses a buffer, and periodically transmits it triggering a 
+  44:../../libDaisy//src/per/dac.h ****      ** callback to fill the buffer when it is ready for more samples.
+  45:../../libDaisy//src/per/dac.h ****      ***/
+  46:../../libDaisy//src/per/dac.h ****     enum class Mode
+  47:../../libDaisy//src/per/dac.h ****     {
+  48:../../libDaisy//src/per/dac.h ****         POLLING,
+  49:../../libDaisy//src/per/dac.h ****         DMA,
+  50:../../libDaisy//src/per/dac.h ****     };
+  51:../../libDaisy//src/per/dac.h **** 
+  52:../../libDaisy//src/per/dac.h ****     /** Sets the number of bits per sample transmitted out of the DAC.
+  53:../../libDaisy//src/per/dac.h ****      ** The output range will be: 0V - VDDA
+  54:../../libDaisy//src/per/dac.h ****      ** The resolution will be roughly: bitdepth / (VDDA - 0V) 
+  55:../../libDaisy//src/per/dac.h ****      ***/
+  56:../../libDaisy//src/per/dac.h ****     enum class BitDepth
+  57:../../libDaisy//src/per/dac.h ****     {
+  58:../../libDaisy//src/per/dac.h ****         BITS_8,
+  59:../../libDaisy//src/per/dac.h ****         BITS_12
+  60:../../libDaisy//src/per/dac.h ****     };
+  61:../../libDaisy//src/per/dac.h **** 
+  62:../../libDaisy//src/per/dac.h ****     /** Sets whether the DAC output is buffered for higher drive ability. */
+  63:../../libDaisy//src/per/dac.h ****     enum class BufferState
+  64:../../libDaisy//src/per/dac.h ****     {
+  65:../../libDaisy//src/per/dac.h ****         ENABLED,
+  66:../../libDaisy//src/per/dac.h ****         DISABLED,
+  67:../../libDaisy//src/per/dac.h ****     };
+  68:../../libDaisy//src/per/dac.h **** 
+  69:../../libDaisy//src/per/dac.h ****     /** Configuration structure for initializing the DAC structure. */
+  70:../../libDaisy//src/per/dac.h ****     struct Config
+  71:../../libDaisy//src/per/dac.h ****     {
+  72:../../libDaisy//src/per/dac.h ****         /** Target Samplerate in Hz used to configure the internal 
+  73:../../libDaisy//src/per/dac.h ****          ** timebase for DMA mode. Does nothing in POLLING mode.
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 38
+
+
+  74:../../libDaisy//src/per/dac.h ****          ** If the value is 0 at Init time this will default to 48000Hz 
+  75:../../libDaisy//src/per/dac.h ****          ** otherwise the driver will attempt meet the target.*/
+  76:../../libDaisy//src/per/dac.h ****         uint32_t target_samplerate;
+  77:../../libDaisy//src/per/dac.h **** 
+  78:../../libDaisy//src/per/dac.h ****         Channel     chn;
+  79:../../libDaisy//src/per/dac.h ****         Mode        mode;
+  80:../../libDaisy//src/per/dac.h ****         BitDepth    bitdepth;
+  81:../../libDaisy//src/per/dac.h ****         BufferState buff_state;
+  82:../../libDaisy//src/per/dac.h ****     };
+  83:../../libDaisy//src/per/dac.h **** 
+  84:../../libDaisy//src/per/dac.h ****     DacHandle() : pimpl_(nullptr) {}
+ 914              		.loc 15 84 5 is_stmt 1 view .LVU257
+ 915              	.LBB402:
+ 916              	.LBB403:
+ 917              		.loc 15 84 33 is_stmt 0 view .LVU258
+ 918 001a 0262     		str	r2, [r0, #32]
+ 919              	.LVL60:
+ 920              		.loc 15 84 33 view .LVU259
+ 921              	.LBE403:
+ 922              	.LBE402:
+ 923              	.LBE401:
+ 924              	.LBB404:
+ 925              	.LBI404:
+  40:../../libDaisy//src/hid/usb.h **** 
+ 926              		.loc 10 40 5 is_stmt 1 view .LVU260
+  40:../../libDaisy//src/hid/usb.h **** 
+ 927              		.loc 10 40 5 is_stmt 0 view .LVU261
+ 928              	.LBE404:
+ 929              	.LBB405:
+ 930              	.LBI405:
+  77:../../libDaisy//src/sys/system.h ****     ~System() {}
+ 931              		.loc 9 77 5 is_stmt 1 view .LVU262
+  77:../../libDaisy//src/sys/system.h ****     ~System() {}
+ 932              		.loc 9 77 5 is_stmt 0 view .LVU263
+ 933              	.LBE405:
+ 934              	.LBE407:
+ 935              	.LBE446:
+ 936              	.LBB447:
+ 937              	.LBI447:
+  20:../../libDaisy//src/hid/encoder.h ****     ~Encoder() {}
+ 938              		.loc 7 20 5 is_stmt 1 view .LVU264
+ 939              	.LBB448:
+ 940              	.LBB449:
+ 941              	.LBI449:
+  41:../../libDaisy//src/hid/switch.h ****     ~Switch() {}
+ 942              		.loc 5 41 5 view .LVU265
+  41:../../libDaisy//src/hid/switch.h ****     ~Switch() {}
+ 943              		.loc 5 41 5 is_stmt 0 view .LVU266
+ 944              	.LBE449:
+ 945              	.LBE448:
+ 946              	.LBE447:
+ 947              	.LBB450:
+ 948              	.LBI450:
+  21:../../libDaisy//src/hid/ctrl.h ****     /** destructor */
+ 949              		.loc 6 21 5 is_stmt 1 view .LVU267
+  21:../../libDaisy//src/hid/ctrl.h ****     /** destructor */
+ 950              		.loc 6 21 5 is_stmt 0 view .LVU268
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 39
+
+
+ 951              	.LBE450:
+ 952              	.LBB451:
+ 953              	.LBI451:
+  21:../../libDaisy//src/hid/ctrl.h ****     /** destructor */
+ 954              		.loc 6 21 5 is_stmt 1 view .LVU269
+  21:../../libDaisy//src/hid/ctrl.h ****     /** destructor */
+ 955              		.loc 6 21 5 is_stmt 0 view .LVU270
+ 956              	.LBE451:
+ 957              	.LBB452:
+ 958              	.LBI452:
+  41:../../libDaisy//src/hid/switch.h ****     ~Switch() {}
+ 959              		.loc 5 41 5 is_stmt 1 view .LVU271
+  41:../../libDaisy//src/hid/switch.h ****     ~Switch() {}
+ 960              		.loc 5 41 5 is_stmt 0 view .LVU272
+ 961              	.LBE452:
+ 962              	.LBB453:
+ 963              	.LBI453:
+  41:../../libDaisy//src/hid/switch.h ****     ~Switch() {}
+ 964              		.loc 5 41 5 is_stmt 1 view .LVU273
+  41:../../libDaisy//src/hid/switch.h ****     ~Switch() {}
+ 965              		.loc 5 41 5 is_stmt 0 view .LVU274
+ 966              	.LBE453:
+ 967              	.LBB454:
+ 968              	.LBI454:
+  17:../../libDaisy//src/hid/rgb_led.h ****     ~RgbLed() {}
+ 969              		.loc 3 17 5 is_stmt 1 view .LVU275
+ 970              	.LBB455:
+ 971              	.LBB456:
+ 972              	.LBI456:
+  24:../../libDaisy//src/hid/led.h ****     ~Led() {}
+ 973              		.loc 4 24 5 view .LVU276
+  24:../../libDaisy//src/hid/led.h ****     ~Led() {}
+ 974              		.loc 4 24 5 is_stmt 0 view .LVU277
+ 975              	.LBE456:
+ 976              	.LBB457:
+ 977              	.LBI457:
+  24:../../libDaisy//src/hid/led.h ****     ~Led() {}
+ 978              		.loc 4 24 5 is_stmt 1 view .LVU278
+  24:../../libDaisy//src/hid/led.h ****     ~Led() {}
+ 979              		.loc 4 24 5 is_stmt 0 view .LVU279
+ 980              	.LBE457:
+ 981              	.LBB458:
+ 982              	.LBI458:
+  24:../../libDaisy//src/hid/led.h ****     ~Led() {}
+ 983              		.loc 4 24 5 is_stmt 1 view .LVU280
+  24:../../libDaisy//src/hid/led.h ****     ~Led() {}
+ 984              		.loc 4 24 5 is_stmt 0 view .LVU281
+ 985              	.LBE458:
+ 986              	.LBE455:
+ 987              	.LBE454:
+ 988              	.LBB459:
+ 989              	.LBI459:
+  17:../../libDaisy//src/hid/rgb_led.h ****     ~RgbLed() {}
+ 990              		.loc 3 17 5 is_stmt 1 view .LVU282
+ 991              	.LBB460:
+ 992              	.LBB461:
+ 993              	.LBI461:
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 40
+
+
+  24:../../libDaisy//src/hid/led.h ****     ~Led() {}
+ 994              		.loc 4 24 5 view .LVU283
+  24:../../libDaisy//src/hid/led.h ****     ~Led() {}
+ 995              		.loc 4 24 5 is_stmt 0 view .LVU284
+ 996              	.LBE461:
+ 997              	.LBB462:
+ 998              	.LBI462:
+  24:../../libDaisy//src/hid/led.h ****     ~Led() {}
+ 999              		.loc 4 24 5 is_stmt 1 view .LVU285
+  24:../../libDaisy//src/hid/led.h ****     ~Led() {}
+ 1000              		.loc 4 24 5 is_stmt 0 view .LVU286
+ 1001              	.LBE462:
+ 1002              	.LBB463:
+ 1003              	.LBI463:
+  24:../../libDaisy//src/hid/led.h ****     ~Led() {}
+ 1004              		.loc 4 24 5 is_stmt 1 view .LVU287
+  24:../../libDaisy//src/hid/led.h ****     ~Led() {}
+ 1005              		.loc 4 24 5 is_stmt 0 view .LVU288
+ 1006              	.LBE463:
+ 1007              	.LBE460:
+ 1008              	.LBE459:
+ 1009              	.LBB464:
+ 1010              	.LBI408:
+  84:../../libDaisy//src/hid/midi.h ****     ~MidiHandler() {}
+ 1011              		.loc 2 84 5 is_stmt 1 view .LVU289
+ 1012              	.LBB442:
+ 1013              	.LBB439:
+ 1014              	.LBB425:
+ 1015              	.LBI425:
+ 1016              		.file 16 "../../libDaisy//src/per/uart.h"
+   1:../../libDaisy//src/per/uart.h **** /* 
+   2:../../libDaisy//src/per/uart.h **** TODO
+   3:../../libDaisy//src/per/uart.h **** - UART1 defaults to DMA, add flexible config for DMA on all periphs
+   4:../../libDaisy//src/per/uart.h **** - Transmit function improvements.
+   5:../../libDaisy//src/per/uart.h **** - Overflow handling, etc. for Rx Queue.
+   6:../../libDaisy//src/per/uart.h **** */
+   7:../../libDaisy//src/per/uart.h **** 
+   8:../../libDaisy//src/per/uart.h **** #pragma once
+   9:../../libDaisy//src/per/uart.h **** #ifndef DSY_UART_H
+  10:../../libDaisy//src/per/uart.h **** #define DSY_UART_H /**< macro */
+  11:../../libDaisy//src/per/uart.h **** #include "daisy_core.h"
+  12:../../libDaisy//src/per/uart.h **** 
+  13:../../libDaisy//src/per/uart.h **** 
+  14:../../libDaisy//src/per/uart.h **** namespace daisy
+  15:../../libDaisy//src/per/uart.h **** {
+  16:../../libDaisy//src/per/uart.h **** /** @addtogroup serial
+  17:../../libDaisy//src/per/uart.h ****     @{
+  18:../../libDaisy//src/per/uart.h ****     */
+  19:../../libDaisy//src/per/uart.h **** 
+  20:../../libDaisy//src/per/uart.h **** /** 
+  21:../../libDaisy//src/per/uart.h ****     Uart Peripheral
+  22:../../libDaisy//src/per/uart.h ****     @author shensley
+  23:../../libDaisy//src/per/uart.h ****     @date March 2020
+  24:../../libDaisy//src/per/uart.h ****     */
+  25:../../libDaisy//src/per/uart.h **** class UartHandler
+  26:../../libDaisy//src/per/uart.h **** {
+  27:../../libDaisy//src/per/uart.h ****   public:
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 41
+
+
+  28:../../libDaisy//src/per/uart.h ****     struct Config
+  29:../../libDaisy//src/per/uart.h ****     {
+  30:../../libDaisy//src/per/uart.h ****         enum class Peripheral
+  31:../../libDaisy//src/per/uart.h ****         {
+  32:../../libDaisy//src/per/uart.h ****             USART_1,
+  33:../../libDaisy//src/per/uart.h ****             USART_2,
+  34:../../libDaisy//src/per/uart.h ****             USART_3,
+  35:../../libDaisy//src/per/uart.h ****             UART_4,
+  36:../../libDaisy//src/per/uart.h ****             UART_5,
+  37:../../libDaisy//src/per/uart.h ****             USART_6,
+  38:../../libDaisy//src/per/uart.h ****             UART_7,
+  39:../../libDaisy//src/per/uart.h ****             UART_8,
+  40:../../libDaisy//src/per/uart.h ****             LPUART_1,
+  41:../../libDaisy//src/per/uart.h ****         };
+  42:../../libDaisy//src/per/uart.h **** 
+  43:../../libDaisy//src/per/uart.h ****         enum class StopBits
+  44:../../libDaisy//src/per/uart.h ****         {
+  45:../../libDaisy//src/per/uart.h ****             BITS_0_5,
+  46:../../libDaisy//src/per/uart.h ****             BITS_1,
+  47:../../libDaisy//src/per/uart.h ****             BITS_1_5,
+  48:../../libDaisy//src/per/uart.h ****             BITS_2,
+  49:../../libDaisy//src/per/uart.h ****         };
+  50:../../libDaisy//src/per/uart.h **** 
+  51:../../libDaisy//src/per/uart.h ****         enum class Parity
+  52:../../libDaisy//src/per/uart.h ****         {
+  53:../../libDaisy//src/per/uart.h ****             NONE,
+  54:../../libDaisy//src/per/uart.h ****             EVEN,
+  55:../../libDaisy//src/per/uart.h ****             ODD,
+  56:../../libDaisy//src/per/uart.h ****         };
+  57:../../libDaisy//src/per/uart.h **** 
+  58:../../libDaisy//src/per/uart.h ****         enum class Mode
+  59:../../libDaisy//src/per/uart.h ****         {
+  60:../../libDaisy//src/per/uart.h ****             RX,
+  61:../../libDaisy//src/per/uart.h ****             TX,
+  62:../../libDaisy//src/per/uart.h ****             TX_RX,
+  63:../../libDaisy//src/per/uart.h ****         };
+  64:../../libDaisy//src/per/uart.h **** 
+  65:../../libDaisy//src/per/uart.h ****         enum class WordLength
+  66:../../libDaisy//src/per/uart.h ****         {
+  67:../../libDaisy//src/per/uart.h ****             BITS_7,
+  68:../../libDaisy//src/per/uart.h ****             BITS_8,
+  69:../../libDaisy//src/per/uart.h ****             BITS_9,
+  70:../../libDaisy//src/per/uart.h ****         };
+  71:../../libDaisy//src/per/uart.h **** 
+  72:../../libDaisy//src/per/uart.h ****         struct
+  73:../../libDaisy//src/per/uart.h ****         {
+  74:../../libDaisy//src/per/uart.h ****             dsy_gpio_pin tx; /**< & */
+  75:../../libDaisy//src/per/uart.h ****             dsy_gpio_pin rx; /**< & */
+  76:../../libDaisy//src/per/uart.h ****         } pin_config;        /**< & */
+  77:../../libDaisy//src/per/uart.h **** 
+  78:../../libDaisy//src/per/uart.h ****         Config()
+  79:../../libDaisy//src/per/uart.h ****         {
+  80:../../libDaisy//src/per/uart.h ****             // user must init periph, pin_config, and mode
+  81:../../libDaisy//src/per/uart.h ****             stopbits   = StopBits::BITS_1;
+  82:../../libDaisy//src/per/uart.h ****             parity     = Parity::NONE;
+  83:../../libDaisy//src/per/uart.h ****             wordlength = WordLength::BITS_8;
+  84:../../libDaisy//src/per/uart.h ****             baudrate   = 4800;
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 42
+
+
+  85:../../libDaisy//src/per/uart.h ****             // baudrate   = 31250;
+  86:../../libDaisy//src/per/uart.h ****         }
+  87:../../libDaisy//src/per/uart.h **** 
+  88:../../libDaisy//src/per/uart.h ****         Peripheral periph;
+  89:../../libDaisy//src/per/uart.h ****         StopBits   stopbits;
+  90:../../libDaisy//src/per/uart.h ****         Parity     parity;
+  91:../../libDaisy//src/per/uart.h ****         Mode       mode;
+  92:../../libDaisy//src/per/uart.h ****         WordLength wordlength;
+  93:../../libDaisy//src/per/uart.h ****         uint32_t   baudrate;
+  94:../../libDaisy//src/per/uart.h ****     };
+  95:../../libDaisy//src/per/uart.h **** 
+  96:../../libDaisy//src/per/uart.h **** 
+  97:../../libDaisy//src/per/uart.h ****     UartHandler() : pimpl_(nullptr) {}
+ 1017              		.loc 16 97 5 view .LVU290
+ 1018              	.LBB426:
+ 1019              	.LBB427:
+ 1020              		.loc 16 97 35 is_stmt 0 view .LVU291
+ 1021 001c C0F87C21 		str	r2, [r0, #380]
+ 1022              	.LVL61:
+ 1023              		.loc 16 97 35 view .LVU292
+ 1024              	.LBE427:
+ 1025              	.LBE426:
+ 1026              	.LBE425:
+ 1027              	.LBB428:
+ 1028              	.LBI428:
+ 1029              		.file 17 "../../libDaisy//src/util/ringbuffer.h"
+   1:../../libDaisy//src/util/ringbuffer.h **** #pragma once
+   2:../../libDaisy//src/util/ringbuffer.h **** #ifndef DSY_RINGBUFFER_H
+   3:../../libDaisy//src/util/ringbuffer.h **** #define DSY_RINGBUFFER_H
+   4:../../libDaisy//src/util/ringbuffer.h **** 
+   5:../../libDaisy//src/util/ringbuffer.h **** #include <algorithm>
+   6:../../libDaisy//src/util/ringbuffer.h **** 
+   7:../../libDaisy//src/util/ringbuffer.h **** namespace daisy
+   8:../../libDaisy//src/util/ringbuffer.h **** {
+   9:../../libDaisy//src/util/ringbuffer.h **** /** @addtogroup utility
+  10:../../libDaisy//src/util/ringbuffer.h ****     @{
+  11:../../libDaisy//src/util/ringbuffer.h **** */
+  12:../../libDaisy//src/util/ringbuffer.h **** 
+  13:../../libDaisy//src/util/ringbuffer.h **** /**
+  14:../../libDaisy//src/util/ringbuffer.h **** Utility Ring Buffer \n 
+  15:../../libDaisy//src/util/ringbuffer.h **** imported from pichenettes/stmlib
+  16:../../libDaisy//src/util/ringbuffer.h **** */
+  17:../../libDaisy//src/util/ringbuffer.h **** template <typename T, size_t size>
+  18:../../libDaisy//src/util/ringbuffer.h **** class RingBuffer
+  19:../../libDaisy//src/util/ringbuffer.h **** {
+  20:../../libDaisy//src/util/ringbuffer.h ****   public:
+  21:../../libDaisy//src/util/ringbuffer.h ****     RingBuffer() {}
+ 1030              		.loc 17 21 5 is_stmt 1 view .LVU293
+ 1031              		.loc 17 21 5 is_stmt 0 view .LVU294
+ 1032              	.LBE428:
+ 1033              	.LBB429:
+ 1034              	.LBI411:
+  86:../../libDaisy//src/hid/midi.h **** 
+  87:../../libDaisy//src/hid/midi.h ****     struct Config
+ 1035              		.loc 2 87 12 is_stmt 1 view .LVU295
+ 1036              	.LBB422:
+ 1037              	.LBI412:
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 43
+
+
+  34:../../libDaisy//src/hid/midi.h ****         {
+ 1038              		.loc 2 34 9 view .LVU296
+ 1039              	.LBB419:
+ 1040              	.LBB416:
+  36:../../libDaisy//src/hid/midi.h ****             rx     = {DSY_GPIOB, 7};
+ 1041              		.loc 2 36 13 view .LVU297
+  36:../../libDaisy//src/hid/midi.h ****             rx     = {DSY_GPIOB, 7};
+ 1042              		.loc 2 36 20 is_stmt 0 view .LVU298
+ 1043 0020 C3F82422 		str	r2, [r3, #548]
+  37:../../libDaisy//src/hid/midi.h ****             tx     = {DSY_GPIOB, 6};
+ 1044              		.loc 2 37 13 is_stmt 1 view .LVU299
+  38:../../libDaisy//src/hid/midi.h ****         }
+ 1045              		.loc 2 38 20 is_stmt 0 view .LVU300
+ 1046 0024 A3F82AC2 		strh	ip, [r3, #554]	@ movhi
+ 1047              	.LBE416:
+ 1048              	.LBE419:
+ 1049              	.LBE422:
+ 1050              	.LBE429:
+  84:../../libDaisy//src/hid/midi.h ****     ~MidiHandler() {}
+ 1051              		.loc 2 84 19 view .LVU301
+ 1052 0028 4FF0070C 		mov	ip, #7
+ 1053              	.LBB430:
+ 1054              	.LBB431:
+ 1055              	.LBB432:
+ 1056              	.LBB433:
+ 1057              		.loc 16 97 35 view .LVU302
+ 1058 002c C3F82C22 		str	r2, [r3, #556]
+ 1059              	.LBE433:
+ 1060              	.LBE432:
+ 1061              	.LBE431:
+ 1062              	.LBE430:
+  84:../../libDaisy//src/hid/midi.h ****     ~MidiHandler() {}
+ 1063              		.loc 2 84 19 view .LVU303
+ 1064 0030 4FF60F02 		movw	r2, #63503
+ 1065 0034 C3F83012 		str	r1, [r3, #560]
+ 1066 0038 A3F83422 		strh	r2, [r3, #564]	@ movhi
+ 1067 003c 83F836C2 		strb	ip, [r3, #566]
+ 1068              	.LBB435:
+ 1069              	.LBB423:
+ 1070              	.LBB420:
+ 1071              	.LBB417:
+  37:../../libDaisy//src/hid/midi.h ****             tx     = {DSY_GPIOB, 6};
+ 1072              		.loc 2 37 20 view .LVU304
+ 1073 0040 A3F828E2 		strh	lr, [r3, #552]	@ movhi
+  38:../../libDaisy//src/hid/midi.h ****         }
+ 1074              		.loc 2 38 13 is_stmt 1 view .LVU305
+ 1075              	.LVL62:
+  38:../../libDaisy//src/hid/midi.h ****         }
+ 1076              		.loc 2 38 13 is_stmt 0 view .LVU306
+ 1077              	.LBE417:
+ 1078              	.LBE420:
+ 1079              	.LBE423:
+ 1080              	.LBE435:
+ 1081              	.LBB436:
+ 1082              	.LBI430:
+  25:../../libDaisy//src/hid/midi.h ****     ~MidiUartTransport() {}
+ 1083              		.loc 2 25 5 is_stmt 1 view .LVU307
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 44
+
+
+ 1084              	.LBB434:
+ 1085              	.LBI431:
+ 1086              		.loc 16 97 5 view .LVU308
+ 1087              		.loc 16 97 5 is_stmt 0 view .LVU309
+ 1088              	.LBE434:
+ 1089              	.LBE436:
+ 1090              	.LBE439:
+ 1091              	.LBE442:
+ 1092              	.LBE464:
+ 1093              	.LBE465:
+ 1094              	.LBE466:
+   6:MyProj.cpp    **** tCycle mySine;
+ 1095              		.loc 13 6 10 view .LVU310
+ 1096 0044 054A     		ldr	r2, .L32+12
+ 1097 0046 0649     		ldr	r1, .L32+16
+ 1098              	.LBE467:
+ 1099              	.LBE469:
+ 1100              		.loc 13 156 1 view .LVU311
+ 1101 0048 5DF804EB 		ldr	lr, [sp], #4
+ 1102              		.cfi_restore 14
+ 1103              		.cfi_def_cfa_offset 0
+ 1104              	.LBB470:
+ 1105              	.LBB468:
+   6:MyProj.cpp    **** tCycle mySine;
+ 1106              		.loc 13 6 10 view .LVU312
+ 1107 004c FFF7FEBF 		b	__aeabi_atexit
+ 1108              	.LVL63:
+ 1109              	.L33:
+ 1110              		.align	2
+ 1111              	.L32:
+ 1112 0050 00000000 		.word	hw
+ 1113 0054 00000000 		.word	.LANCHOR10
+ 1114 0058 80707FF0 		.word	-260083584
+ 1115 005c 00000000 		.word	__dso_handle
+ 1116 0060 00000000 		.word	_ZN5daisy8DaisyPodD1Ev
+ 1117              	.LBE468:
+ 1118              	.LBE470:
+ 1119              		.cfi_endproc
+ 1120              	.LFE2571:
+ 1122              		.section	.init_array,"aw",%init_array
+ 1123              		.align	2
+ 1124 0000 00000000 		.word	_GLOBAL__sub_I_leaf(target1)
+ 1125              		.global	majorScale
+ 1126              		.global	whichNoteInSequence
+ 1127              		.global	mySequence
+ 1128              		.global	sampleCounterMaxValue
+ 1129              		.global	sampleCounter
+ 1130              		.global	myTempo
+ 1131              		.global	myFreq2
+ 1132              		.global	myFreq
+ 1133              		.global	mySine3
+ 1134              		.global	mySine2
+ 1135              		.global	mySine
+ 1136              		.global	hw
+ 1137              		.global	leafMemory
+ 1138              		.global	leaf
+ 1139              		.section	.rodata
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 45
+
+
+ 1140              		.align	2
+ 1141              		.set	.LANCHOR10,. + 0
+ 1142              	.LC0:
+ 1143 0000 01       		.byte	1
+ 1144 0001 07       		.byte	7
+ 1145 0002 0000     		.space	2
+ 1146              	.LC1:
+ 1147 0004 01       		.byte	1
+ 1148 0005 06       		.byte	6
+ 1149              		.section	.bss.hw,"aw",%nobits
+ 1150              		.align	2
+ 1153              	hw:
+ 1154 0000 00000000 		.space	37432
+ 1154      00000000 
+ 1154      00000000 
+ 1154      00000000 
+ 1154      00000000 
+ 1155              		.section	.bss.leaf,"aw",%nobits
+ 1156              		.align	2
+ 1157              		.set	.LANCHOR9,. + 0
+ 1160              	leaf:
+ 1161 0000 00000000 		.space	80
+ 1161      00000000 
+ 1161      00000000 
+ 1161      00000000 
+ 1161      00000000 
+ 1162              		.section	.bss.leafMemory,"aw",%nobits
+ 1163              		.align	2
+ 1166              	leafMemory:
+ 1167 0000 00000000 		.space	65535
+ 1167      00000000 
+ 1167      00000000 
+ 1167      00000000 
+ 1167      00000000 
+ 1168              		.section	.bss.mySine,"aw",%nobits
+ 1169              		.align	2
+ 1170              		.set	.LANCHOR4,. + 0
+ 1173              	mySine:
+ 1174 0000 00000000 		.space	4
+ 1175              		.section	.bss.mySine2,"aw",%nobits
+ 1176              		.align	2
+ 1177              		.set	.LANCHOR8,. + 0
+ 1180              	mySine2:
+ 1181 0000 00000000 		.space	4
+ 1182              		.section	.bss.mySine3,"aw",%nobits
+ 1183              		.align	2
+ 1186              	mySine3:
+ 1187 0000 00000000 		.space	4
+ 1188              		.section	.bss.sampleCounter,"aw",%nobits
+ 1189              		.align	2
+ 1190              		.set	.LANCHOR0,. + 0
+ 1193              	sampleCounter:
+ 1194 0000 00000000 		.space	4
+ 1195              		.section	.bss.whichNoteInSequence,"aw",%nobits
+ 1196              		.align	2
+ 1197              		.set	.LANCHOR1,. + 0
+ 1200              	whichNoteInSequence:
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 46
+
+
+ 1201 0000 00000000 		.space	4
+ 1202              		.section	.data.majorScale,"aw"
+ 1203              		.align	2
+ 1204              		.set	.LANCHOR7,. + 0
+ 1207              	majorScale:
+ 1208 0000 00000000 		.word	0
+ 1209 0004 02000000 		.word	2
+ 1210 0008 04000000 		.word	4
+ 1211 000c 05000000 		.word	5
+ 1212 0010 07000000 		.word	7
+ 1213 0014 09000000 		.word	9
+ 1214 0018 0B000000 		.word	11
+ 1215 001c 0C000000 		.word	12
+ 1216              		.section	.data.myFreq,"aw"
+ 1217              		.align	2
+ 1218              		.set	.LANCHOR3,. + 0
+ 1221              	myFreq:
+ 1222 0000 00005C43 		.word	1130102784
+ 1223              		.section	.data.myFreq2,"aw"
+ 1224              		.align	2
+ 1225              		.set	.LANCHOR6,. + 0
+ 1228              	myFreq2:
+ 1229 0000 0000DC43 		.word	1138491392
+ 1230              		.section	.data.mySequence,"aw"
+ 1231              		.align	2
+ 1232              		.set	.LANCHOR2,. + 0
+ 1235              	mySequence:
+ 1236 0000 3C000000 		.word	60
+ 1237 0004 36000000 		.word	54
+ 1238 0008 48000000 		.word	72
+ 1239 000c 55000000 		.word	85
+ 1240 0010 5D000000 		.word	93
+ 1241 0014 2B000000 		.word	43
+ 1242 0018 50000000 		.word	80
+ 1243 001c 42000000 		.word	66
+ 1244 0020 3C000000 		.word	60
+ 1245 0024 39000000 		.word	57
+ 1246 0028 48000000 		.word	72
+ 1247 002c 55000000 		.word	85
+ 1248 0030 5D000000 		.word	93
+ 1249 0034 2E000000 		.word	46
+ 1250 0038 50000000 		.word	80
+ 1251 003c 42000000 		.word	66
+ 1252              		.section	.data.myTempo,"aw"
+ 1253              		.align	2
+ 1256              	myTempo:
+ 1257 0000 00004843 		.word	1128792064
+ 1258              		.section	.data.sampleCounterMaxValue,"aw"
+ 1259              		.align	2
+ 1260              		.set	.LANCHOR5,. + 0
+ 1263              	sampleCounterMaxValue:
+ 1264 0000 80BB0000 		.word	48000
+ 1265              		.text
+ 1266              	.Letext0:
+ 1267              		.file 18 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/machine/_default_types.h"
+ 1268              		.file 19 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_stdint.h"
+ 1269              		.file 20 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdint.h"
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 47
+
+
+ 1270              		.file 21 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h"
+ 1271              		.file 22 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cmath"
+ 1272              		.file 23 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_abs.h"
+ 1273              		.file 24 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdlib"
+ 1274              		.file 25 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdint"
+ 1275              		.file 26 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/type_traits"
+ 1276              		.file 27 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/debug/debug.h"
+ 1277              		.file 28 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v
+ 1278              		.file 29 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/algorithmfwd.h"
+ 1279              		.file 30 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h"
+ 1280              		.file 31 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/exception_ptr.h"
+ 1281              		.file 32 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdarg"
+ 1282              		.file 33 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdio"
+ 1283              		.file 34 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstring"
+ 1284              		.file 35 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/predefined_ops.h
+ 1285              		.file 36 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_types.h"
+ 1286              		.file 37 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/reent.h"
+ 1287              		.file 38 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/lock.h"
+ 1288              		.file 39 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/math.h"
+ 1289              		.file 40 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdlib.h"
+ 1290              		.file 41 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/math.h"
+ 1291              		.file 42 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/stdlib.h"
+ 1292              		.file 43 "../../libDaisy//src/daisy_core.h"
+ 1293              		.file 44 "../../libDaisy//src/per/tim.h"
+ 1294              		.file 45 "../../libDaisy//src/per/sai.h"
+ 1295              		.file 46 "../../libDaisy//src/hid/MidiEvent.h"
+ 1296              		.file 47 "../../libDaisy//src/per/rng.h"
+ 1297              		.file 48 "../../libDaisy//src/util/wav_format.h"
+ 1298              		.file 49 "../../libDaisy//src/util/color.h"
+ 1299              		.file 50 "../../libDaisy//src/dev/max11300.h"
+ 1300              		.file 51 "../../libDaisy//src/per/gpio.h"
+ 1301              		.file 52 "../../libDaisy//src/dev/sdram.h"
+ 1302              		.file 53 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h"
+ 1303              		.file 54 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdio.h"
+ 1304              		.file 55 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/string.h"
+ 1305              		.file 56 "../../../LEAF/leaf/./Inc/leaf-mempool.h"
+ 1306              		.file 57 "../../../LEAF/leaf/./Inc/leaf-global.h"
+ 1307              		.file 58 "../../../LEAF/leaf/./Inc/leaf-oscillators.h"
+ 1308              		.file 59 "../../../LEAF/leaf/leaf.h"
+ 1309              		.file 60 "../../../LEAF/leaf/./Inc/leaf-math.h"
+ 1310              		.file 61 "<built-in>"
+ 1311              		.file 62 "../../libDaisy//src/dev/sr_595.h"
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 48
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 MyProj.cpp
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:19     .text._ZN5daisy8DaisyPodD2Ev:0000000000000000 $t
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:26     .text._ZN5daisy8DaisyPodD2Ev:0000000000000000 _ZN5daisy8DaisyPodD2Ev
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:26     .text._ZN5daisy8DaisyPodD2Ev:0000000000000000 _ZN5daisy8DaisyPodD1Ev
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:154    .text._Z12randomNumberv:0000000000000000 $t
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:161    .text._Z12randomNumberv:0000000000000000 _Z12randomNumberv
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:178    .text._Z12randomNumberv:000000000000000c $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:183    .text._Z13AudioCallbackPKPKfPPfj:0000000000000000 $t
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:190    .text._Z13AudioCallbackPKPKfPPfj:0000000000000000 _Z13AudioCallbackPKPKfPPfj
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:627    .text._Z13AudioCallbackPKPKfPPfj:00000000000001d8 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1153   .bss.hw:0000000000000000 hw
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:651    .text.startup.main:0000000000000000 $t
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:658    .text.startup.main:0000000000000000 main
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:767    .text.startup.main:0000000000000088 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1166   .bss.leafMemory:0000000000000000 leafMemory
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:781    .text.startup._GLOBAL__sub_I_leaf:0000000000000000 $t
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:787    .text.startup._GLOBAL__sub_I_leaf:0000000000000000 _GLOBAL__sub_I_leaf
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1112   .text.startup._GLOBAL__sub_I_leaf:0000000000000050 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1123   .init_array:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1207   .data.majorScale:0000000000000000 majorScale
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1200   .bss.whichNoteInSequence:0000000000000000 whichNoteInSequence
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1235   .data.mySequence:0000000000000000 mySequence
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1263   .data.sampleCounterMaxValue:0000000000000000 sampleCounterMaxValue
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1193   .bss.sampleCounter:0000000000000000 sampleCounter
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1256   .data.myTempo:0000000000000000 myTempo
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1228   .data.myFreq2:0000000000000000 myFreq2
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1221   .data.myFreq:0000000000000000 myFreq
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1186   .bss.mySine3:0000000000000000 mySine3
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1180   .bss.mySine2:0000000000000000 mySine2
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1173   .bss.mySine:0000000000000000 mySine
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1160   .bss.leaf:0000000000000000 leaf
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1140   .rodata:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1150   .bss.hw:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1156   .bss.leaf:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1163   .bss.leafMemory:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1169   .bss.mySine:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1176   .bss.mySine2:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1183   .bss.mySine3:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1189   .bss.sampleCounter:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1196   .bss.whichNoteInSequence:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1203   .data.majorScale:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1217   .data.myFreq:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1224   .data.myFreq2:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1231   .data.mySequence:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1253   .data.myTempo:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s:1259   .data.sampleCounterMaxValue:0000000000000000 $d
+                           .group:0000000000000000 _ZN5daisy8DaisyPodD5Ev
+
+UNDEFINED SYMBOLS
+_ZN5daisy6Random8GetFloatEff
+_ZN5daisy8DaisyPod21ProcessAnalogControlsEv
+_ZN5daisy8DaisyPod22ProcessDigitalControlsEv
+mtof
+tCycle_setFreq
+_ZN5daisy6RgbLed3SetEfff
+tCycle_tick
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqnmtjU.s 			page 49
+
+
+_ZN5daisy8DaisyPod12GetKnobValueENS0_4KnobE
+_ZN5daisy8DaisyPod4InitEb
+_ZN5daisy8DaisyPod17SetAudioBlockSizeEj
+_ZN5daisy8DaisyPod18SetAudioSampleRateENS_9SaiHandle6Config10SampleRateE
+_ZN5daisy6Random4InitEv
+_ZN5daisy8DaisyPod8StartAdcEv
+_ZN5daisy8DaisyPod10StartAudioEPFvPKPKfPPfjE
+LEAF_init
+tCycle_init
+_ZN5daisy9DaisySeed6SetLedEb
+_ZN5daisy8DaisyPod7DelayMsEj
+__aeabi_atexit
+__dso_handle
