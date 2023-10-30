@@ -18,7 +18,6 @@ tDattorroReverb myReverb;
 
 //A simple reverb. Reverb is pretty expensive so you can't combine it with many other things.
 
-
 float randomNumber()
 {
     return Random::GetFloat(0.0f, 1.0f);
@@ -33,7 +32,6 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
     {
         //get the next sample from the left channel of the input (right channel would be in[1][i])
         float mySample = in[0][i];
-
         tDattorroReverb_setMix(&myReverb, hw.knob1.Value());
         tDattorroReverb_setSize(&myReverb, (hw.knob2.Value() * 2.0f) + 0.1f);
         mySample = tDattorroReverb_tick(&myReverb, mySample);
