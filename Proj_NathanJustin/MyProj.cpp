@@ -56,13 +56,6 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
     myFreq = (660.0f * hw.GetKnobValue(hw.KNOB_1)) + 220.0f;
     myFreq2 = (660.0f * hw.GetKnobValue(hw.KNOB_2)) + 220.0f;
 
-    // now pass myFreq as the value we pass to the setFreq function on the mySine object
-    tCycle_setFreq(&mySine, myFreq);
-    tCycle_setFreq(&mySine2, myFreq2);
-
-    mySample = mySample * hw.button1.Pressed();
-    mySample2 = mySample2 * hw.button2.Pressed();
-
 
     //now here's the per sample stuff
     for (size_t i = 0; i < size; i++)
@@ -75,8 +68,8 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
         mySample2 = mySample2 * hw.button2.Pressed();
 
         //now set the audio outputs (left is [0] and right is [1] to be whatever value has been computed and stored in the mySample variable.
-        out[0][i] = mySample;
-        out[1][i] = mySample2;
+        out[0][i] = mySample + mySample2;
+        out[1][i] = mySample2 + mySample;
     }
 }
 

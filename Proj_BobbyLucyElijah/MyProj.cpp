@@ -13,7 +13,8 @@ int sampleCounterMaxValue = 48000; //we'll set this to 48000 for now, meaning th
 float myTempo; // we'll use this as a variable to store what tempo we are trying to click the metronome counter at
 
 // initializing index for chord sweeps (chord degree)
-int x = 1;
+int x = 0;
+
 
 //program that lets you sweep major, minor, or augmented chords depending on whether you are holding down a button
 

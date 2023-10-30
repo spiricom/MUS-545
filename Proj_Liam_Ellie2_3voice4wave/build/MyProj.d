@@ -149,44 +149,37 @@ build/MyProj.o: MyProj.cpp \
  ../../libDaisy//src/util/VoctCalibration.h \
  ../../libDaisy//src/util/WaveTableLoader.h \
  ../../libDaisy//src/sys/fatfs.h ../../libDaisy//src/util/WavWriter.h \
- ../../../LEAF/leaf/Inc/leaf-analysis.h \
- ../../../LEAF/leaf/Inc/leaf-global.h \
- ../../../LEAF/leaf/Inc/leaf-mempool.h \
- ../../../LEAF/leaf/Inc/../leaf-config.h \
- ../../../LEAF/leaf/Inc/leaf-distortion.h \
- ../../../LEAF/leaf/Inc/leaf-math.h ../../../LEAF/leaf/Inc/leaf-filters.h \
- ../../../LEAF/leaf/Inc/leaf-delay.h ../../../LEAF/leaf/Inc/leaf-tables.h \
- ../../../LEAF/leaf/Inc/leaf-envelopes.h \
- ../../../LEAF/leaf/Inc/leaf-analysis.h ../../../LEAF/leaf/leaf.h \
- ../../../LEAF/leaf/./Inc/leaf-global.h \
+ ../../../LEAF/leaf/leaf.h ../../../LEAF/leaf/./Inc/leaf-global.h \
+ ../../../LEAF/leaf/./Inc/leaf-mempool.h \
+ ../../../LEAF/leaf/./Inc/../leaf-config.h \
  ../../../LEAF/leaf/./Inc/leaf-math.h \
+ ../../../LEAF/leaf/./Inc/leaf-global.h \
  ../../../LEAF/leaf/./Inc/leaf-mempool.h \
  ../../../LEAF/leaf/./Inc/leaf-tables.h \
+ ../../../LEAF/leaf/./Inc/leaf-math.h \
  ../../../LEAF/leaf/./Inc/leaf-distortion.h \
  ../../../LEAF/leaf/./Inc/leaf-dynamics.h \
- ../../../LEAF/leaf/./Inc/leaf-global.h \
- ../../../LEAF/leaf/./Inc/leaf-math.h \
- ../../../LEAF/leaf/./Inc/leaf-mempool.h \
  ../../../LEAF/leaf/./Inc/leaf-analysis.h \
- ../../../LEAF/leaf/./Inc/leaf-oscillators.h \
- ../../../LEAF/leaf/./Inc/leaf-tables.h \
- ../../../LEAF/leaf/./Inc/leaf-filters.h \
  ../../../LEAF/leaf/./Inc/leaf-distortion.h \
+ ../../../LEAF/leaf/./Inc/leaf-filters.h \
+ ../../../LEAF/leaf/./Inc/leaf-delay.h \
+ ../../../LEAF/leaf/./Inc/leaf-tables.h \
+ ../../../LEAF/leaf/./Inc/leaf-envelopes.h \
+ ../../../LEAF/leaf/./Inc/leaf-oscillators.h \
  ../../../LEAF/leaf/./Inc/leaf-filters.h \
  ../../../LEAF/leaf/./Inc/leaf-delay.h \
  ../../../LEAF/leaf/./Inc/leaf-reverb.h \
- ../../../LEAF/leaf/./Inc/leaf-delay.h \
  ../../../LEAF/leaf/./Inc/leaf-oscillators.h \
  ../../../LEAF/leaf/./Inc/leaf-effects.h \
  ../../../LEAF/leaf/./Inc/leaf-dynamics.h \
- ../../../LEAF/leaf/./Inc/leaf-envelopes.h \
  ../../../LEAF/leaf/./Inc/leaf-envelopes.h \
  ../../../LEAF/leaf/./Inc/leaf-analysis.h \
  ../../../LEAF/leaf/./Inc/leaf-instruments.h \
  ../../../LEAF/leaf/./Inc/leaf-midi.h \
  ../../../LEAF/leaf/./Inc/leaf-sampling.h \
  ../../../LEAF/leaf/./Inc/leaf-physical.h \
- ../../../LEAF/leaf/./Inc/leaf-electrical.h
+ ../../../LEAF/leaf/./Inc/leaf-electrical.h \
+ ../../../LEAF/leaf/./Inc/leaf-vocal.h
 ../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../../libDaisy//Drivers/CMSIS/Include/core_cm7.h:
@@ -365,40 +358,30 @@ build/MyProj.o: MyProj.cpp \
 ../../libDaisy//src/util/WaveTableLoader.h:
 ../../libDaisy//src/sys/fatfs.h:
 ../../libDaisy//src/util/WavWriter.h:
-../../../LEAF/leaf/Inc/leaf-analysis.h:
-../../../LEAF/leaf/Inc/leaf-global.h:
-../../../LEAF/leaf/Inc/leaf-mempool.h:
-../../../LEAF/leaf/Inc/../leaf-config.h:
-../../../LEAF/leaf/Inc/leaf-distortion.h:
-../../../LEAF/leaf/Inc/leaf-math.h:
-../../../LEAF/leaf/Inc/leaf-filters.h:
-../../../LEAF/leaf/Inc/leaf-delay.h:
-../../../LEAF/leaf/Inc/leaf-tables.h:
-../../../LEAF/leaf/Inc/leaf-envelopes.h:
-../../../LEAF/leaf/Inc/leaf-analysis.h:
 ../../../LEAF/leaf/leaf.h:
 ../../../LEAF/leaf/./Inc/leaf-global.h:
+../../../LEAF/leaf/./Inc/leaf-mempool.h:
+../../../LEAF/leaf/./Inc/../leaf-config.h:
 ../../../LEAF/leaf/./Inc/leaf-math.h:
+../../../LEAF/leaf/./Inc/leaf-global.h:
 ../../../LEAF/leaf/./Inc/leaf-mempool.h:
 ../../../LEAF/leaf/./Inc/leaf-tables.h:
+../../../LEAF/leaf/./Inc/leaf-math.h:
 ../../../LEAF/leaf/./Inc/leaf-distortion.h:
 ../../../LEAF/leaf/./Inc/leaf-dynamics.h:
-../../../LEAF/leaf/./Inc/leaf-global.h:
-../../../LEAF/leaf/./Inc/leaf-math.h:
-../../../LEAF/leaf/./Inc/leaf-mempool.h:
 ../../../LEAF/leaf/./Inc/leaf-analysis.h:
-../../../LEAF/leaf/./Inc/leaf-oscillators.h:
-../../../LEAF/leaf/./Inc/leaf-tables.h:
-../../../LEAF/leaf/./Inc/leaf-filters.h:
 ../../../LEAF/leaf/./Inc/leaf-distortion.h:
+../../../LEAF/leaf/./Inc/leaf-filters.h:
+../../../LEAF/leaf/./Inc/leaf-delay.h:
+../../../LEAF/leaf/./Inc/leaf-tables.h:
+../../../LEAF/leaf/./Inc/leaf-envelopes.h:
+../../../LEAF/leaf/./Inc/leaf-oscillators.h:
 ../../../LEAF/leaf/./Inc/leaf-filters.h:
 ../../../LEAF/leaf/./Inc/leaf-delay.h:
 ../../../LEAF/leaf/./Inc/leaf-reverb.h:
-../../../LEAF/leaf/./Inc/leaf-delay.h:
 ../../../LEAF/leaf/./Inc/leaf-oscillators.h:
 ../../../LEAF/leaf/./Inc/leaf-effects.h:
 ../../../LEAF/leaf/./Inc/leaf-dynamics.h:
-../../../LEAF/leaf/./Inc/leaf-envelopes.h:
 ../../../LEAF/leaf/./Inc/leaf-envelopes.h:
 ../../../LEAF/leaf/./Inc/leaf-analysis.h:
 ../../../LEAF/leaf/./Inc/leaf-instruments.h:
@@ -406,3 +389,4 @@ build/MyProj.o: MyProj.cpp \
 ../../../LEAF/leaf/./Inc/leaf-sampling.h:
 ../../../LEAF/leaf/./Inc/leaf-physical.h:
 ../../../LEAF/leaf/./Inc/leaf-electrical.h:
+../../../LEAF/leaf/./Inc/leaf-vocal.h:

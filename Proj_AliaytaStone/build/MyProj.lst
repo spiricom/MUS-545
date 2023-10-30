@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   27:../../libDaisy//src/daisy_pod.h ****     /** Knobs */
   28:../../libDaisy//src/daisy_pod.h ****     enum Knob
   29:../../libDaisy//src/daisy_pod.h ****     {
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 2
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 2
 
 
   30:../../libDaisy//src/daisy_pod.h ****         KNOB_1,    /** &  */
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   40:../../libDaisy//src/hid/midi.h ****     };
   41:../../libDaisy//src/hid/midi.h **** 
   42:../../libDaisy//src/hid/midi.h ****     inline void Init(Config config)
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 3
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 3
 
 
   43:../../libDaisy//src/hid/midi.h ****     {
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   47              		.file 3 "../../libDaisy//src/hid/rgb_led.h"
    1:../../libDaisy//src/hid/rgb_led.h **** #pragma once
    2:../../libDaisy//src/hid/rgb_led.h **** #ifndef DSY_RGB_LED_H
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 4
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 4
 
 
    3:../../libDaisy//src/hid/rgb_led.h **** #define DSY_RGB_LED_H
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   61              	.LBI274:
   62              		.loc 4 25 5 is_stmt 1 view .LVU9
   63              		.loc 4 25 5 is_stmt 0 view .LVU10
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 5
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 5
 
 
   64              	.LBE274:
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   31:../../libDaisy//src/hid/switch.h ****     };
   32:../../libDaisy//src/hid/switch.h **** 
   33:../../libDaisy//src/hid/switch.h ****     /** Specifies whether to use built-in Pull Up/Down resistors to hold button at a given state wh
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 6
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 6
 
 
   34:../../libDaisy//src/hid/switch.h ****     enum Pull
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
    1:../../libDaisy//src/hid/encoder.h **** #pragma once
    2:../../libDaisy//src/hid/encoder.h **** #ifndef DSY_ENCODER_H
    3:../../libDaisy//src/hid/encoder.h **** #define DSY_ENCODER_H
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 7
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 7
 
 
    4:../../libDaisy//src/hid/encoder.h **** #include "daisy_core.h"
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
    1:../../libDaisy//src/sys/system.h **** #ifndef DSY_SYSTEM_H
    2:../../libDaisy//src/sys/system.h **** #define DSY_SYSTEM_H
    3:../../libDaisy//src/sys/system.h **** 
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 8
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 8
 
 
    4:../../libDaisy//src/sys/system.h **** #ifndef UNIT_TEST // for unit tests, a dummy implementation is provided below
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   58:../../libDaisy//src/sys/system.h ****         bool       skip_clocks;
   59:../../libDaisy//src/sys/system.h ****     };
   60:../../libDaisy//src/sys/system.h **** 
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 9
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 9
 
 
   61:../../libDaisy//src/sys/system.h ****     /** Describes the different regions of memory available to the Daisy
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   31:../../libDaisy//src/hid/usb.h ****         FS_INTERNAL, /**< Internal pin */
   32:../../libDaisy//src/hid/usb.h ****         FS_EXTERNAL, /**< FS External D+ pin is Pin 38 (GPIO32). FS External D- pin is Pin 37 (GPIO
   33:../../libDaisy//src/hid/usb.h ****         FS_BOTH,     /**< Both */
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 10
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 10
 
 
   34:../../libDaisy//src/hid/usb.h ****     };
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   40:../../libDaisy//src/per/adc.h ****     };
   41:../../libDaisy//src/per/adc.h **** 
   42:../../libDaisy//src/per/adc.h ****     /** Initializes a single ADC pin as an ADC. 
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 11
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 11
 
 
   43:../../libDaisy//src/per/adc.h ****     \param pin Pin to init.
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
  139              	.LBB289:
  140              	.LBI289:
  141              		.file 12 "../../libDaisy//src/hid/audio.h"
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 12
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 12
 
 
    1:../../libDaisy//src/hid/audio.h **** #ifndef DSY_AUDIO_H
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   55:../../libDaisy//src/hid/audio.h ****         OK,
   56:../../libDaisy//src/hid/audio.h ****         ERR,
   57:../../libDaisy//src/hid/audio.h ****     };
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 13
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 13
 
 
   58:../../libDaisy//src/hid/audio.h **** 
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
  158              		.thumb
  159              		.thumb_func
  161              	_Z7_randomv:
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 14
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 14
 
 
  162              	.LFB2542:
@@ -838,7 +838,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   53:MyProj.cpp    **** 	for (size_t i = 0; i < size; i++)
   54:MyProj.cpp    **** 	{
   55:MyProj.cpp    **** 		float sample = tCycle_tick(&mySineRoot) * 0.33;
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 15
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 15
 
 
   56:MyProj.cpp    **** 		float sample2 = tCycle_tick(&mySineThird) * 0.33;
@@ -898,7 +898,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   45:../../libDaisy//src/daisy_pod.h **** 
   46:../../libDaisy//src/daisy_pod.h ****     /** Starts the callback
   47:../../libDaisy//src/daisy_pod.h ****     \param cb Interleaved callback function
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 16
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 16
 
 
   48:../../libDaisy//src/daisy_pod.h ****     */
@@ -958,7 +958,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
  102:../../libDaisy//src/daisy_pod.h ****     inline void ProcessAllControls()
  198              		.loc 1 102 17 view .LVU44
  199              	.LBB291:
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 17
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 17
 
 
  103:../../libDaisy//src/daisy_pod.h ****     {
@@ -1018,7 +1018,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
  246              	.LBB300:
  247              	.LBB295:
  248              		.loc 1 105 31 view .LVU56
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 18
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 18
 
 
  249 0018 2046     		mov	r0, r4
@@ -1078,7 +1078,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   31:MyProj.cpp    **** 
  290              		.loc 13 31 10 view .LVU72
  291 004e 87ED008A 		vstr.32	s16, [r7]
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 19
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 19
 
 
   33:MyProj.cpp    **** 	tCycle_setFreq(&mySineThird, myFreq2);
@@ -1138,7 +1138,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   79:../../libDaisy//src/hid/switch.h ****     inline bool Pressed() const { return state_ == 0xff; }
  305              		.loc 5 79 17 view .LVU78
  306              	.LBB303:
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 20
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 20
 
 
  307              		.loc 5 79 35 view .LVU79
@@ -1198,7 +1198,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   55:MyProj.cpp    **** 		float sample2 = tCycle_tick(&mySineThird) * 0.33;
  351              		.loc 13 55 29 discriminator 2 view .LVU94
  352 0086 B0EE408A 		vmov.f32	s16, s0
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 21
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 21
 
 
  353              	.LVL13:
@@ -1258,7 +1258,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
  391              	.LBE308:
   53:MyProj.cpp    **** 	{
  392              		.loc 13 53 23 discriminator 2 view .LVU111
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 22
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 22
 
 
  393 00be A642     		cmp	r6, r4
@@ -1318,7 +1318,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
  434              		.cfi_restore_state
   45:MyProj.cpp    **** 
  435              		.loc 13 45 3 is_stmt 1 view .LVU125
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 23
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 23
 
 
   45:MyProj.cpp    **** 
@@ -1378,7 +1378,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   70:MyProj.cpp    **** 	hw.Init();
  485              		.loc 13 70 1 is_stmt 0 view .LVU131
  486 0000 08B5     		push	{r3, lr}
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 24
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 24
 
 
  487              		.cfi_def_cfa_offset 8
@@ -1438,7 +1438,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   80:MyProj.cpp    **** 	tCycle_init (&mySineFifth, &leaf);
  533              		.loc 13 80 2 is_stmt 1 view .LVU145
  534              		.loc 13 80 14 is_stmt 0 view .LVU146
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 25
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 25
 
 
  535 0042 1049     		ldr	r1, .L24+16
@@ -1498,7 +1498,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
  581 0088 00000000 		.word	.LANCHOR2
  582 008c 00000000 		.word	.LANCHOR3
  583 0090 00000000 		.word	.LANCHOR4
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 26
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 26
 
 
  584 0094 00000000 		.word	_Z13AudioCallbackPKPKfPPfj
@@ -1558,7 +1558,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   20:../../libDaisy//src/per/qspi.h **** {
   21:../../libDaisy//src/per/qspi.h **** /** @addtogroup serial
   22:../../libDaisy//src/per/qspi.h **** @{
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 27
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 27
 
 
   23:../../libDaisy//src/per/qspi.h **** */
@@ -1618,7 +1618,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   77:../../libDaisy//src/per/qspi.h ****             INDIRECT_POLLING, /**< & */
   78:../../libDaisy//src/per/qspi.h ****             MODE_LAST,
   79:../../libDaisy//src/per/qspi.h ****         };
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 28
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 28
 
 
   80:../../libDaisy//src/per/qspi.h **** 
@@ -1678,7 +1678,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
  134:../../libDaisy//src/per/qspi.h ****     /** 
  135:../../libDaisy//src/per/qspi.h ****         Erases the area specified on the chip.
  136:../../libDaisy//src/per/qspi.h ****         Erasures will happen by 4K, 32K or 64K increments.
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 29
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 29
 
 
  137:../../libDaisy//src/per/qspi.h ****         Smallest erase possible is 4kB at a time. (on IS25LP*)
@@ -1738,7 +1738,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   38:../../libDaisy//src/hid/midi.h ****         }
  639              		.loc 2 38 20 view .LVU167
  640 000a B1F804C0 		ldrh	ip, [r1, #4]
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 30
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 30
 
 
  641              	.LBE405:
@@ -1798,7 +1798,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
  693              	.LBE435:
  694              	.LBB436:
  695              	.LBB432:
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 31
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 31
 
 
  696              	.LBB429:
@@ -1858,7 +1858,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   24:../../libDaisy//src/per/dac.h ****     /** Return Values for the DacHandle class */
   25:../../libDaisy//src/per/dac.h ****     enum class Result
   26:../../libDaisy//src/per/dac.h ****     {
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 32
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 32
 
 
   27:../../libDaisy//src/per/dac.h ****         OK,
@@ -1918,7 +1918,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   81:../../libDaisy//src/per/dac.h ****         BufferState buff_state;
   82:../../libDaisy//src/per/dac.h ****     };
   83:../../libDaisy//src/per/dac.h **** 
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 33
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 33
 
 
   84:../../libDaisy//src/per/dac.h ****     DacHandle() : pimpl_(nullptr) {}
@@ -1978,7 +1978,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
  764              	.LBE442:
  765              	.LBB443:
  766              	.LBI443:
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 34
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 34
 
 
   41:../../libDaisy//src/hid/switch.h ****     ~Switch() {}
@@ -2038,7 +2038,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   24:../../libDaisy//src/hid/led.h ****     ~Led() {}
  807              		.loc 4 24 5 is_stmt 1 view .LVU206
   24:../../libDaisy//src/hid/led.h ****     ~Led() {}
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 35
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 35
 
 
  808              		.loc 4 24 5 is_stmt 0 view .LVU207
@@ -2098,7 +2098,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   35:../../libDaisy//src/per/uart.h ****             UART_4,
   36:../../libDaisy//src/per/uart.h ****             UART_5,
   37:../../libDaisy//src/per/uart.h ****             USART_6,
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 36
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 36
 
 
   38:../../libDaisy//src/per/uart.h ****             UART_7,
@@ -2158,7 +2158,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
   92:../../libDaisy//src/per/uart.h ****         WordLength wordlength;
   93:../../libDaisy//src/per/uart.h ****         uint32_t   baudrate;
   94:../../libDaisy//src/per/uart.h ****     };
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 37
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 37
 
 
   95:../../libDaisy//src/per/uart.h **** 
@@ -2218,7 +2218,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
  850              		.loc 2 36 20 is_stmt 0 view .LVU219
  851 0020 C3F82422 		str	r2, [r3, #548]
   37:../../libDaisy//src/hid/midi.h ****             tx     = {DSY_GPIOB, 6};
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 38
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 38
 
 
  852              		.loc 2 37 13 is_stmt 1 view .LVU220
@@ -2278,7 +2278,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
  899              	.LBE433:
  900              	.LBE455:
  901              	.LBE456:
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 39
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 39
 
 
  902              	.LBE457:
@@ -2338,7 +2338,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
  957              	_knob:
  958 0000 00000000 		.space	4
  959              		.section	.bss.hw,"aw",%nobits
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 40
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 40
 
 
  960              		.align	2
@@ -2398,7 +2398,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
  1020              	.Letext0:
  1021              		.file 18 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/machine/_default_types.h"
  1022              		.file 19 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_stdint.h"
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 41
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 41
 
 
  1023              		.file 20 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdint.h"
@@ -2442,48 +2442,48 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 1
  1061              		.file 58 "../../../LEAF/leaf/leaf.h"
  1062              		.file 59 "<built-in>"
  1063              		.file 60 "../../libDaisy//src/dev/sr_595.h"
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 42
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 42
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 MyProj.cpp
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:19     .text._ZN5daisy8DaisyPodD2Ev:0000000000000000 $t
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:26     .text._ZN5daisy8DaisyPodD2Ev:0000000000000000 _ZN5daisy8DaisyPodD2Ev
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:26     .text._ZN5daisy8DaisyPodD2Ev:0000000000000000 _ZN5daisy8DaisyPodD1Ev
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:154    .text._Z7_randomv:0000000000000000 $t
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:161    .text._Z7_randomv:0000000000000000 _Z7_randomv
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:176    .text._Z7_randomv:0000000000000008 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:181    .text._Z13AudioCallbackPKPKfPPfj:0000000000000000 $t
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:188    .text._Z13AudioCallbackPKPKfPPfj:0000000000000000 _Z13AudioCallbackPKPKfPPfj
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:453    .text._Z13AudioCallbackPKPKfPPfj:0000000000000100 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:963    .bss.hw:0000000000000000 hw
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:470    .text.startup.main:0000000000000000 $t
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:477    .text.startup.main:0000000000000000 main
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:576    .text.startup.main:0000000000000074 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:976    .bss.leafMemory:0000000000000000 leafMemory
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:589    .text.startup._GLOBAL__sub_I_hw:0000000000000000 $t
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:595    .text.startup._GLOBAL__sub_I_hw:0000000000000000 _GLOBAL__sub_I_hw
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:920    .text.startup._GLOBAL__sub_I_hw:0000000000000050 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:931    .init_array:0000000000000000 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:957    .bss._knob:0000000000000000 _knob
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:1017   .data.myFreq3:0000000000000000 myFreq3
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:1011   .data.myFreq2:0000000000000000 myFreq2
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:1004   .data.myFreq:0000000000000000 myFreq
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:983    .bss.mySineFifth:0000000000000000 mySineFifth
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:997    .bss.mySineThird:0000000000000000 mySineThird
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:990    .bss.mySineRoot:0000000000000000 mySineRoot
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:970    .bss.leaf:0000000000000000 leaf
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:944    .rodata:0000000000000000 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:954    .bss._knob:0000000000000000 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:960    .bss.hw:0000000000000000 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:966    .bss.leaf:0000000000000000 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:973    .bss.leafMemory:0000000000000000 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:979    .bss.mySineFifth:0000000000000000 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:986    .bss.mySineRoot:0000000000000000 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:993    .bss.mySineThird:0000000000000000 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:1000   .data.myFreq:0000000000000000 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:1007   .data.myFreq2:0000000000000000 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s:1014   .data.myFreq3:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:19     .text._ZN5daisy8DaisyPodD2Ev:0000000000000000 $t
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:26     .text._ZN5daisy8DaisyPodD2Ev:0000000000000000 _ZN5daisy8DaisyPodD2Ev
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:26     .text._ZN5daisy8DaisyPodD2Ev:0000000000000000 _ZN5daisy8DaisyPodD1Ev
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:154    .text._Z7_randomv:0000000000000000 $t
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:161    .text._Z7_randomv:0000000000000000 _Z7_randomv
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:176    .text._Z7_randomv:0000000000000008 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:181    .text._Z13AudioCallbackPKPKfPPfj:0000000000000000 $t
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:188    .text._Z13AudioCallbackPKPKfPPfj:0000000000000000 _Z13AudioCallbackPKPKfPPfj
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:453    .text._Z13AudioCallbackPKPKfPPfj:0000000000000100 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:963    .bss.hw:0000000000000000 hw
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:470    .text.startup.main:0000000000000000 $t
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:477    .text.startup.main:0000000000000000 main
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:576    .text.startup.main:0000000000000074 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:976    .bss.leafMemory:0000000000000000 leafMemory
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:589    .text.startup._GLOBAL__sub_I_hw:0000000000000000 $t
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:595    .text.startup._GLOBAL__sub_I_hw:0000000000000000 _GLOBAL__sub_I_hw
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:920    .text.startup._GLOBAL__sub_I_hw:0000000000000050 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:931    .init_array:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:957    .bss._knob:0000000000000000 _knob
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:1017   .data.myFreq3:0000000000000000 myFreq3
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:1011   .data.myFreq2:0000000000000000 myFreq2
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:1004   .data.myFreq:0000000000000000 myFreq
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:983    .bss.mySineFifth:0000000000000000 mySineFifth
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:997    .bss.mySineThird:0000000000000000 mySineThird
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:990    .bss.mySineRoot:0000000000000000 mySineRoot
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:970    .bss.leaf:0000000000000000 leaf
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:944    .rodata:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:954    .bss._knob:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:960    .bss.hw:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:966    .bss.leaf:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:973    .bss.leafMemory:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:979    .bss.mySineFifth:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:986    .bss.mySineRoot:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:993    .bss.mySineThird:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:1000   .data.myFreq:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:1007   .data.myFreq2:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s:1014   .data.myFreq3:0000000000000000 $d
                            .group:0000000000000000 _ZN5daisy8DaisyPodD5Ev
 
 UNDEFINED SYMBOLS
@@ -2502,7 +2502,7 @@ _ZN5daisy8DaisyPod10StartAudioEPFvPKPKfPPfjE
 _ZN5daisy9DaisySeed6SetLedEb
 _ZN5daisy8DaisyPod7DelayMsEj
 __aeabi_atexit
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccyGB37N.s 			page 43
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccqAEkIZ.s 			page 43
 
 
 __dso_handle
