@@ -5,7 +5,7 @@ LEAF leaf;
 char leafMemory[400000]; //notice I increased this, because tRetune needs more memory
 DaisyPod hw;
 
-tADSR env;
+tADSRS env;
 tCycle mySine;
 
 float randomNumber()
@@ -27,11 +27,11 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
         
         if (hw.button1.RisingEdge())
         {
-            tADSR_on(&env, 1.0f);
+            tADSRS_on(&env, 1.0f);
         }
 
         mySample = tCycle_tick(&mySine);
-        mySample = mySample * tADSR_tick(&env);
+        mySample = mySample * tADSRS_tick(&env);
         out[0][i] = mySample;
         out[1][i] = mySample;
     }
@@ -46,7 +46,7 @@ int main(void)
     hw.StartAdc();
 
     LEAF_init(&leaf, 48000, leafMemory, 400000, randomNumber); //notice I increased this, because tRetune needs more memory
-    tADSR_init(&env, 10, 500, 0., 500, &leaf);
+    tADSRS_init(&env, 10, 500, 0., 500, &leaf);
     tCycle_init(&mySine, &leaf);
 
     hw.StartAudio(AudioCallback);
