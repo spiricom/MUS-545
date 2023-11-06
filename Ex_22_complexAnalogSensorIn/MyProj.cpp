@@ -14,6 +14,10 @@ dsy_gpio_pin A7Pin;
 tPBPulse myOsc;
 tPBSaw myMod;
 
+//let's make some variables so we can peek at the sensor values in the debugger. Volatile so the compiler doesn't optimize them away
+volatile float sensor1;
+volatile float sensor2;
+
 float randomNumber()
 {
     return Random::GetFloat(0.0f, 1.0f);
@@ -30,11 +34,11 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
         tPBSaw_setFreq(&myMod, modFreq);
         float sawOutput = tPBSaw_tick(&myMod);
         float modAmp = hw.GetKnobValue(hw.KNOB_2) * 2000.0f;
-
-        tPBPulse_setFreq(&myOsc, hw.seed.adc.GetFloat(0) * 440.0f + (sawOutput * modAmp));
-        tPBPulse_setWidth(&myOsc, hw.seed.adc.GetFloat(1) * 0.9f + 0.05f);
+        sensor1 = hw.seed.adc.GetFloat(0);
+        sensor2 = hw.seed.adc.GetFloat(1);
+        tPBPulse_setFreq(&myOsc, sensor1 * 440.0f + (sawOutput * modAmp));
+        tPBPulse_setWidth(&myOsc, sensor2 * 0.9f + 0.05f);
         float mySample = tPBPulse_tick(&myOsc);
-
         
         //now set the audio outputs (left is [0] and right is [1] to be whatever value has been computed and stored in the mySample variable.
         out[0][i] = mySample;

@@ -1,4 +1,4 @@
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   27:../../libDaisy//src/daisy_pod.h ****     /** Knobs */
   28:../../libDaisy//src/daisy_pod.h ****     enum Knob
   29:../../libDaisy//src/daisy_pod.h ****     {
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 2
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 2
 
 
   30:../../libDaisy//src/daisy_pod.h ****         KNOB_1,    /** &  */
@@ -118,7 +118,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   40:../../libDaisy//src/hid/midi.h ****     };
   41:../../libDaisy//src/hid/midi.h **** 
   42:../../libDaisy//src/hid/midi.h ****     inline void Init(Config config)
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 3
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 3
 
 
   43:../../libDaisy//src/hid/midi.h ****     {
@@ -178,7 +178,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   47              		.file 3 "../../libDaisy//src/hid/rgb_led.h"
    1:../../libDaisy//src/hid/rgb_led.h **** #pragma once
    2:../../libDaisy//src/hid/rgb_led.h **** #ifndef DSY_RGB_LED_H
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 4
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 4
 
 
    3:../../libDaisy//src/hid/rgb_led.h **** #define DSY_RGB_LED_H
@@ -238,7 +238,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   61              	.LBI275:
   62              		.loc 4 25 5 is_stmt 1 view .LVU9
   63              		.loc 4 25 5 is_stmt 0 view .LVU10
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 5
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 5
 
 
   64              	.LBE275:
@@ -298,7 +298,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   31:../../libDaisy//src/hid/switch.h ****     };
   32:../../libDaisy//src/hid/switch.h **** 
   33:../../libDaisy//src/hid/switch.h ****     /** Specifies whether to use built-in Pull Up/Down resistors to hold button at a given state wh
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 6
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 6
 
 
   34:../../libDaisy//src/hid/switch.h ****     enum Pull
@@ -358,7 +358,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
    1:../../libDaisy//src/hid/encoder.h **** #pragma once
    2:../../libDaisy//src/hid/encoder.h **** #ifndef DSY_ENCODER_H
    3:../../libDaisy//src/hid/encoder.h **** #define DSY_ENCODER_H
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 7
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 7
 
 
    4:../../libDaisy//src/hid/encoder.h **** #include "daisy_core.h"
@@ -418,7 +418,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
    1:../../libDaisy//src/sys/system.h **** #ifndef DSY_SYSTEM_H
    2:../../libDaisy//src/sys/system.h **** #define DSY_SYSTEM_H
    3:../../libDaisy//src/sys/system.h **** 
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 8
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 8
 
 
    4:../../libDaisy//src/sys/system.h **** #ifndef UNIT_TEST // for unit tests, a dummy implementation is provided below
@@ -478,7 +478,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   58:../../libDaisy//src/sys/system.h ****         bool       skip_clocks;
   59:../../libDaisy//src/sys/system.h ****     };
   60:../../libDaisy//src/sys/system.h **** 
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 9
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 9
 
 
   61:../../libDaisy//src/sys/system.h ****     /** Describes the different regions of memory available to the Daisy
@@ -538,7 +538,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   31:../../libDaisy//src/hid/usb.h ****         FS_INTERNAL, /**< Internal pin */
   32:../../libDaisy//src/hid/usb.h ****         FS_EXTERNAL, /**< FS External D+ pin is Pin 38 (GPIO32). FS External D- pin is Pin 37 (GPIO
   33:../../libDaisy//src/hid/usb.h ****         FS_BOTH,     /**< Both */
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 10
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 10
 
 
   34:../../libDaisy//src/hid/usb.h ****     };
@@ -598,7 +598,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   40:../../libDaisy//src/per/adc.h ****     };
   41:../../libDaisy//src/per/adc.h **** 
   42:../../libDaisy//src/per/adc.h ****     /** Initializes a single ADC pin as an ADC. 
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 11
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 11
 
 
   43:../../libDaisy//src/per/adc.h ****     \param pin Pin to init.
@@ -658,7 +658,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  139              	.LBB290:
  140              	.LBI290:
  141              		.file 12 "../../libDaisy//src/hid/audio.h"
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 12
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 12
 
 
    1:../../libDaisy//src/hid/audio.h **** #ifndef DSY_AUDIO_H
@@ -718,7 +718,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   55:../../libDaisy//src/hid/audio.h ****         OK,
   56:../../libDaisy//src/hid/audio.h ****         ERR,
   57:../../libDaisy//src/hid/audio.h ****     };
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 13
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 13
 
 
   58:../../libDaisy//src/hid/audio.h **** 
@@ -778,7 +778,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  158              		.thumb
  159              		.thumb_func
  161              	_Z12randomNumberv:
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 14
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 14
 
 
  162              	.LFB2541:
@@ -793,22 +793,21 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
    8:MyProj.cpp    **** dsy_gpio_pin A7Pin;
    9:MyProj.cpp    **** 
   10:MyProj.cpp    **** //SIMPLE SENSOR INPUT
-  11:MyProj.cpp    **** //CONNECT A SENSOR TO A1 (and GND)
+  11:MyProj.cpp    **** //CONNECT SENSORS TO A1 and A7 pins on the Daisy Pod
   12:MyProj.cpp    **** 
   13:MyProj.cpp    **** tPBPulse myOsc;
   14:MyProj.cpp    **** 
-  15:MyProj.cpp    **** float ext_adc_in[2];
-  16:MyProj.cpp    **** 
-  17:MyProj.cpp    **** float randomNumber()
-  18:MyProj.cpp    **** {
- 164              		.loc 13 18 1 is_stmt 1 view -0
+  15:MyProj.cpp    **** 
+  16:MyProj.cpp    **** float randomNumber()
+  17:MyProj.cpp    **** {
+ 164              		.loc 13 17 1 is_stmt 1 view -0
  165              		.cfi_startproc
  166              		@ args = 0, pretend = 0, frame = 0
  167              		@ frame_needed = 0, uses_anonymous_args = 0
  168              		@ link register save eliminated.
-  19:MyProj.cpp    ****     return Random::GetFloat(0.0f, 1.0f);
- 169              		.loc 13 19 5 view .LVU40
- 170              		.loc 13 19 28 is_stmt 0 view .LVU41
+  18:MyProj.cpp    ****     return Random::GetFloat(0.0f, 1.0f);
+ 169              		.loc 13 18 5 view .LVU40
+ 170              		.loc 13 18 28 is_stmt 0 view .LVU41
  171 0000 F7EE000A 		vmov.f32	s1, #1.0e+0
  172 0004 9FED010A 		vldr.32	s0, .L4
  173 0008 FFF7FEBF 		b	_ZN5daisy6Random8GetFloatEff
@@ -829,20 +828,20 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  190              	_Z13AudioCallbackPKPKfPPfj:
  191              	.LVL2:
  192              	.LFB2542:
-  20:MyProj.cpp    **** }
+  19:MyProj.cpp    **** }
+  20:MyProj.cpp    **** 
   21:MyProj.cpp    **** 
-  22:MyProj.cpp    **** 
-  23:MyProj.cpp    **** void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
-  24:MyProj.cpp    **** {
- 193              		.loc 13 24 1 is_stmt 1 view -0
+  22:MyProj.cpp    **** void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, size_t size)
+  23:MyProj.cpp    **** {
+ 193              		.loc 13 23 1 is_stmt 1 view -0
  194              		.cfi_startproc
  195              		@ args = 0, pretend = 0, frame = 0
  196              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 15
+  24:MyProj.cpp    ****     hw.ProcessAllControls();
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 15
 
 
-  25:MyProj.cpp    ****     hw.ProcessAllControls();
- 197              		.loc 13 25 5 view .LVU43
+ 197              		.loc 13 24 5 view .LVU43
  198              	.LBB291:
  199              	.LBI291:
   37:../../libDaisy//src/daisy_pod.h **** 
@@ -898,10 +897,10 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   87:../../libDaisy//src/daisy_pod.h ****     /** Returns the rate in Hz that the Audio callback is called */
   88:../../libDaisy//src/daisy_pod.h ****     float AudioCallbackRate();
   89:../../libDaisy//src/daisy_pod.h **** 
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 16
-
-
   90:../../libDaisy//src/daisy_pod.h ****     /**
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 16
+
+
   91:../../libDaisy//src/daisy_pod.h ****        Start analog to digital conversion.
   92:../../libDaisy//src/daisy_pod.h ****      */
   93:../../libDaisy//src/daisy_pod.h ****     void StartAdc();
@@ -921,8 +920,8 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  202              		.loc 1 104 9 view .LVU45
  203              	.LBE292:
  204              	.LBE291:
-  24:MyProj.cpp    ****     hw.ProcessAllControls();
- 205              		.loc 13 24 1 is_stmt 0 view .LVU46
+  23:MyProj.cpp    ****     hw.ProcessAllControls();
+ 205              		.loc 13 23 1 is_stmt 0 view .LVU46
  206 0000 70B5     		push	{r4, r5, r6, lr}
  207              		.cfi_def_cfa_offset 16
  208              		.cfi_offset 4, -16
@@ -937,8 +936,8 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  217              		.loc 1 104 30 view .LVU48
  218              	.LBE293:
  219              	.LBE295:
-  24:MyProj.cpp    ****     hw.ProcessAllControls();
- 220              		.loc 13 24 1 view .LVU49
+  23:MyProj.cpp    ****     hw.ProcessAllControls();
+ 220              		.loc 13 23 1 view .LVU49
  221 0004 1646     		mov	r6, r2
  222 0006 0D46     		mov	r5, r1
  223 0008 2DED028B 		vpush.64	{d8}
@@ -958,30 +957,30 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  236              	.LVL5:
  237              		.loc 1 105 31 view .LVU53
  238              	.LBE294:
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 17
-
-
  239              	.LBE296:
-  26:MyProj.cpp    ****     //now here's the per sample stuff
-  27:MyProj.cpp    ****     for (size_t i = 0; i < size; i++)
- 240              		.loc 13 27 5 is_stmt 1 view .LVU54
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 17
+
+
+  25:MyProj.cpp    ****     //now here's the per sample stuff
+  26:MyProj.cpp    ****     for (size_t i = 0; i < size; i++)
+ 240              		.loc 13 26 5 is_stmt 1 view .LVU54
  241              	.LBB297:
- 242              		.loc 13 27 26 view .LVU55
+ 242              		.loc 13 26 26 view .LVU55
  243 0016 B6B3     		cbz	r6, .L6
- 244              		.loc 13 27 17 is_stmt 0 view .LVU56
+ 244              		.loc 13 26 17 is_stmt 0 view .LVU56
  245 0018 0024     		movs	r4, #0
  246              	.LVL6:
  247              	.L8:
  248              	.LBB298:
-  28:MyProj.cpp    ****     {
-  29:MyProj.cpp    ****         tPBPulse_setFreq(&myOsc, hw.seed.adc.GetFloat(0) * 440.0f + 40.0f);
- 249              		.loc 13 29 9 is_stmt 1 discriminator 2 view .LVU57
- 250              		.loc 13 29 54 is_stmt 0 discriminator 2 view .LVU58
+  27:MyProj.cpp    ****     {
+  28:MyProj.cpp    ****         tPBPulse_setFreq(&myOsc, hw.seed.adc.GetFloat(0) * 440.0f + 40.0f);
+ 249              		.loc 13 28 9 is_stmt 1 discriminator 2 view .LVU57
+ 250              		.loc 13 28 54 is_stmt 0 discriminator 2 view .LVU58
  251 001a 0021     		movs	r1, #0
  252 001c 1C48     		ldr	r0, .L14+4
  253 001e FFF7FEFF 		bl	_ZNK5daisy9AdcHandle8GetFloatEh
  254              	.LVL7:
- 255              		.loc 13 29 25 discriminator 2 view .LVU59
+ 255              		.loc 13 28 25 discriminator 2 view .LVU59
  256 0022 9FED1C7A 		vldr.32	s14, .L14+8
  257 0026 DFED1C7A 		vldr.32	s15, .L14+12
  258 002a 1C48     		ldr	r0, .L14+16
@@ -989,14 +988,14 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  260 0030 B0EE670A 		vmov.f32	s0, s15
  261 0034 FFF7FEFF 		bl	tPBPulse_setFreq
  262              	.LVL8:
-  30:MyProj.cpp    ****         tPBPulse_setWidth(&myOsc, hw.seed.adc.GetFloat(1) * 0.9f + 0.05f);
- 263              		.loc 13 30 9 is_stmt 1 discriminator 2 view .LVU60
- 264              		.loc 13 30 55 is_stmt 0 discriminator 2 view .LVU61
+  29:MyProj.cpp    ****         tPBPulse_setWidth(&myOsc, hw.seed.adc.GetFloat(1) * 0.9f + 0.05f);
+ 263              		.loc 13 29 9 is_stmt 1 discriminator 2 view .LVU60
+ 264              		.loc 13 29 55 is_stmt 0 discriminator 2 view .LVU61
  265 0038 0121     		movs	r1, #1
  266 003a 1548     		ldr	r0, .L14+4
  267 003c FFF7FEFF 		bl	_ZNK5daisy9AdcHandle8GetFloatEh
  268              	.LVL9:
- 269              		.loc 13 30 26 discriminator 2 view .LVU62
+ 269              		.loc 13 29 26 discriminator 2 view .LVU62
  270 0040 9FED177A 		vldr.32	s14, .L14+20
  271 0044 DFED177A 		vldr.32	s15, .L14+24
  272 0048 1448     		ldr	r0, .L14+16
@@ -1004,87 +1003,87 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  274 004e B0EE670A 		vmov.f32	s0, s15
  275 0052 FFF7FEFF 		bl	tPBPulse_setWidth
  276              	.LVL10:
-  31:MyProj.cpp    ****         float mySample = tPBPulse_tick(&myOsc);
- 277              		.loc 13 31 9 is_stmt 1 discriminator 2 view .LVU63
- 278              		.loc 13 31 39 is_stmt 0 discriminator 2 view .LVU64
+  30:MyProj.cpp    ****         float mySample = tPBPulse_tick(&myOsc);
+ 277              		.loc 13 30 9 is_stmt 1 discriminator 2 view .LVU63
+ 278              		.loc 13 30 39 is_stmt 0 discriminator 2 view .LVU64
  279 0056 1148     		ldr	r0, .L14+16
  280 0058 FFF7FEFF 		bl	tPBPulse_tick
  281              	.LVL11:
-  32:MyProj.cpp    **** 
-  33:MyProj.cpp    ****         mySample = mySample * hw.GetKnobValue(hw.KNOB_1); //knob1 gives values from 0-1 and multipl
- 282              		.loc 13 33 46 discriminator 2 view .LVU65
+  31:MyProj.cpp    **** 
+  32:MyProj.cpp    ****         mySample = mySample * hw.GetKnobValue(hw.KNOB_1); //knob1 gives values from 0-1 and multipl
+ 282              		.loc 13 32 46 discriminator 2 view .LVU65
  283 005c 0B48     		ldr	r0, .L14
  284 005e 0021     		movs	r1, #0
-  31:MyProj.cpp    ****         float mySample = tPBPulse_tick(&myOsc);
- 285              		.loc 13 31 39 discriminator 2 view .LVU66
+  30:MyProj.cpp    ****         float mySample = tPBPulse_tick(&myOsc);
+ 285              		.loc 13 30 39 discriminator 2 view .LVU66
  286 0060 B0EE408A 		vmov.f32	s16, s0
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 18
-
-
  287              	.LVL12:
- 288              		.loc 13 33 9 is_stmt 1 discriminator 2 view .LVU67
- 289              		.loc 13 33 46 is_stmt 0 discriminator 2 view .LVU68
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 18
+
+
+ 288              		.loc 13 32 9 is_stmt 1 discriminator 2 view .LVU67
+ 289              		.loc 13 32 46 is_stmt 0 discriminator 2 view .LVU68
  290 0064 FFF7FEFF 		bl	_ZN5daisy8DaisyPod12GetKnobValueENS0_4KnobE
  291              	.LVL13:
-  34:MyProj.cpp    ****         //now set the audio outputs (left is [0] and right is [1] to be whatever value has been com
-  35:MyProj.cpp    ****         out[0][i] = mySample;
-  36:MyProj.cpp    ****         out[1][i] = mySample;
- 292              		.loc 13 36 19 discriminator 2 view .LVU69
- 293 0068 D5E90003 		ldrd	r0, r3, [r5]
   33:MyProj.cpp    ****         //now set the audio outputs (left is [0] and right is [1] to be whatever value has been com
- 294              		.loc 13 33 18 discriminator 2 view .LVU70
+  34:MyProj.cpp    ****         out[0][i] = mySample;
+  35:MyProj.cpp    ****         out[1][i] = mySample;
+ 292              		.loc 13 35 19 discriminator 2 view .LVU69
+ 293 0068 D5E90003 		ldrd	r0, r3, [r5]
+  32:MyProj.cpp    ****         //now set the audio outputs (left is [0] and right is [1] to be whatever value has been com
+ 294              		.loc 13 32 18 discriminator 2 view .LVU70
  295 006c 20EE080A 		vmul.f32	s0, s0, s16
  296              	.LVL14:
-  35:MyProj.cpp    ****         out[1][i] = mySample;
- 297              		.loc 13 35 9 is_stmt 1 discriminator 2 view .LVU71
-  35:MyProj.cpp    ****         out[1][i] = mySample;
- 298              		.loc 13 35 19 is_stmt 0 discriminator 2 view .LVU72
+  34:MyProj.cpp    ****         out[1][i] = mySample;
+ 297              		.loc 13 34 9 is_stmt 1 discriminator 2 view .LVU71
+  34:MyProj.cpp    ****         out[1][i] = mySample;
+ 298              		.loc 13 34 19 is_stmt 0 discriminator 2 view .LVU72
  299 0070 00EB8400 		add	r0, r0, r4, lsl #2
- 300              		.loc 13 36 19 discriminator 2 view .LVU73
+ 300              		.loc 13 35 19 discriminator 2 view .LVU73
  301 0074 03EB8403 		add	r3, r3, r4, lsl #2
  302              	.LBE298:
-  27:MyProj.cpp    ****     {
- 303              		.loc 13 27 5 discriminator 2 view .LVU74
+  26:MyProj.cpp    ****     {
+ 303              		.loc 13 26 5 discriminator 2 view .LVU74
  304 0078 0134     		adds	r4, r4, #1
  305              	.LVL15:
  306              	.LBB299:
-  35:MyProj.cpp    ****         out[1][i] = mySample;
- 307              		.loc 13 35 19 discriminator 2 view .LVU75
+  34:MyProj.cpp    ****         out[1][i] = mySample;
+ 307              		.loc 13 34 19 discriminator 2 view .LVU75
  308 007a 80ED000A 		vstr.32	s0, [r0]
- 309              		.loc 13 36 9 is_stmt 1 discriminator 2 view .LVU76
+ 309              		.loc 13 35 9 is_stmt 1 discriminator 2 view .LVU76
  310              	.LBE299:
-  27:MyProj.cpp    ****     {
- 311              		.loc 13 27 26 is_stmt 0 discriminator 2 view .LVU77
+  26:MyProj.cpp    ****     {
+ 311              		.loc 13 26 26 is_stmt 0 discriminator 2 view .LVU77
  312 007e A642     		cmp	r6, r4
  313              	.LBB300:
- 314              		.loc 13 36 19 discriminator 2 view .LVU78
+ 314              		.loc 13 35 19 discriminator 2 view .LVU78
  315 0080 83ED000A 		vstr.32	s0, [r3]
  316              	.LBE300:
-  27:MyProj.cpp    ****     {
- 317              		.loc 13 27 5 is_stmt 1 discriminator 2 view .LVU79
+  26:MyProj.cpp    ****     {
+ 317              		.loc 13 26 5 is_stmt 1 discriminator 2 view .LVU79
  318              	.LVL16:
-  27:MyProj.cpp    ****     {
- 319              		.loc 13 27 26 discriminator 2 view .LVU80
+  26:MyProj.cpp    ****     {
+ 319              		.loc 13 26 26 discriminator 2 view .LVU80
  320 0084 C9D1     		bne	.L8
  321              	.LVL17:
  322              	.L6:
-  27:MyProj.cpp    ****     {
- 323              		.loc 13 27 26 is_stmt 0 discriminator 2 view .LVU81
+  26:MyProj.cpp    ****     {
+ 323              		.loc 13 26 26 is_stmt 0 discriminator 2 view .LVU81
  324              	.LBE297:
-  37:MyProj.cpp    ****     }
-  38:MyProj.cpp    **** }
- 325              		.loc 13 38 1 view .LVU82
+  36:MyProj.cpp    ****     }
+  37:MyProj.cpp    **** }
+ 325              		.loc 13 37 1 view .LVU82
  326 0086 BDEC028B 		vldm	sp!, {d8}
  327              		.cfi_restore 80
  328              		.cfi_restore 81
  329              		.cfi_def_cfa_offset 16
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 19
-
-
  330 008a 70BD     		pop	{r4, r5, r6, pc}
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 19
+
+
  331              	.LVL18:
  332              	.L15:
- 333              		.loc 13 38 1 view .LVU83
+ 333              		.loc 13 37 1 view .LVU83
  334              		.align	2
  335              	.L14:
  336 008c 00000000 		.word	hw
@@ -1105,61 +1104,53 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  352              		.thumb_func
  354              	main:
  355              	.LFB2543:
-  39:MyProj.cpp    **** 
-  40:MyProj.cpp    **** int main(void)
-  41:MyProj.cpp    **** {
- 356              		.loc 13 41 1 is_stmt 1 view -0
+  38:MyProj.cpp    **** 
+  39:MyProj.cpp    **** int main(void)
+  40:MyProj.cpp    **** {
+ 356              		.loc 13 40 1 is_stmt 1 view -0
  357              		.cfi_startproc
  358              		@ args = 0, pretend = 0, frame = 88
  359              		@ frame_needed = 0, uses_anonymous_args = 0
-  42:MyProj.cpp    ****     hw.Init();
- 360              		.loc 13 42 5 view .LVU85
   41:MyProj.cpp    ****     hw.Init();
- 361              		.loc 13 41 1 is_stmt 0 view .LVU86
+ 360              		.loc 13 41 5 view .LVU85
+  40:MyProj.cpp    ****     hw.Init();
+ 361              		.loc 13 40 1 is_stmt 0 view .LVU86
  362 0000 30B5     		push	{r4, r5, lr}
  363              		.cfi_def_cfa_offset 12
  364              		.cfi_offset 4, -12
  365              		.cfi_offset 5, -8
  366              		.cfi_offset 14, -4
- 367              		.loc 13 42 12 view .LVU87
+ 367              		.loc 13 41 12 view .LVU87
  368 0002 414C     		ldr	r4, .L19
-  41:MyProj.cpp    ****     hw.Init();
- 369              		.loc 13 41 1 view .LVU88
+  40:MyProj.cpp    ****     hw.Init();
+ 369              		.loc 13 40 1 view .LVU88
  370 0004 97B0     		sub	sp, sp, #92
  371              		.cfi_def_cfa_offset 104
- 372              		.loc 13 42 12 view .LVU89
+ 372              		.loc 13 41 12 view .LVU89
  373 0006 0021     		movs	r1, #0
-  43:MyProj.cpp    ****     /*
-  44:MyProj.cpp    ****     hw.seed.Configure();
-  45:MyProj.cpp    ****     hw.seed.Init(0);
-  46:MyProj.cpp    ****     // button1
-  47:MyProj.cpp    ****     hw.button1.Init(hw.seed.GetPin(27));
-  48:MyProj.cpp    ****     // button2
-  49:MyProj.cpp    ****     hw.button2.Init(hw.seed.GetPin(28));
-  50:MyProj.cpp    **** 
-  51:MyProj.cpp    ****     hw.buttons[hw.BUTTON_1] = &hw.button1;
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 20
+  42:MyProj.cpp    ****    
+  43:MyProj.cpp    ****    //here's some code that sets up those additional analog sensor inputs
+  44:MyProj.cpp    ****    //I've copied out the internal Daisy code that sets up the knobs, and added the analog inputs to
+  45:MyProj.cpp    ****    //we can now use the knobs as usual
+  46:MyProj.cpp    ****    // but also we can get the new sensor channels as hw.seed.adc.GetFloat(0) and hw.seed.adc.GetFlo
+  47:MyProj.cpp    **** 
+  48:MyProj.cpp    ****     AdcChannelConfig ext_knob_init[4];
+  49:MyProj.cpp    ****     A1Pin = dsy_pin(DSY_GPIOA, 3);
+  50:MyProj.cpp    ****     A7Pin = dsy_pin(DSY_GPIOA, 5);
+ 374              		.loc 13 50 33 view .LVU90
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 20
 
 
-  52:MyProj.cpp    ****     hw.buttons[hw.BUTTON_2] = &hw.button2;
-  53:MyProj.cpp    **** 
-  54:MyProj.cpp    ****     hw.SetAudioBlockSize(48);
-  55:MyProj.cpp    **** 
-  56:MyProj.cpp    **** */
-  57:MyProj.cpp    ****     AdcChannelConfig ext_knob_init[4];
-  58:MyProj.cpp    ****     A1Pin = dsy_pin(DSY_GPIOA, 3);
-  59:MyProj.cpp    ****     A7Pin = dsy_pin(DSY_GPIOA, 5);
- 374              		.loc 13 59 33 view .LVU90
  375 0008 404D     		ldr	r5, .L19+4
-  42:MyProj.cpp    ****     /*
- 376              		.loc 13 42 12 view .LVU91
+  41:MyProj.cpp    ****    
+ 376              		.loc 13 41 12 view .LVU91
  377 000a 2046     		mov	r0, r4
  378 000c FFF7FEFF 		bl	_ZN5daisy8DaisyPod4InitEb
  379              	.LVL19:
-  57:MyProj.cpp    ****     A1Pin = dsy_pin(DSY_GPIOA, 3);
- 380              		.loc 13 57 5 is_stmt 1 view .LVU92
-  58:MyProj.cpp    ****     A7Pin = dsy_pin(DSY_GPIOA, 5);
- 381              		.loc 13 58 5 view .LVU93
+  48:MyProj.cpp    ****     A1Pin = dsy_pin(DSY_GPIOA, 3);
+ 380              		.loc 13 48 5 is_stmt 1 view .LVU92
+  49:MyProj.cpp    ****     A7Pin = dsy_pin(DSY_GPIOA, 5);
+ 381              		.loc 13 49 5 view .LVU93
  382              		.file 14 "../../libDaisy//src/daisy_core.h"
    1:../../libDaisy//src/daisy_core.h **** #pragma once
    2:../../libDaisy//src/daisy_core.h **** #ifndef DSY_CORE_HW_H
@@ -1198,9 +1189,6 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   35:../../libDaisy//src/daisy_core.h **** #define U82F_SCALE 0.0078740f         /**< 1 / 127 */
   36:../../libDaisy//src/daisy_core.h **** #define F2U8_SCALE 127.0f             /**< 128 - 1 */
   37:../../libDaisy//src/daisy_core.h **** #define S82F_SCALE 0.0078125f         /**< 1 / (2**7) */
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 21
-
-
   38:../../libDaisy//src/daisy_core.h **** #define F2S8_SCALE 127.0f             /**< (2 ** 7) - 1 */
   39:../../libDaisy//src/daisy_core.h **** #define S162F_SCALE 3.0517578125e-05f /**< 1 / (2** 15) */
   40:../../libDaisy//src/daisy_core.h **** #define F2S16_SCALE 32767.0f          /**< (2 ** 15) - 1 */
@@ -1210,6 +1198,9 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   44:../../libDaisy//src/daisy_core.h **** #define S322F_SCALE 4.6566129e-10f    /**< 1 / (2** 31) */
   45:../../libDaisy//src/daisy_core.h **** #define F2S32_SCALE 2147483647.f      /**< (2 ** 31) - 1 */
   46:../../libDaisy//src/daisy_core.h **** 
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 21
+
+
   47:../../libDaisy//src/daisy_core.h **** 
   48:../../libDaisy//src/daisy_core.h **** /** shorthand macro for simplifying the reading of the left 
   49:../../libDaisy//src/daisy_core.h ****  *  channel of a non-interleaved output buffer named out */
@@ -1258,9 +1249,6 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   92:../../libDaisy//src/daisy_core.h **** }
   93:../../libDaisy//src/daisy_core.h **** 
   94:../../libDaisy//src/daisy_core.h **** 
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 22
-
-
   95:../../libDaisy//src/daisy_core.h **** /** 
   96:../../libDaisy//src/daisy_core.h ****     Converts Signed 8-bit to float
   97:../../libDaisy//src/daisy_core.h ****     \param x Number to be scaled.
@@ -1270,6 +1258,9 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  101:../../libDaisy//src/daisy_core.h **** {
  102:../../libDaisy//src/daisy_core.h ****     return (float)x * S82F_SCALE;
  103:../../libDaisy//src/daisy_core.h **** }
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 22
+
+
  104:../../libDaisy//src/daisy_core.h **** 
  105:../../libDaisy//src/daisy_core.h **** /**
  106:../../libDaisy//src/daisy_core.h ****     Converts float to Signed 8-bit
@@ -1318,9 +1309,6 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  149:../../libDaisy//src/daisy_core.h ****     x = x >= FBIPMAX ? FBIPMAX : x;
  150:../../libDaisy//src/daisy_core.h ****     return (int32_t)(x * F2S24_SCALE);
  151:../../libDaisy//src/daisy_core.h **** }
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 23
-
-
  152:../../libDaisy//src/daisy_core.h **** 
  153:../../libDaisy//src/daisy_core.h **** /**
  154:../../libDaisy//src/daisy_core.h ****     Converts Signed 32-bit to float
@@ -1330,6 +1318,9 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  158:../../libDaisy//src/daisy_core.h ****     return (float)x * S322F_SCALE;
  159:../../libDaisy//src/daisy_core.h **** }
  160:../../libDaisy//src/daisy_core.h **** /**
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 23
+
+
  161:../../libDaisy//src/daisy_core.h ****     Converts float to Signed 24-bit
  162:../../libDaisy//src/daisy_core.h ****  */
  163:../../libDaisy//src/daisy_core.h **** FORCE_INLINE int32_t f2s32(float x)
@@ -1378,9 +1369,6 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  206:../../libDaisy//src/daisy_core.h ****     dsy_gpio_port port; /**< & */
  207:../../libDaisy//src/daisy_core.h ****     uint8_t       pin;  /**< number 0-15 */
  208:../../libDaisy//src/daisy_core.h **** } dsy_gpio_pin;
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 24
-
-
  209:../../libDaisy//src/daisy_core.h **** 
  210:../../libDaisy//src/daisy_core.h **** /** Helper for creating pins from port/pin combos easily
  211:../../libDaisy//src/daisy_core.h ****  * 
@@ -1390,6 +1378,9 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  215:../../libDaisy//src/daisy_core.h ****  *  Please use Pin struct instead.
  216:../../libDaisy//src/daisy_core.h **** */
  217:../../libDaisy//src/daisy_core.h **** FORCE_INLINE dsy_gpio_pin dsy_pin(dsy_gpio_port port, uint8_t pin)
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 24
+
+
  218:../../libDaisy//src/daisy_core.h **** {
  219:../../libDaisy//src/daisy_core.h ****     dsy_gpio_pin p;
  383              		.loc 14 219 5 view .LVU94
@@ -1399,18 +1390,18 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  385              		.loc 14 221 5 view .LVU96
  222:../../libDaisy//src/daisy_core.h ****     return p;
  386              		.loc 14 222 5 view .LVU97
-  58:MyProj.cpp    ****     A7Pin = dsy_pin(DSY_GPIOA, 5);
- 387              		.loc 13 58 33 is_stmt 0 view .LVU98
+  49:MyProj.cpp    ****     A7Pin = dsy_pin(DSY_GPIOA, 5);
+ 387              		.loc 13 49 33 is_stmt 0 view .LVU98
  388 0010 3F4B     		ldr	r3, .L19+8
  389 0012 4FF44072 		mov	r2, #768
-  60:MyProj.cpp    ****     ext_knob_init[0].InitSingle(A1Pin);
- 390              		.loc 13 60 32 view .LVU99
+  51:MyProj.cpp    ****     ext_knob_init[0].InitSingle(A1Pin);
+ 390              		.loc 13 51 32 view .LVU99
  391 0016 05A8     		add	r0, sp, #20
-  58:MyProj.cpp    ****     A7Pin = dsy_pin(DSY_GPIOA, 5);
- 392              		.loc 13 58 33 view .LVU100
+  49:MyProj.cpp    ****     A7Pin = dsy_pin(DSY_GPIOA, 5);
+ 392              		.loc 13 49 33 view .LVU100
  393 0018 1A80     		strh	r2, [r3]	@ movhi
-  59:MyProj.cpp    ****     ext_knob_init[0].InitSingle(A1Pin);
- 394              		.loc 13 59 5 is_stmt 1 view .LVU101
+  50:MyProj.cpp    ****     ext_knob_init[0].InitSingle(A1Pin);
+ 394              		.loc 13 50 5 is_stmt 1 view .LVU101
  395              	.LVL20:
  219:../../libDaisy//src/daisy_core.h ****     p.port = port;
  396              		.loc 14 219 5 view .LVU102
@@ -1419,45 +1410,43 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  221:../../libDaisy//src/daisy_core.h ****     return p;
  398              		.loc 14 221 5 view .LVU104
  399              		.loc 14 222 5 view .LVU105
-  59:MyProj.cpp    ****     ext_knob_init[0].InitSingle(A1Pin);
- 400              		.loc 13 59 33 is_stmt 0 view .LVU106
+  50:MyProj.cpp    ****     ext_knob_init[0].InitSingle(A1Pin);
+ 400              		.loc 13 50 33 is_stmt 0 view .LVU106
  401 001a 4FF4A062 		mov	r2, #1280
- 402              		.loc 13 60 32 view .LVU107
+ 402              		.loc 13 51 32 view .LVU107
  403 001e 1968     		ldr	r1, [r3]
-  59:MyProj.cpp    ****     ext_knob_init[0].InitSingle(A1Pin);
- 404              		.loc 13 59 33 view .LVU108
+  50:MyProj.cpp    ****     ext_knob_init[0].InitSingle(A1Pin);
+ 404              		.loc 13 50 33 view .LVU108
  405 0020 2A80     		strh	r2, [r5]	@ movhi
- 406              		.loc 13 60 5 is_stmt 1 view .LVU109
- 407              		.loc 13 60 32 is_stmt 0 view .LVU110
+ 406              		.loc 13 51 5 is_stmt 1 view .LVU109
+ 407              		.loc 13 51 32 is_stmt 0 view .LVU110
  408 0022 FFF7FEFF 		bl	_ZN5daisy16AdcChannelConfig10InitSingleE12dsy_gpio_pin
  409              	.LVL21:
-  61:MyProj.cpp    ****     ext_knob_init[1].InitSingle(A7Pin);
- 410              		.loc 13 61 5 is_stmt 1 view .LVU111
- 411              		.loc 13 61 32 is_stmt 0 view .LVU112
+  52:MyProj.cpp    ****     ext_knob_init[1].InitSingle(A7Pin);
+ 410              		.loc 13 52 5 is_stmt 1 view .LVU111
+ 411              		.loc 13 52 32 is_stmt 0 view .LVU112
  412 0026 2968     		ldr	r1, [r5]
  413 0028 0DF12500 		add	r0, sp, #37
-  62:MyProj.cpp    ****     ext_knob_init[2].InitSingle(hw.seed.GetPin(21));
-  63:MyProj.cpp    ****     ext_knob_init[3].InitSingle(hw.seed.GetPin(15));
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 25
-
-
-  64:MyProj.cpp    ****     // Initialize with the knob init struct w/ 4 members
-  65:MyProj.cpp    ****     // Set Oversampling to 32x
-  66:MyProj.cpp    ****     hw.seed.adc.Init(ext_knob_init, 4);
-  67:MyProj.cpp    ****     // Make an array of pointers to the knobs.
-  68:MyProj.cpp    **** 
-  69:MyProj.cpp    ****     // Make an array of pointers to the knobs.
-  70:MyProj.cpp    ****     hw.knobs[0] = &hw.knob1;
- 414              		.loc 13 70 17 view .LVU113
+  53:MyProj.cpp    ****     ext_knob_init[2].InitSingle(hw.seed.GetPin(21));
+  54:MyProj.cpp    ****     ext_knob_init[3].InitSingle(hw.seed.GetPin(15));
+  55:MyProj.cpp    ****     // Initialize with the knob init struct w/ 4 members
+  56:MyProj.cpp    ****     // Set Oversampling to 32x
+  57:MyProj.cpp    ****     hw.seed.adc.Init(ext_knob_init, 4);
+  58:MyProj.cpp    ****     // Make an array of pointers to the knobs.
+  59:MyProj.cpp    ****     hw.knobs[0] = &hw.knob1;
+ 414              		.loc 13 59 17 view .LVU113
  415 002c 04F16405 		add	r5, r4, #100
-  61:MyProj.cpp    ****     ext_knob_init[1].InitSingle(A7Pin);
- 416              		.loc 13 61 32 view .LVU114
+  52:MyProj.cpp    ****     ext_knob_init[1].InitSingle(A7Pin);
+ 416              		.loc 13 52 32 view .LVU114
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 25
+
+
  417 0030 FFF7FEFF 		bl	_ZN5daisy16AdcChannelConfig10InitSingleE12dsy_gpio_pin
  418              	.LVL22:
-  62:MyProj.cpp    ****     ext_knob_init[2].InitSingle(hw.seed.GetPin(21));
- 419              		.loc 13 62 5 is_stmt 1 view .LVU115
-  62:MyProj.cpp    ****     ext_knob_init[2].InitSingle(hw.seed.GetPin(21));
- 420              		.loc 13 62 32 is_stmt 0 view .LVU116
+  53:MyProj.cpp    ****     ext_knob_init[2].InitSingle(hw.seed.GetPin(21));
+ 419              		.loc 13 53 5 is_stmt 1 view .LVU115
+  53:MyProj.cpp    ****     ext_knob_init[2].InitSingle(hw.seed.GetPin(21));
+ 420              		.loc 13 53 32 is_stmt 0 view .LVU116
  421 0034 1520     		movs	r0, #21
  422 0036 FFF7FEFF 		bl	_ZN5daisy9DaisySeed6GetPinEh
  423              	.LVL23:
@@ -1467,10 +1456,10 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  427 0044 0399     		ldr	r1, [sp, #12]
  428 0046 FFF7FEFF 		bl	_ZN5daisy16AdcChannelConfig10InitSingleE12dsy_gpio_pin
  429              	.LVL24:
-  63:MyProj.cpp    ****     // Initialize with the knob init struct w/ 4 members
- 430              		.loc 13 63 5 is_stmt 1 view .LVU117
-  63:MyProj.cpp    ****     // Initialize with the knob init struct w/ 4 members
- 431              		.loc 13 63 32 is_stmt 0 view .LVU118
+  54:MyProj.cpp    ****     // Initialize with the knob init struct w/ 4 members
+ 430              		.loc 13 54 5 is_stmt 1 view .LVU117
+  54:MyProj.cpp    ****     // Initialize with the knob init struct w/ 4 members
+ 431              		.loc 13 54 32 is_stmt 0 view .LVU118
  432 004a 0F20     		movs	r0, #15
  433 004c FFF7FEFF 		bl	_ZN5daisy9DaisySeed6GetPinEh
  434              	.LVL25:
@@ -1480,42 +1469,42 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  438 005a 0499     		ldr	r1, [sp, #16]
  439 005c FFF7FEFF 		bl	_ZN5daisy16AdcChannelConfig10InitSingleE12dsy_gpio_pin
  440              	.LVL26:
-  66:MyProj.cpp    ****     // Make an array of pointers to the knobs.
- 441              		.loc 13 66 5 is_stmt 1 view .LVU119
-  66:MyProj.cpp    ****     // Make an array of pointers to the knobs.
- 442              		.loc 13 66 21 is_stmt 0 view .LVU120
+  57:MyProj.cpp    ****     // Make an array of pointers to the knobs.
+ 441              		.loc 13 57 5 is_stmt 1 view .LVU119
+  57:MyProj.cpp    ****     // Make an array of pointers to the knobs.
+ 442              		.loc 13 57 21 is_stmt 0 view .LVU120
  443 0060 0423     		movs	r3, #4
  444 0062 05A9     		add	r1, sp, #20
  445 0064 04F11800 		add	r0, r4, #24
  446 0068 1A46     		mov	r2, r3
  447 006a FFF7FEFF 		bl	_ZN5daisy9AdcHandle4InitEPNS_16AdcChannelConfigEjNS0_12OverSamplingE
  448              	.LVL27:
- 449              		.loc 13 70 5 is_stmt 1 view .LVU121
-  71:MyProj.cpp    ****     hw.knobs[1] = &hw.knob2;
- 450              		.loc 13 71 17 is_stmt 0 view .LVU122
+ 449              		.loc 13 59 5 is_stmt 1 view .LVU121
+  60:MyProj.cpp    ****     hw.knobs[1] = &hw.knob2;
+ 450              		.loc 13 60 17 is_stmt 0 view .LVU122
  451 006e 04F18403 		add	r3, r4, #132
  452              	.LBB301:
-  72:MyProj.cpp    ****     for(int i = 0; i < 2; i++)
-  73:MyProj.cpp    ****     {
-  74:MyProj.cpp    ****         hw.knobs[i]->Init(hw.seed.adc.GetPtr(i+2), hw.seed.AudioCallbackRate());
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 26
-
-
- 453              		.loc 13 74 26 view .LVU123
+  61:MyProj.cpp    ****     for(int i = 0; i < 2; i++)
+  62:MyProj.cpp    ****     {
+  63:MyProj.cpp    ****         hw.knobs[i]->Init(hw.seed.adc.GetPtr(i+2), hw.seed.AudioCallbackRate());
+ 453              		.loc 13 63 26 view .LVU123
  454 0072 0221     		movs	r1, #2
  455 0074 04F11800 		add	r0, r4, #24
  456              	.LBE301:
-  71:MyProj.cpp    ****     hw.knobs[1] = &hw.knob2;
- 457              		.loc 13 71 17 view .LVU124
+  60:MyProj.cpp    ****     hw.knobs[1] = &hw.knob2;
+ 457              		.loc 13 60 17 view .LVU124
  458 0078 C4E92953 		strd	r5, r3, [r4, #164]
-  72:MyProj.cpp    ****     for(int i = 0; i < 2; i++)
- 459              		.loc 13 72 5 is_stmt 1 view .LVU125
+  61:MyProj.cpp    ****     for(int i = 0; i < 2; i++)
+ 459              		.loc 13 61 5 is_stmt 1 view .LVU125
  460              	.LVL28:
  461              	.LBB302:
-  72:MyProj.cpp    ****     for(int i = 0; i < 2; i++)
- 462              		.loc 13 72 22 view .LVU126
- 463              		.loc 13 74 9 view .LVU127
- 464              		.loc 13 74 26 is_stmt 0 view .LVU128
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 26
+
+
+  61:MyProj.cpp    ****     for(int i = 0; i < 2; i++)
+ 462              		.loc 13 61 22 view .LVU126
+ 463              		.loc 13 63 9 view .LVU127
+ 464              		.loc 13 63 26 is_stmt 0 view .LVU128
  465 007c FFF7FEFF 		bl	_ZNK5daisy9AdcHandle6GetPtrEh
  466              	.LVL29:
  467 0080 0146     		mov	r1, r0
@@ -1530,17 +1519,17 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  476 0094 1A46     		mov	r2, r3
  477 0096 FFF7FEFF 		bl	_ZN5daisy13AnalogControl4InitEPtfbbf
  478              	.LVL31:
-  72:MyProj.cpp    ****     for(int i = 0; i < 2; i++)
- 479              		.loc 13 72 5 is_stmt 1 view .LVU129
-  72:MyProj.cpp    ****     for(int i = 0; i < 2; i++)
- 480              		.loc 13 72 22 view .LVU130
- 481              		.loc 13 74 26 is_stmt 0 view .LVU131
+  61:MyProj.cpp    ****     for(int i = 0; i < 2; i++)
+ 479              		.loc 13 61 5 is_stmt 1 view .LVU129
+  61:MyProj.cpp    ****     for(int i = 0; i < 2; i++)
+ 480              		.loc 13 61 22 view .LVU130
+ 481              		.loc 13 63 26 is_stmt 0 view .LVU131
  482 009a 0321     		movs	r1, #3
  483 009c 04F11800 		add	r0, r4, #24
- 484              		.loc 13 74 19 view .LVU132
+ 484              		.loc 13 63 19 view .LVU132
  485 00a0 D4F8A850 		ldr	r5, [r4, #168]
- 486              		.loc 13 74 9 is_stmt 1 view .LVU133
- 487              		.loc 13 74 26 is_stmt 0 view .LVU134
+ 486              		.loc 13 63 9 is_stmt 1 view .LVU133
+ 487              		.loc 13 63 26 is_stmt 0 view .LVU134
  488 00a4 FFF7FEFF 		bl	_ZNK5daisy9AdcHandle6GetPtrEh
  489              	.LVL32:
  490 00a8 0146     		mov	r1, r0
@@ -1555,46 +1544,48 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  499 00bc 1A46     		mov	r2, r3
  500 00be FFF7FEFF 		bl	_ZN5daisy13AnalogControl4InitEPtfbbf
  501              	.LVL34:
-  72:MyProj.cpp    ****     for(int i = 0; i < 2; i++)
- 502              		.loc 13 72 5 is_stmt 1 view .LVU135
-  72:MyProj.cpp    ****     for(int i = 0; i < 2; i++)
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 27
-
-
- 503              		.loc 13 72 22 view .LVU136
+  61:MyProj.cpp    ****     for(int i = 0; i < 2; i++)
+ 502              		.loc 13 61 5 is_stmt 1 view .LVU135
+  61:MyProj.cpp    ****     for(int i = 0; i < 2; i++)
+ 503              		.loc 13 61 22 view .LVU136
  504              	.LBE302:
-  75:MyProj.cpp    ****     }
-  76:MyProj.cpp    ****     
-  77:MyProj.cpp    **** 
-  78:MyProj.cpp    ****     hw.SetAudioBlockSize(4); // number of samples handled per callback
- 505              		.loc 13 78 5 view .LVU137
- 506              		.loc 13 78 25 is_stmt 0 view .LVU138
+  64:MyProj.cpp    ****     }
+  65:MyProj.cpp    ****     
+  66:MyProj.cpp    ****     //OK that's done
+  67:MyProj.cpp    ****     //now back to the usual boilerplate stuff
+  68:MyProj.cpp    **** 
+  69:MyProj.cpp    ****     hw.SetAudioBlockSize(4); // number of samples handled per callback
+ 505              		.loc 13 69 5 view .LVU137
+ 506              		.loc 13 69 25 is_stmt 0 view .LVU138
  507 00c2 0421     		movs	r1, #4
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 27
+
+
  508 00c4 2046     		mov	r0, r4
  509 00c6 FFF7FEFF 		bl	_ZN5daisy8DaisyPod17SetAudioBlockSizeEj
  510              	.LVL35:
-  79:MyProj.cpp    ****     hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
- 511              		.loc 13 79 5 is_stmt 1 view .LVU139
- 512              		.loc 13 79 26 is_stmt 0 view .LVU140
+  70:MyProj.cpp    ****     hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
+ 511              		.loc 13 70 5 is_stmt 1 view .LVU139
+ 512              		.loc 13 70 26 is_stmt 0 view .LVU140
  513 00ca 0321     		movs	r1, #3
  514 00cc 2046     		mov	r0, r4
  515 00ce FFF7FEFF 		bl	_ZN5daisy8DaisyPod18SetAudioSampleRateENS_9SaiHandle6Config10SampleRateE
  516              	.LVL36:
-  80:MyProj.cpp    ****     Random::Init();
- 517              		.loc 13 80 5 is_stmt 1 view .LVU141
- 518              		.loc 13 80 17 is_stmt 0 view .LVU142
+  71:MyProj.cpp    ****     Random::Init();
+ 517              		.loc 13 71 5 is_stmt 1 view .LVU141
+ 518              		.loc 13 71 17 is_stmt 0 view .LVU142
  519 00d2 FFF7FEFF 		bl	_ZN5daisy6Random4InitEv
  520              	.LVL37:
-  81:MyProj.cpp    ****     hw.StartAdc();
- 521              		.loc 13 81 5 is_stmt 1 view .LVU143
- 522              		.loc 13 81 16 is_stmt 0 view .LVU144
+  72:MyProj.cpp    ****     hw.StartAdc();
+ 521              		.loc 13 72 5 is_stmt 1 view .LVU143
+ 522              		.loc 13 72 16 is_stmt 0 view .LVU144
  523 00d6 2046     		mov	r0, r4
  524 00d8 FFF7FEFF 		bl	_ZN5daisy8DaisyPod8StartAdcEv
  525              	.LVL38:
-  82:MyProj.cpp    **** 
-  83:MyProj.cpp    ****     LEAF_init(&leaf, 48000, leafMemory, 65535, randomNumber);
- 526              		.loc 13 83 5 is_stmt 1 view .LVU145
- 527              		.loc 13 83 14 is_stmt 0 view .LVU146
+  73:MyProj.cpp    **** 
+  74:MyProj.cpp    ****     LEAF_init(&leaf, 48000, leafMemory, 65535, randomNumber);
+ 526              		.loc 13 74 5 is_stmt 1 view .LVU145
+ 527              		.loc 13 74 14 is_stmt 0 view .LVU146
  528 00dc 0E4B     		ldr	r3, .L19+16
  529 00de 4FF6FF72 		movw	r2, #65535
  530 00e2 0E49     		ldr	r1, .L19+20
@@ -1602,38 +1593,39 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  532 00e8 0E48     		ldr	r0, .L19+28
  533 00ea FFF7FEFF 		bl	LEAF_init
  534              	.LVL39:
-  84:MyProj.cpp    **** 
-  85:MyProj.cpp    ****     tPBPulse_init(&myOsc, &leaf);
- 535              		.loc 13 85 5 is_stmt 1 view .LVU147
- 536              		.loc 13 85 18 is_stmt 0 view .LVU148
+  75:MyProj.cpp    **** 
+  76:MyProj.cpp    ****     //for this example, let's set up a pulse wave
+  77:MyProj.cpp    ****     tPBPulse_init(&myOsc, &leaf);
+ 535              		.loc 13 77 5 is_stmt 1 view .LVU147
+ 536              		.loc 13 77 18 is_stmt 0 view .LVU148
  537 00ee 0D49     		ldr	r1, .L19+28
  538 00f0 0D48     		ldr	r0, .L19+32
  539 00f2 FFF7FEFF 		bl	tPBPulse_init
  540              	.LVL40:
-  86:MyProj.cpp    **** 
-  87:MyProj.cpp    ****     hw.StartAudio(AudioCallback);
- 541              		.loc 13 87 5 is_stmt 1 view .LVU149
- 542              		.loc 13 87 18 is_stmt 0 view .LVU150
+  78:MyProj.cpp    **** 
+  79:MyProj.cpp    ****     hw.StartAudio(AudioCallback);
+ 541              		.loc 13 79 5 is_stmt 1 view .LVU149
+ 542              		.loc 13 79 18 is_stmt 0 view .LVU150
  543 00f6 0D49     		ldr	r1, .L19+36
  544 00f8 2046     		mov	r0, r4
  545 00fa FFF7FEFF 		bl	_ZN5daisy8DaisyPod10StartAudioEPFvPKPKfPPfjE
  546              	.LVL41:
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 28
-
-
  547              	.L17:
-  88:MyProj.cpp    ****     while(1) {
- 548              		.loc 13 88 5 is_stmt 1 discriminator 1 view .LVU151
-  89:MyProj.cpp    ****         //the RGB leds on the pod need to be updated with the "update" function here to work
-  90:MyProj.cpp    **** 
-  91:MyProj.cpp    ****         hw.UpdateLeds();
- 549              		.loc 13 91 9 discriminator 1 view .LVU152
- 550              		.loc 13 91 22 is_stmt 0 discriminator 1 view .LVU153
+  80:MyProj.cpp    ****     while(1) {
+ 548              		.loc 13 80 5 is_stmt 1 discriminator 1 view .LVU151
+  81:MyProj.cpp    ****         //the RGB leds on the pod need to be updated with the "update" function here to work
+  82:MyProj.cpp    **** 
+  83:MyProj.cpp    ****         hw.UpdateLeds();
+ 549              		.loc 13 83 9 discriminator 1 view .LVU152
+ 550              		.loc 13 83 22 is_stmt 0 discriminator 1 view .LVU153
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 28
+
+
  551 00fe 0248     		ldr	r0, .L19
  552 0100 FFF7FEFF 		bl	_ZN5daisy8DaisyPod10UpdateLedsEv
  553              	.LVL42:
-  88:MyProj.cpp    ****     while(1) {
- 554              		.loc 13 88 5 is_stmt 1 discriminator 1 view .LVU154
+  80:MyProj.cpp    ****     while(1) {
+ 554              		.loc 13 80 5 is_stmt 1 discriminator 1 view .LVU154
  555 0104 FBE7     		b	.L17
  556              	.L20:
  557 0106 00BF     		.align	2
@@ -1658,15 +1650,15 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  577              		.thumb_func
  579              	_GLOBAL__sub_I_leaf:
  580              	.LFB2571:
-  92:MyProj.cpp    ****     }
-  93:MyProj.cpp    **** }
- 581              		.loc 13 93 1 view -0
+  84:MyProj.cpp    ****     }
+  85:MyProj.cpp    **** }
+ 581              		.loc 13 85 1 view -0
  582              		.cfi_startproc
  583              		@ args = 0, pretend = 0, frame = 0
  584              		@ frame_needed = 0, uses_anonymous_args = 0
  585              	.LBB368:
  586              	.LBI368:
- 587              		.loc 13 93 1 view .LVU156
+ 587              		.loc 13 85 1 view .LVU156
  588              	.LVL43:
  589              	.LBB369:
  590              	.LBB370:
@@ -1678,9 +1670,6 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  595              	.LBI372:
   21:../../libDaisy//src/daisy_seed.h ****     ~DaisySeed() {}
  596              		.loc 8 21 5 view .LVU158
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 29
-
-
  597              	.LBB373:
  598              	.LBB374:
  599              	.LBI374:
@@ -1689,6 +1678,9 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
    2:../../libDaisy//src/per/qspi.h **** #define DSY_QSPI /**< Macro */
    3:../../libDaisy//src/per/qspi.h **** 
    4:../../libDaisy//src/per/qspi.h **** #ifndef UNIT_TEST // for unit tests, a dummy implementation
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 29
+
+
    5:../../libDaisy//src/per/qspi.h **** 
    6:../../libDaisy//src/per/qspi.h **** #include <cstdint>
    7:../../libDaisy//src/per/qspi.h **** #include "daisy_core.h" // Added for dsy_gpio_pin typedef
@@ -1738,9 +1730,6 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   51:../../libDaisy//src/per/qspi.h ****         E_HAL_ERROR,
   52:../../libDaisy//src/per/qspi.h ****         E_SWITCHING_MODES,
   53:../../libDaisy//src/per/qspi.h ****         E_INVALID_MODE,
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 30
-
-
   54:../../libDaisy//src/per/qspi.h ****     };
   55:../../libDaisy//src/per/qspi.h **** 
   56:../../libDaisy//src/per/qspi.h ****     /** Configuration structure for interfacing with QSPI Driver */
@@ -1749,6 +1738,9 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   59:../../libDaisy//src/per/qspi.h ****         /** Flash Devices supported. (Both of these are more-or-less the same, just different sizes
   60:../../libDaisy//src/per/qspi.h ****         enum Device
   61:../../libDaisy//src/per/qspi.h ****         {
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 30
+
+
   62:../../libDaisy//src/per/qspi.h ****             IS25LP080D,  /**< & */
   63:../../libDaisy//src/per/qspi.h ****             IS25LP064A,  /**< & */
   64:../../libDaisy//src/per/qspi.h ****             DEVICE_LAST, /**< & */
@@ -1798,9 +1790,6 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  108:../../libDaisy//src/per/qspi.h ****     /** 
  109:../../libDaisy//src/per/qspi.h ****         Deinitializes the peripheral
  110:../../libDaisy//src/per/qspi.h ****         This should be called before reinitializing QSPI in a different mode.
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 31
-
-
  111:../../libDaisy//src/per/qspi.h ****         \return Result::OK or Result::ERR
  112:../../libDaisy//src/per/qspi.h ****         */
  113:../../libDaisy//src/per/qspi.h ****     Result DeInit();
@@ -1809,6 +1798,9 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  116:../../libDaisy//src/per/qspi.h ****         Writes a single page to to the specified address on the QSPI chip.
  117:../../libDaisy//src/per/qspi.h ****         For IS25LP*, page size is 256 bytes.
  118:../../libDaisy//src/per/qspi.h ****         \param address Address to write to
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 31
+
+
  119:../../libDaisy//src/per/qspi.h ****         \param size Buffer size
  120:../../libDaisy//src/per/qspi.h ****         \param buffer Buffer to write
  121:../../libDaisy//src/per/qspi.h ****         \return Result::OK or Result::ERR
@@ -1858,9 +1850,6 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  165:../../libDaisy//src/per/qspi.h **** 
  166:../../libDaisy//src/per/qspi.h ****     QSPIHandle() : pimpl_(nullptr) {}
  601              		.loc 15 166 5 view .LVU159
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 32
-
-
  602              	.LBB375:
  603              	.LBB376:
  604              		.loc 15 166 34 is_stmt 0 view .LVU160
@@ -1869,6 +1858,9 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  607              	.LBE376:
  608              	.LBE375:
  609              	.LBE374:
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 32
+
+
  610              	.LBE373:
  611              	.LBE372:
  612              	.LBB392:
@@ -1898,7 +1890,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  633              	.LBE370:
  634              	.LBE369:
  635              	.LBE368:
- 636              		.loc 13 93 1 view .LVU164
+ 636              		.loc 13 85 1 view .LVU164
  637 000e 00B5     		push	{lr}
  638              		.cfi_def_cfa_offset 4
  639              		.cfi_offset 14, -4
@@ -1918,9 +1910,6 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  652 0010 B1F800E0 		ldrh	lr, [r1]
  653              	.LBE399:
  654              	.LBE402:
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 33
-
-
  655              	.LBE405:
  656              	.LBE408:
  657              	.LBE421:
@@ -1929,6 +1918,9 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  660              	.LBB428:
  661              	.LBB390:
  662              	.LBB379:
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 33
+
+
  663              	.LBB378:
  664              	.LBB377:
  665              		.loc 15 166 34 view .LVU166
@@ -1978,9 +1970,6 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  703              	.LBB385:
  704              	.LBI385:
  705              		.file 16 "../../libDaisy//src/per/dac.h"
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 34
-
-
    1:../../libDaisy//src/per/dac.h **** #pragma once
    2:../../libDaisy//src/per/dac.h **** #ifndef DSY_DAC_H
    3:../../libDaisy//src/per/dac.h **** #define DSY_DAC_H
@@ -1989,6 +1978,9 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
    6:../../libDaisy//src/per/dac.h **** 
    7:../../libDaisy//src/per/dac.h **** namespace daisy
    8:../../libDaisy//src/per/dac.h **** {
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 34
+
+
    9:../../libDaisy//src/per/dac.h **** /** @brief DAC handle for Built-in DAC Peripheral 
   10:../../libDaisy//src/per/dac.h ****  *  @ingroup per_analog
   11:../../libDaisy//src/per/dac.h ****  ** 
@@ -2038,9 +2030,6 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   55:../../libDaisy//src/per/dac.h ****      ***/
   56:../../libDaisy//src/per/dac.h ****     enum class BitDepth
   57:../../libDaisy//src/per/dac.h ****     {
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 35
-
-
   58:../../libDaisy//src/per/dac.h ****         BITS_8,
   59:../../libDaisy//src/per/dac.h ****         BITS_12
   60:../../libDaisy//src/per/dac.h ****     };
@@ -2049,6 +2038,9 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   63:../../libDaisy//src/per/dac.h ****     enum class BufferState
   64:../../libDaisy//src/per/dac.h ****     {
   65:../../libDaisy//src/per/dac.h ****         ENABLED,
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 35
+
+
   66:../../libDaisy//src/per/dac.h ****         DISABLED,
   67:../../libDaisy//src/per/dac.h ****     };
   68:../../libDaisy//src/per/dac.h **** 
@@ -2098,9 +2090,6 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  729              	.LBI431:
   20:../../libDaisy//src/hid/encoder.h ****     ~Encoder() {}
  730              		.loc 7 20 5 is_stmt 1 view .LVU181
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 36
-
-
  731              	.LBB432:
  732              	.LBB433:
  733              	.LBI433:
@@ -2109,6 +2098,9 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   41:../../libDaisy//src/hid/switch.h ****     ~Switch() {}
  735              		.loc 5 41 5 is_stmt 0 view .LVU183
  736              	.LBE433:
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 36
+
+
  737              	.LBE432:
  738              	.LBE431:
  739              	.LBB434:
@@ -2158,9 +2150,6 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   24:../../libDaisy//src/hid/led.h ****     ~Led() {}
  771              		.loc 4 24 5 is_stmt 0 view .LVU196
  772              	.LBE441:
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 37
-
-
  773              	.LBB442:
  774              	.LBI442:
   24:../../libDaisy//src/hid/led.h ****     ~Led() {}
@@ -2169,6 +2158,9 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  776              		.loc 4 24 5 is_stmt 0 view .LVU198
  777              	.LBE442:
  778              	.LBE439:
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 37
+
+
  779              	.LBE438:
  780              	.LBB443:
  781              	.LBI443:
@@ -2218,9 +2210,6 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
    9:../../libDaisy//src/per/uart.h **** #ifndef DSY_UART_H
   10:../../libDaisy//src/per/uart.h **** #define DSY_UART_H /**< macro */
   11:../../libDaisy//src/per/uart.h **** #include "daisy_core.h"
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 38
-
-
   12:../../libDaisy//src/per/uart.h **** 
   13:../../libDaisy//src/per/uart.h **** 
   14:../../libDaisy//src/per/uart.h **** namespace daisy
@@ -2229,6 +2218,9 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   17:../../libDaisy//src/per/uart.h ****     @{
   18:../../libDaisy//src/per/uart.h ****     */
   19:../../libDaisy//src/per/uart.h **** 
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 38
+
+
   20:../../libDaisy//src/per/uart.h **** /** 
   21:../../libDaisy//src/per/uart.h ****     Uart Peripheral
   22:../../libDaisy//src/per/uart.h ****     @author shensley
@@ -2278,9 +2270,6 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   66:../../libDaisy//src/per/uart.h ****         {
   67:../../libDaisy//src/per/uart.h ****             BITS_7,
   68:../../libDaisy//src/per/uart.h ****             BITS_8,
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 39
-
-
   69:../../libDaisy//src/per/uart.h ****             BITS_9,
   70:../../libDaisy//src/per/uart.h ****         };
   71:../../libDaisy//src/per/uart.h **** 
@@ -2289,6 +2278,9 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   74:../../libDaisy//src/per/uart.h ****             dsy_gpio_pin tx; /**< & */
   75:../../libDaisy//src/per/uart.h ****             dsy_gpio_pin rx; /**< & */
   76:../../libDaisy//src/per/uart.h ****         } pin_config;        /**< & */
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 39
+
+
   77:../../libDaisy//src/per/uart.h **** 
   78:../../libDaisy//src/per/uart.h ****         Config()
   79:../../libDaisy//src/per/uart.h ****         {
@@ -2338,9 +2330,6 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   13:../../libDaisy//src/util/ringbuffer.h **** /**
   14:../../libDaisy//src/util/ringbuffer.h **** Utility Ring Buffer \n 
   15:../../libDaisy//src/util/ringbuffer.h **** imported from pichenettes/stmlib
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 40
-
-
   16:../../libDaisy//src/util/ringbuffer.h **** */
   17:../../libDaisy//src/util/ringbuffer.h **** template <typename T, size_t size>
   18:../../libDaisy//src/util/ringbuffer.h **** class RingBuffer
@@ -2349,6 +2338,9 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
   21:../../libDaisy//src/util/ringbuffer.h ****     RingBuffer() {}
  822              		.loc 18 21 5 is_stmt 1 view .LVU210
  823              		.loc 18 21 5 is_stmt 0 view .LVU211
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 40
+
+
  824              	.LBE412:
  825              	.LBB413:
  826              	.LBI395:
@@ -2398,9 +2390,6 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  861              	.LBB407:
  862              	.LBB404:
  863              	.LBB401:
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 41
-
-
   37:../../libDaisy//src/hid/midi.h ****             tx     = {DSY_GPIOB, 6};
  864              		.loc 2 37 20 view .LVU221
  865 0040 A3F828E2 		strh	lr, [r3, #552]	@ movhi
@@ -2409,6 +2398,9 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  867              	.LVL48:
   38:../../libDaisy//src/hid/midi.h ****         }
  868              		.loc 2 38 13 is_stmt 0 view .LVU223
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 41
+
+
  869              	.LBE401:
  870              	.LBE404:
  871              	.LBE407:
@@ -2434,7 +2426,7 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  889 0046 0649     		ldr	r1, .L23+16
  890              	.LBE451:
  891              	.LBE453:
- 892              		.loc 13 93 1 view .LVU228
+ 892              		.loc 13 85 1 view .LVU228
  893 0048 5DF804EB 		ldr	lr, [sp], #4
  894              		.cfi_restore 14
  895              		.cfi_def_cfa_offset 0
@@ -2458,156 +2450,148 @@ ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 1
  912              	.LFE2571:
  914              		.section	.init_array,"aw",%init_array
  915              		.align	2
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 42
-
-
  916 0000 00000000 		.word	_GLOBAL__sub_I_leaf(target1)
- 917              		.global	ext_adc_in
- 918              		.global	myOsc
- 919              		.global	A7Pin
- 920              		.global	A1Pin
- 921              		.global	hw
- 922              		.global	leafMemory
- 923              		.global	leaf
- 924              		.section	.rodata
- 925              		.align	2
- 926              		.set	.LANCHOR4,. + 0
- 927              	.LC0:
- 928 0000 01       		.byte	1
- 929 0001 07       		.byte	7
- 930 0002 0000     		.space	2
- 931              	.LC1:
- 932 0004 01       		.byte	1
- 933 0005 06       		.byte	6
- 934              		.section	.bss.A1Pin,"aw",%nobits
- 935              		.align	2
- 936              		.set	.LANCHOR1,. + 0
- 939              	A1Pin:
- 940 0000 0000     		.space	2
- 941              		.section	.bss.A7Pin,"aw",%nobits
- 942              		.align	2
- 943              		.set	.LANCHOR2,. + 0
- 946              	A7Pin:
- 947 0000 0000     		.space	2
- 948              		.section	.bss.ext_adc_in,"aw",%nobits
- 949              		.align	2
- 952              	ext_adc_in:
- 953 0000 00000000 		.space	8
- 953      00000000 
- 954              		.section	.bss.hw,"aw",%nobits
- 955              		.align	2
- 958              	hw:
- 959 0000 00000000 		.space	37432
+ 917              		.global	myOsc
+ 918              		.global	A7Pin
+ 919              		.global	A1Pin
+ 920              		.global	hw
+ 921              		.global	leafMemory
+ 922              		.global	leaf
+ 923              		.section	.rodata
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 42
+
+
+ 924              		.align	2
+ 925              		.set	.LANCHOR4,. + 0
+ 926              	.LC0:
+ 927 0000 01       		.byte	1
+ 928 0001 07       		.byte	7
+ 929 0002 0000     		.space	2
+ 930              	.LC1:
+ 931 0004 01       		.byte	1
+ 932 0005 06       		.byte	6
+ 933              		.section	.bss.A1Pin,"aw",%nobits
+ 934              		.align	2
+ 935              		.set	.LANCHOR1,. + 0
+ 938              	A1Pin:
+ 939 0000 0000     		.space	2
+ 940              		.section	.bss.A7Pin,"aw",%nobits
+ 941              		.align	2
+ 942              		.set	.LANCHOR2,. + 0
+ 945              	A7Pin:
+ 946 0000 0000     		.space	2
+ 947              		.section	.bss.hw,"aw",%nobits
+ 948              		.align	2
+ 951              	hw:
+ 952 0000 00000000 		.space	37432
+ 952      00000000 
+ 952      00000000 
+ 952      00000000 
+ 952      00000000 
+ 953              		.section	.bss.leaf,"aw",%nobits
+ 954              		.align	2
+ 955              		.set	.LANCHOR3,. + 0
+ 958              	leaf:
+ 959 0000 00000000 		.space	80
  959      00000000 
  959      00000000 
  959      00000000 
  959      00000000 
- 960              		.section	.bss.leaf,"aw",%nobits
+ 960              		.section	.bss.leafMemory,"aw",%nobits
  961              		.align	2
- 962              		.set	.LANCHOR3,. + 0
- 965              	leaf:
- 966 0000 00000000 		.space	80
- 966      00000000 
- 966      00000000 
- 966      00000000 
- 966      00000000 
- 967              		.section	.bss.leafMemory,"aw",%nobits
- 968              		.align	2
- 971              	leafMemory:
- 972 0000 00000000 		.space	65535
- 972      00000000 
- 972      00000000 
- 972      00000000 
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 43
+ 964              	leafMemory:
+ 965 0000 00000000 		.space	65535
+ 965      00000000 
+ 965      00000000 
+ 965      00000000 
+ 965      00000000 
+ 966              		.section	.bss.myOsc,"aw",%nobits
+ 967              		.align	2
+ 968              		.set	.LANCHOR0,. + 0
+ 971              	myOsc:
+ 972 0000 00000000 		.space	4
+ 973              		.text
+ 974              	.Letext0:
+ 975              		.file 19 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/machine/_default_types.h"
+ 976              		.file 20 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_stdint.h"
+ 977              		.file 21 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdint.h"
+ 978              		.file 22 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h"
+ 979              		.file 23 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cmath"
+ 980              		.file 24 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_abs.h"
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 43
 
 
- 972      00000000 
- 973              		.section	.bss.myOsc,"aw",%nobits
- 974              		.align	2
- 975              		.set	.LANCHOR0,. + 0
- 978              	myOsc:
- 979 0000 00000000 		.space	4
- 980              		.text
- 981              	.Letext0:
- 982              		.file 19 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/machine/_default_types.h"
- 983              		.file 20 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_stdint.h"
- 984              		.file 21 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdint.h"
- 985              		.file 22 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h"
- 986              		.file 23 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cmath"
- 987              		.file 24 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/std_abs.h"
- 988              		.file 25 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdlib"
- 989              		.file 26 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdint"
- 990              		.file 27 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/type_traits"
- 991              		.file 28 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/debug/debug.h"
- 992              		.file 29 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v
- 993              		.file 30 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/algorithmfwd.h"
- 994              		.file 31 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h"
- 995              		.file 32 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/exception_ptr.h"
- 996              		.file 33 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdarg"
- 997              		.file 34 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdio"
- 998              		.file 35 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstring"
- 999              		.file 36 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/predefined_ops.h
- 1000              		.file 37 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_types.h"
- 1001              		.file 38 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/reent.h"
- 1002              		.file 39 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/lock.h"
- 1003              		.file 40 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/math.h"
- 1004              		.file 41 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdlib.h"
- 1005              		.file 42 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/math.h"
- 1006              		.file 43 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/stdlib.h"
- 1007              		.file 44 "../../libDaisy//src/per/tim.h"
- 1008              		.file 45 "../../libDaisy//src/per/sai.h"
- 1009              		.file 46 "../../libDaisy//src/hid/MidiEvent.h"
- 1010              		.file 47 "../../libDaisy//src/per/rng.h"
- 1011              		.file 48 "../../libDaisy//src/util/wav_format.h"
- 1012              		.file 49 "../../libDaisy//src/util/color.h"
- 1013              		.file 50 "../../libDaisy//src/dev/max11300.h"
- 1014              		.file 51 "../../libDaisy//src/per/gpio.h"
- 1015              		.file 52 "../../libDaisy//src/dev/sdram.h"
- 1016              		.file 53 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h"
- 1017              		.file 54 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdio.h"
- 1018              		.file 55 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/string.h"
- 1019              		.file 56 "../../../LEAF/leaf/./Inc/leaf-mempool.h"
- 1020              		.file 57 "../../../LEAF/leaf/./Inc/leaf-global.h"
- 1021              		.file 58 "../../../LEAF/leaf/./Inc/leaf-oscillators.h"
- 1022              		.file 59 "../../libDaisy//src/dev/sr_595.h"
- 1023              		.file 60 "../../../LEAF/leaf/leaf.h"
- 1024              		.file 61 "<built-in>"
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 44
+ 981              		.file 25 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdlib"
+ 982              		.file 26 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdint"
+ 983              		.file 27 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/type_traits"
+ 984              		.file 28 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/debug/debug.h"
+ 985              		.file 29 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v
+ 986              		.file 30 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/algorithmfwd.h"
+ 987              		.file 31 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/stl_pair.h"
+ 988              		.file 32 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/exception_ptr.h"
+ 989              		.file 33 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdarg"
+ 990              		.file 34 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstdio"
+ 991              		.file 35 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/cstring"
+ 992              		.file 36 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/bits/predefined_ops.h
+ 993              		.file 37 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/_types.h"
+ 994              		.file 38 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/reent.h"
+ 995              		.file 39 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/sys/lock.h"
+ 996              		.file 40 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/math.h"
+ 997              		.file 41 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdlib.h"
+ 998              		.file 42 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/math.h"
+ 999              		.file 43 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/c++/10.3.1/stdlib.h"
+ 1000              		.file 44 "../../libDaisy//src/per/tim.h"
+ 1001              		.file 45 "../../libDaisy//src/per/sai.h"
+ 1002              		.file 46 "../../libDaisy//src/hid/MidiEvent.h"
+ 1003              		.file 47 "../../libDaisy//src/per/rng.h"
+ 1004              		.file 48 "../../libDaisy//src/util/wav_format.h"
+ 1005              		.file 49 "../../libDaisy//src/util/color.h"
+ 1006              		.file 50 "../../libDaisy//src/dev/max11300.h"
+ 1007              		.file 51 "../../libDaisy//src/per/gpio.h"
+ 1008              		.file 52 "../../libDaisy//src/dev/sdram.h"
+ 1009              		.file 53 "/Library/DaisyToolchain/0.2.0/arm/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h"
+ 1010              		.file 54 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/stdio.h"
+ 1011              		.file 55 "/Library/DaisyToolchain/0.2.0/arm/arm-none-eabi/include/string.h"
+ 1012              		.file 56 "../../../LEAF/leaf/./Inc/leaf-mempool.h"
+ 1013              		.file 57 "../../../LEAF/leaf/./Inc/leaf-global.h"
+ 1014              		.file 58 "../../../LEAF/leaf/./Inc/leaf-oscillators.h"
+ 1015              		.file 59 "../../libDaisy//src/dev/sr_595.h"
+ 1016              		.file 60 "../../../LEAF/leaf/leaf.h"
+ 1017              		.file 61 "<built-in>"
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 44
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 MyProj.cpp
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:19     .text._ZN5daisy8DaisyPodD2Ev:0000000000000000 $t
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:26     .text._ZN5daisy8DaisyPodD2Ev:0000000000000000 _ZN5daisy8DaisyPodD2Ev
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:26     .text._ZN5daisy8DaisyPodD2Ev:0000000000000000 _ZN5daisy8DaisyPodD1Ev
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:154    .text._Z12randomNumberv:0000000000000000 $t
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:161    .text._Z12randomNumberv:0000000000000000 _Z12randomNumberv
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:178    .text._Z12randomNumberv:000000000000000c $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:183    .text._Z13AudioCallbackPKPKfPPfj:0000000000000000 $t
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:190    .text._Z13AudioCallbackPKPKfPPfj:0000000000000000 _Z13AudioCallbackPKPKfPPfj
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:336    .text._Z13AudioCallbackPKPKfPPfj:000000000000008c $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:958    .bss.hw:0000000000000000 hw
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:347    .text.startup.main:0000000000000000 $t
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:354    .text.startup.main:0000000000000000 main
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:559    .text.startup.main:0000000000000108 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:971    .bss.leafMemory:0000000000000000 leafMemory
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:573    .text.startup._GLOBAL__sub_I_leaf:0000000000000000 $t
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:579    .text.startup._GLOBAL__sub_I_leaf:0000000000000000 _GLOBAL__sub_I_leaf
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:904    .text.startup._GLOBAL__sub_I_leaf:0000000000000050 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:915    .init_array:0000000000000000 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:952    .bss.ext_adc_in:0000000000000000 ext_adc_in
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:978    .bss.myOsc:0000000000000000 myOsc
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:946    .bss.A7Pin:0000000000000000 A7Pin
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:939    .bss.A1Pin:0000000000000000 A1Pin
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:965    .bss.leaf:0000000000000000 leaf
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:925    .rodata:0000000000000000 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:935    .bss.A1Pin:0000000000000000 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:942    .bss.A7Pin:0000000000000000 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:949    .bss.ext_adc_in:0000000000000000 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:955    .bss.hw:0000000000000000 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:961    .bss.leaf:0000000000000000 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:968    .bss.leafMemory:0000000000000000 $d
-/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s:974    .bss.myOsc:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:19     .text._ZN5daisy8DaisyPodD2Ev:0000000000000000 $t
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:26     .text._ZN5daisy8DaisyPodD2Ev:0000000000000000 _ZN5daisy8DaisyPodD2Ev
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:26     .text._ZN5daisy8DaisyPodD2Ev:0000000000000000 _ZN5daisy8DaisyPodD1Ev
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:154    .text._Z12randomNumberv:0000000000000000 $t
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:161    .text._Z12randomNumberv:0000000000000000 _Z12randomNumberv
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:178    .text._Z12randomNumberv:000000000000000c $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:183    .text._Z13AudioCallbackPKPKfPPfj:0000000000000000 $t
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:190    .text._Z13AudioCallbackPKPKfPPfj:0000000000000000 _Z13AudioCallbackPKPKfPPfj
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:336    .text._Z13AudioCallbackPKPKfPPfj:000000000000008c $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:951    .bss.hw:0000000000000000 hw
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:347    .text.startup.main:0000000000000000 $t
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:354    .text.startup.main:0000000000000000 main
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:559    .text.startup.main:0000000000000108 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:964    .bss.leafMemory:0000000000000000 leafMemory
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:573    .text.startup._GLOBAL__sub_I_leaf:0000000000000000 $t
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:579    .text.startup._GLOBAL__sub_I_leaf:0000000000000000 _GLOBAL__sub_I_leaf
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:904    .text.startup._GLOBAL__sub_I_leaf:0000000000000050 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:915    .init_array:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:971    .bss.myOsc:0000000000000000 myOsc
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:945    .bss.A7Pin:0000000000000000 A7Pin
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:938    .bss.A1Pin:0000000000000000 A1Pin
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:958    .bss.leaf:0000000000000000 leaf
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:924    .rodata:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:934    .bss.A1Pin:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:941    .bss.A7Pin:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:948    .bss.hw:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:954    .bss.leaf:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:961    .bss.leafMemory:0000000000000000 $d
+/var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s:967    .bss.myOsc:0000000000000000 $d
                            .group:0000000000000000 _ZN5daisy8DaisyPodD5Ev
 
 UNDEFINED SYMBOLS
@@ -2632,10 +2616,10 @@ _ZN5daisy6Random4InitEv
 _ZN5daisy8DaisyPod8StartAdcEv
 LEAF_init
 tPBPulse_init
-ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//ccpzGXOl.s 			page 45
-
-
 _ZN5daisy8DaisyPod10StartAudioEPFvPKPKfPPfjE
 _ZN5daisy8DaisyPod10UpdateLedsEv
+ARM GAS  /var/folders/ky/97y1n_614tj15gjp3pmt3wd00000gn/T//cc377TYd.s 			page 45
+
+
 __aeabi_atexit
 __dso_handle
