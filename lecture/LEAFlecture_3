@@ -1,0 +1,61 @@
+LEAF 3
+
+go over assignments
+
+programming control structures
+    for loop
+
+input sensors and physical outputs
+where to get sensors and things:
+    adafruit
+    sparkfun
+    pololu
+
+types of input sensors 
+    switch
+        button
+        toggle
+        slide
+        lever
+        any two pieces of metal connecting and disconnecting
+    potentiometer
+        rotary potentiometer
+        slide potentiometer
+        softpot (linear touch potentiometer)
+    photoresistor
+    IR reflectance sensor
+    beam breaker
+    bend sensor
+    FSR (force sensing resistor)
+    hall sensor (senses magnetic field)
+    Accelerometer (acceleration in xyz)
+    Gyroscope (orientation in xyz)
+    IMU (integrated motion unit - combination of accelerometer and gyroscope)
+    rotary encoder
+        for turning by hand
+        for counting revolutions of a shaft
+    ultrasonic distance sensors (like PING)
+    laser rangefinder
+
+    these sensors may use different methods to communicate with the microcontroller:
+        analog output (use an analog in on the Daisy)
+        digital output (use a digital in on the Daisy)
+        digital serial communication
+            I2C
+            SPI
+    
+physical outputs
+    light:
+        single LEDs
+        LED strips (usually need a transistor to drive the current)
+    motion (also usually need transistors to drive current or an extra driver board):
+        motors:
+            DC motor (spins with speed proportional to current)
+            Hobby Servo Motor (goes to a position you tell it to go to, cheap and simple to control)
+            Stepper Motor (also goes to a position, but more precise and can rotate 360 degrees)
+        solenoids (for linear or rotary on/off motion - like car door locks)
+
+Soldering:
+https://youtu.be/AqvHogekDI4?si=t0_JDIMhYVfw8eEu&t=79
+
+

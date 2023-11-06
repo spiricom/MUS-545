@@ -2,7 +2,7 @@
 #include "leaf.h"
 using namespace daisy;
 LEAF leaf;
-char leafMemory[400000]; //notice I increased this, because tRetune needs more memory
+char leafMemory[400000];
 DaisyPod hw;
 
 tADSRS env;
@@ -40,12 +40,13 @@ void AudioCallback(AudioHandle::InputBuffer in, AudioHandle::OutputBuffer out, s
 int main(void)
 {
     hw.Init();
-    hw.SetAudioBlockSize(64); // I also had to increase this to make retune work - 4 samples didn't give it enough time because it has some "bursty" processing
+    hw.SetAudioBlockSize(64); 
     hw.SetAudioSampleRate(SaiHandle::Config::SampleRate::SAI_48KHZ);
     Random::Init();
     hw.StartAdc();
 
-    LEAF_init(&leaf, 48000, leafMemory, 400000, randomNumber); //notice I increased this, because tRetune needs more memory
+    LEAF_init(&leaf, 48000, leafMemory, 400000, randomNumber); 
+    //arguments are attack time in milliseconds, decay time in ms, sustain level (0-1), and release time in ms)
     tADSRS_init(&env, 10, 500, 0., 500, &leaf);
     tCycle_init(&mySine, &leaf);
 
