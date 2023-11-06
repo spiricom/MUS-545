@@ -178,7 +178,8 @@ build/MyProj.o: MyProj.cpp \
  ../../../LEAF/leaf/./Inc/leaf-midi.h \
  ../../../LEAF/leaf/./Inc/leaf-sampling.h \
  ../../../LEAF/leaf/./Inc/leaf-physical.h \
- ../../../LEAF/leaf/./Inc/leaf-electrical.h
+ ../../../LEAF/leaf/./Inc/leaf-electrical.h \
+ ../../../LEAF/leaf/./Inc/leaf-vocal.h
 ../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h:
 ../../libDaisy//Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h750xx.h:
 ../../libDaisy//Drivers/CMSIS/Include/core_cm7.h:
@@ -388,3 +389,4 @@ build/MyProj.o: MyProj.cpp \
 ../../../LEAF/leaf/./Inc/leaf-sampling.h:
 ../../../LEAF/leaf/./Inc/leaf-physical.h:
 ../../../LEAF/leaf/./Inc/leaf-electrical.h:
+../../../LEAF/leaf/./Inc/leaf-vocal.h:
